@@ -67,16 +67,23 @@
 
   <main id="main">
     <section class="hero" id="home">
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <h1 data-reveal>
-            Websites built for trades that close real work.
-          </h1>
-          <p class="hero-lead" data-reveal>
+      <div class="container">
+        <div class="hero-spec" data-reveal>
+          <span>Web Design</span>
+          <span>For Serious Trades</span>
+        </div>
+        <h1 data-reveal>
+          Websites built for trades that close real work.
+        </h1>
+      </div>
+
+      <div class="container hero-split">
+        <div class="hero-copy" data-reveal>
+          <p class="hero-lead">
             We design and build premium websites for builders, fabrication studios, and skilled trades teams who are
             tired of looking like everyone else.
           </p>
-          <div class="hero-actions" data-reveal>
+          <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Start a Project</a>
             <a href="#work" class="btn btn-secondary">See Work</a>
           </div>
@@ -100,7 +107,8 @@
             <span>avg lift in qualified leads</span>
           </li>
           <li>
-            <strong data-counter data-counter-value="1.4" data-counter-decimals="1" data-counter-suffix="s">1.4s</strong>
+            <strong data-counter data-counter-value="1.4" data-counter-decimals="1"
+              data-counter-suffix="s">1.4s</strong>
             <span>typical load time</span>
           </li>
         </ul>
@@ -119,24 +127,28 @@
       </div>
     </section>
 
-    <section class="services section--compact" id="services">
+    <section class="services" id="services">
       <div class="container">
-        <h2 class="services-heading" data-reveal>What we do</h2>
+        <div class="section-label" data-reveal>What we do</div>
 
         <dl class="service-list">
           <div class="service-list-item" data-reveal>
+            <span class="service-idx" aria-hidden="true">01</span>
             <dt>Positioning + Messaging</dt>
             <dd>Clarify what you do, who you serve, and why your work commands premium fees.</dd>
           </div>
           <div class="service-list-item" data-reveal>
+            <span class="service-idx" aria-hidden="true">02</span>
             <dt>Visual Direction</dt>
             <dd>A distinct look and art direction that feels bespoke to your business, not copied from trends.</dd>
           </div>
           <div class="service-list-item" data-reveal>
+            <span class="service-idx" aria-hidden="true">03</span>
             <dt>Front-End Build</dt>
             <dd>Fast, accessible, responsive implementation that performs well and holds up in production.</dd>
           </div>
           <div class="service-list-item" data-reveal>
+            <span class="service-idx" aria-hidden="true">04</span>
             <dt>Launch Support</dt>
             <dd>Handoff, QA, and practical guidance so your team can maintain and grow without friction.</dd>
           </div>
@@ -144,21 +156,26 @@
       </div>
     </section>
 
-    <section class="work section--work" id="work">
+    <section class="work" id="work">
       <div class="container">
-        <h2 class="work-heading" data-reveal>Selected Work</h2>
+        <div class="work-header" data-reveal>
+          <h2 class="work-heading">Selected Work</h2>
+          <span class="work-count">03 Projects</span>
+        </div>
 
-        <div class="work-grid">
-          <article class="work-card work-card--featured" data-reveal>
-            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1500&q=80"
-              alt="Modern architecture website layout" loading="lazy" decoding="async" />
-            <div class="work-meta">
-              <p>Residential Construction</p>
-              <h3>Ridgepoint Homes</h3>
-            </div>
-          </article>
+        <article class="work-card work-card--featured" data-reveal>
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1500&q=80"
+            alt="Modern architecture website layout" loading="lazy" decoding="async" />
+          <div class="work-meta">
+            <p>Residential Construction</p>
+            <h3>Ridgepoint Homes</h3>
+          </div>
+        </article>
+
+        <div class="work-secondary">
           <article class="work-card" data-reveal>
-            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=80"
+            <img
+              src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=80"
               alt="Material library and stone textures" loading="lazy" decoding="async" />
             <div class="work-meta">
               <p>Stone + Surface</p>
@@ -166,7 +183,8 @@
             </div>
           </article>
           <article class="work-card" data-reveal>
-            <img src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?auto=format&fit=crop&w=1200&q=80"
+            <img
+              src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?auto=format&fit=crop&w=1200&q=80"
               alt="Fabrication workshop website hero" loading="lazy" decoding="async" />
             <div class="work-meta">
               <p>Fabrication Studio</p>
@@ -177,73 +195,95 @@
       </div>
     </section>
 
-    <section class="testimonial-section" id="testimonial">
+    <section class="testimonial" id="testimonial">
       <div class="container">
         <blockquote class="pull-quote" data-reveal>
-          <p>"They understood what we needed before we could articulate it. The site pays for itself every quarter."</p>
-          <cite>— Marcus Caldwell, Ridgepoint Homes</cite>
+          <span class="quote-glyph" aria-hidden="true">&ldquo;</span>
+          <div class="quote-content">
+            <p>They understood what we needed before we could articulate it. The site pays for itself every quarter.</p>
+            <cite>Marcus Caldwell, Ridgepoint Homes</cite>
+          </div>
         </blockquote>
       </div>
     </section>
 
-    <section class="process section--process section--dark" id="process">
+    <section class="process" id="process">
       <div class="container">
-        <h2 class="process-heading" data-reveal>How we work</h2>
+        <div class="section-label section-label--light" data-reveal>How we work</div>
         <ol class="process-list">
           <li data-reveal>
             <span class="process-num">01</span>
-            <h3>Discovery</h3>
-            <p>Business goals, audience, services, and positioning foundation.</p>
+            <div>
+              <h3>Discovery</h3>
+              <p>Business goals, audience, services, and positioning foundation.</p>
+            </div>
           </li>
           <li data-reveal>
             <span class="process-num">02</span>
-            <h3>Direction</h3>
-            <p>Wireframes and visual design grounded in your market and offer.</p>
+            <div>
+              <h3>Direction</h3>
+              <p>Wireframes and visual design grounded in your market and offer.</p>
+            </div>
           </li>
           <li data-reveal>
             <span class="process-num">03</span>
-            <h3>Build</h3>
-            <p>Responsive implementation, QA, and content polish.</p>
+            <div>
+              <h3>Build</h3>
+              <p>Responsive implementation, QA, and content polish.</p>
+            </div>
           </li>
           <li data-reveal>
             <span class="process-num">04</span>
-            <h3>Launch</h3>
-            <p>Final checks, deployment, and handoff documentation.</p>
+            <div>
+              <h3>Launch</h3>
+              <p>Final checks, deployment, and handoff documentation.</p>
+            </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="about section--about" id="about">
-      <div class="container">
-        <h2 class="about-statement" data-reveal>We believe trust is a design outcome.</h2>
-        <p class="about-body" data-reveal>
-          When someone lands on your site, they make a judgment in seconds. We design for that moment with clear
-          structure, intentional typography, and copy that sounds like an expert wrote it.
-        </p>
+    <section class="about" id="about">
+      <div class="container about-layout">
+        <div class="about-accent" aria-hidden="true"></div>
+        <div class="about-content" data-reveal>
+          <h2 class="about-statement">We believe trust is a design outcome.</h2>
+          <p class="about-body">
+            When someone lands on your site, they make a judgment in seconds. We design for that moment with clear
+            structure, intentional typography, and copy that sounds like an expert wrote it.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="contact section--contact" id="contact">
+    <section class="contact" id="contact">
       <div class="container contact-layout">
         <div data-reveal>
           <h2 class="contact-heading">Tell us what you're building.</h2>
-          <p>We'll send back a practical recommendation with scope, timeline, and next step.</p>
+          <p class="contact-sub">We'll send back a practical recommendation with scope, timeline, and next step.</p>
         </div>
 
         <form class="contact-form" data-inquiry-form novalidate data-reveal>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required />
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
 
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" autocomplete="organization" required />
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required />
+          </div>
 
-          <label for="project">Project Brief</label>
-          <textarea id="project" name="project" rows="4" required
-            placeholder="What are you trying to improve with the new site?"></textarea>
+          <div class="form-field">
+            <label for="project">Project Brief</label>
+            <textarea id="project" name="project" rows="4" required
+              placeholder="What are you trying to improve with the new site?"></textarea>
+          </div>
 
           <button class="btn btn-primary" type="submit">Send Inquiry</button>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>

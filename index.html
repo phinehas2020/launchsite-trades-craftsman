@@ -4,306 +4,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blackwood & Brass Atelier | Bespoke Furniture & Forged Hardware</title>
+  <title>Tradesman Atelier — Websites for Serious Craft Businesses</title>
   <meta name="description"
-    content="An atelier dedicated to bespoke furniture and hand-forged hardware. Built one piece at a time with intentionality, craft, and legacy." />
-  <meta name="theme-color" content="#f6f2eb" />
+    content="Tradesman Atelier designs and builds distinct, high-performing websites for premium trades, fabrication, and craft-driven businesses." />
+  <meta name="theme-color" content="#f2f0ea" />
+  <meta property="og:title" content="Tradesman Atelier — Websites for Serious Craft Businesses" />
+  <meta property="og:description"
+    content="A strategy-led studio creating polished, high-conversion websites for builders, fabricators, and craft brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&family=Gloock&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Work+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Tradesman Atelier",
+      "description": "Web design and front-end implementation for premium trades and craft businesses.",
+      "url": "https://tradesmanatelier.com",
+      "areaServed": "Worldwide",
+      "serviceType": "Web Design"
+    }
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Cursor -->
-  <div class="cursor-dot" data-cursor-dot></div>
-  <div class="cursor-outline" data-cursor-outline></div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Tradesman Atelier home">
+        <span class="brand-mark" aria-hidden="true">TA</span>
+        <span class="brand-text">Tradesman Atelier</span>
+      </a>
 
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo">Blackwood & Brass</div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="#capabilities" class="nav-link">Services</a></li>
-          <li><a href="#process" class="nav-link">Process</a></li>
-          <li><a href="#portfolio" class="nav-link">Works</a></li>
-          <li><a href="#philosophy" class="nav-link">Atelier</a></li>
-          <li><a href="#contact" class="nav-link">Inquire</a></li>
+      <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false" aria-controls="site-nav"
+        aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <a href="#contact" class="header-cta">Book Intro Call</a>
     </div>
   </header>
 
-  <!-- Smooth Scroll Wrapper -->
-  <main class="smooth-wrapper" id="main">
-    <div class="smooth-content">
-
-      <section class="hero">
-        <div class="hero-bg-wrapper">
-          <div class="hero-bg" data-speed="0.45"></div>
-        </div>
-        <div class="hero-content container">
-          <div class="hero-copy">
-            <p class="eyebrow reveal-text">Atelier of the Blue Ridge</p>
-            <h1 class="hero-title">
-              <span class="line">Honest Work.</span>
-              <span class="line">Lasting Legacy.</span>
-            </h1>
-            <div class="hero-meta">
-              <p class="hero-subtitle">Bespoke furniture and hand-forged hardware, crafted with patience in our North
-                Carolina workshop.</p>
-              <div class="hero-actions">
-                <a href="#portfolio" class="cta-button">View the Collection</a>
-                <a href="#contact" class="cta-link">Request Studio Book</a>
-              </div>
-            </div>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="kicker" data-reveal>Digital Presence, Built Like Craft</p>
+          <h1 data-reveal>
+            Websites for trades businesses that want to look established, feel trusted, and close better work.
+          </h1>
+          <p class="hero-lead" data-reveal>
+            We design and build premium websites for builders, fabrication studios, and skilled trades teams who are
+            tired of looking like everyone else.
+          </p>
+          <div class="hero-actions" data-reveal>
+            <a href="#contact" class="btn btn-primary">Start a Project</a>
+            <a href="#work" class="btn btn-secondary">See Work</a>
           </div>
-          <div class="hero-details">
-            <div class="detail">
-              <span>Established</span>
-              <strong>1996</strong>
-            </div>
-            <div class="detail">
-              <span>Commissions</span>
-              <strong>8 / year</strong>
-            </div>
-            <div class="detail">
-              <span>Lead Time</span>
-              <strong>12–16 weeks</strong>
-            </div>
-          </div>
+          <ul class="hero-stats" data-reveal>
+            <li>
+              <strong data-counter data-counter-value="127" data-counter-suffix="+">127+</strong>
+              <span>projects delivered</span>
+            </li>
+            <li>
+              <strong data-counter data-counter-value="38" data-counter-suffix="%">38%</strong>
+              <span>average lift in qualified leads</span>
+            </li>
+            <li>
+              <strong data-counter data-counter-value="1.4" data-counter-decimals="1" data-counter-suffix="s">1.4s</strong>
+              <span>typical load time on launch builds</span>
+            </li>
+          </ul>
         </div>
-        <div class="hero-stamp" aria-hidden="true">
-          <span>Blackwood & Brass<br>Atelier</span>
+
+        <figure class="hero-image" data-reveal>
+          <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1400&q=80"
+            alt="Craft workshop desk with plans and tools" loading="eager" decoding="async" />
+          <figcaption>Recent launch: Ashborne Metalworks</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="client-rail" aria-label="Selected client types">
+      <div class="container">
+        <ul>
+          <li>Custom Home Builders</li>
+          <li>Architectural Fabricators</li>
+          <li>Millwork Studios</li>
+          <li>Design-Build Firms</li>
+          <li>Luxury Renovation Teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker">Services</p>
+          <h2>Everything needed to launch a serious site.</h2>
+        </header>
+
+        <div class="service-grid">
+          <article class="service" data-reveal>
+            <h3>Positioning + Messaging</h3>
+            <p>Clarify what you do, who you serve, and why your work commands premium fees.</p>
+          </article>
+          <article class="service" data-reveal>
+            <h3>Visual Direction</h3>
+            <p>A distinct look and art direction that feels bespoke to your business, not copied from trends.</p>
+          </article>
+          <article class="service" data-reveal>
+            <h3>Front-End Build</h3>
+            <p>Fast, accessible, responsive implementation that performs well and holds up in production.</p>
+          </article>
+          <article class="service" data-reveal>
+            <h3>Launch Support</h3>
+            <p>Handoff, QA, and practical guidance so your team can maintain and grow without friction.</p>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="philosophy" id="philosophy">
-        <div class="container philosophy-inner">
-          <div class="philosophy-text">
-            <span class="section-label reveal-text">Philosophy</span>
-            <h2 class="reveal-text">Craft over Scale.</h2>
-            <p class="philosophy-quote reveal-text">“Every piece of wood carries a story. Every strike of the mallet is a
-              conversation.”</p>
-            <p class="philosophy-signature">— The Blackwood Atelier</p>
-          </div>
+    <section class="work section" id="work">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker">Selected Work</p>
+          <h2>Clean architecture, strong identity, clear conversion.</h2>
+        </header>
+
+        <div class="work-grid">
+          <article class="work-card wide" data-reveal>
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1500&q=80"
+              alt="Modern architecture website layout" loading="lazy" decoding="async" />
+            <div class="work-meta">
+              <p>Residential Construction</p>
+              <h3>Ridgepoint Homes</h3>
+            </div>
+          </article>
+          <article class="work-card" data-reveal>
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=80"
+              alt="Material library and stone textures" loading="lazy" decoding="async" />
+            <div class="work-meta">
+              <p>Stone + Surface</p>
+              <h3>Altair Stone</h3>
+            </div>
+          </article>
+          <article class="work-card" data-reveal>
+            <img src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?auto=format&fit=crop&w=1200&q=80"
+              alt="Fabrication workshop website hero" loading="lazy" decoding="async" />
+            <div class="work-meta">
+              <p>Fabrication Studio</p>
+              <h3>Forge &amp; Grain</h3>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="capabilities" id="capabilities">
-        <div class="container">
-          <header class="section-head">
-            <span class="section-label reveal-text">Services</span>
-            <h2 class="section-title reveal-text">Commissioned pieces shaped by craft, not trends.</h2>
-            <p class="section-subtitle">We partner with homeowners, architects, and boutique hospitality teams to build
-              heirloom interiors and signature hardware.</p>
-          </header>
-          <div class="capability-grid">
-            <article class="capability-card">
-              <div class="capability-meta">
-                <span class="capability-num">01</span>
-                <h3>Custom Furniture</h3>
-              </div>
-              <p>Tables, seating, and statement pieces built for the rhythms of daily life.</p>
-              <span class="capability-detail">Tables • Chairs • Built-ins</span>
-            </article>
-            <article class="capability-card">
-              <div class="capability-meta">
-                <span class="capability-num">02</span>
-                <h3>Forged Hardware</h3>
-              </div>
-              <p>Hand-forged pulls, hinges, and accents that age beautifully alongside the wood.</p>
-              <span class="capability-detail">Bronze • Brass • Patinated Steel</span>
-            </article>
-            <article class="capability-card">
-              <div class="capability-meta">
-                <span class="capability-num">03</span>
-                <h3>Architectural Joinery</h3>
-              </div>
-              <p>Built-in libraries, stair details, and millwork that define the soul of a home.</p>
-              <span class="capability-detail">Cabinetry • Paneling • Stairs</span>
-            </article>
-          </div>
+    <section class="process section" id="process">
+      <div class="container process-layout">
+        <header class="section-head" data-reveal>
+          <p class="kicker">Process</p>
+          <h2>Simple, transparent, and built for momentum.</h2>
+        </header>
+        <ol class="process-list">
+          <li data-reveal>
+            <span>01</span>
+            <div>
+              <h3>Discovery</h3>
+              <p>Business goals, audience, services, and positioning foundation.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>02</span>
+            <div>
+              <h3>Direction</h3>
+              <p>Wireframes and visual design grounded in your market and offer.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>03</span>
+            <div>
+              <h3>Build</h3>
+              <p>Responsive implementation, QA, and content polish.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>04</span>
+            <div>
+              <h3>Launch</h3>
+              <p>Final checks, deployment, and handoff documentation.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about-layout">
+        <div data-reveal>
+          <p class="kicker">About</p>
+          <h2>We believe trust is a design outcome.</h2>
         </div>
-      </section>
+        <p data-reveal>
+          When someone lands on your site, they make a judgment in seconds. We design for that moment with clear
+          structure, intentional typography, and copy that sounds like an expert wrote it—not a generator.
+        </p>
+      </div>
+    </section>
 
-      <section class="process" id="process">
-        <div class="container">
-          <header class="section-head">
-            <span class="section-label reveal-text">The Way We Work</span>
-            <h2 class="section-title reveal-text">From first sketch to final burnish.</h2>
-            <p class="section-subtitle">A deliberate, hands-on process built on patience, provenance, and precision.</p>
-          </header>
-          <div class="process-grid">
-
-            <div class="process-step">
-              <div class="process-content">
-                <span class="step-number">01</span>
-                <h3>Selection</h3>
-                <p>We source only the finest sustainably harvested hardwoods. Each slab is hand-selected for its unique
-                  character, ensuring the grain pattern complements the final form of the piece.</p>
-              </div>
-              <div class="process-image-wrapper" data-speed="1.1">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop"
-                  alt="Selecting timber" class="process-img" loading="lazy">
-              </div>
-            </div>
-
-            <div class="process-step reverse">
-              <div class="process-content">
-                <span class="step-number">02</span>
-                <h3>Shaping</h3>
-                <p>No CNC machines. No shortcuts. Every joint is cut by hand using traditional chisels and saws. This
-                  ensures a level of precision and longevity that modern manufacturing simply cannot replicate.</p>
-              </div>
-              <div class="process-image-wrapper" data-speed="1.1">
-                <img src="https://images.unsplash.com/photo-1503437311481-24bd0114f3bc?q=80&w=2089&auto=format&fit=crop"
-                  alt="Hand carving details" class="process-img" loading="lazy">
-              </div>
-            </div>
-
-            <div class="process-step">
-              <div class="process-content">
-                <span class="step-number">03</span>
-                <h3>Refinement</h3>
-                <p>We finish our works with organic oils and waxes, applied in multiple coats and buffed to a soft,
-                  tactile sheen. It protects the wood while allowing you to feel the living material beneath.</p>
-              </div>
-              <div class="process-image-wrapper" data-speed="1.1">
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop"
-                  alt="Finishing process" class="process-img" loading="lazy">
-              </div>
-            </div>
-
-          </div>
+    <section class="contact section" id="contact">
+      <div class="container contact-layout">
+        <div data-reveal>
+          <p class="kicker">Contact</p>
+          <h2>Tell us what you’re building.</h2>
+          <p>We’ll send back a practical recommendation with scope, timeline, and next step.</p>
         </div>
-      </section>
 
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <header class="section-head">
-            <span class="section-label reveal-text">Selected Works</span>
-            <h2 class="section-title reveal-text">A collection of quiet statements.</h2>
-            <p class="section-subtitle">Each piece is made to live with a family for generations.</p>
-          </header>
-          <div class="portfolio-grid">
-            <!-- Item 1 -->
-            <div class="portfolio-item large item-1">
-              <div class="portfolio-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=2070&auto=format&fit=crop"
-                  alt="Walnut dining table" loading="lazy">
-              </div>
-              <div class="portfolio-info">
-                <h3>The Heritage Table</h3>
-                <span class="portfolio-cat">Furniture</span>
-              </div>
-            </div>
+        <form class="contact-form" data-inquiry-form novalidate data-reveal>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
 
-            <!-- Item 2 -->
-            <div class="portfolio-item small item-2">
-              <div class="portfolio-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=1974&auto=format&fit=crop"
-                  alt="Brass handle detail" loading="lazy">
-              </div>
-              <div class="portfolio-info">
-                <h3>Forged Elements</h3>
-                <span class="portfolio-cat">Hardware</span>
-              </div>
-            </div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
 
-            <!-- Item 3 -->
-            <div class="portfolio-item small item-3">
-              <div class="portfolio-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=2080&auto=format&fit=crop"
-                  alt="Walnut cabinet" loading="lazy">
-              </div>
-              <div class="portfolio-info">
-                <h3>Lowland Credenza</h3>
-                <span class="portfolio-cat">Cabinetry</span>
-              </div>
-            </div>
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" autocomplete="organization" required />
 
-            <!-- Item 4 -->
-            <div class="portfolio-item large item-4">
-              <div class="portfolio-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=1964&auto=format&fit=crop"
-                  alt="Modern chair" loading="lazy">
-              </div>
-              <div class="portfolio-info">
-                <h3>Weaver's Chair</h3>
-                <span class="portfolio-cat">Seating</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <label for="project">Project Brief</label>
+          <textarea id="project" name="project" rows="4" required
+            placeholder="What are you trying to improve with the new site?"></textarea>
 
-      <section class="testimonial">
-        <div class="container testimonial-inner">
-          <div class="testimonial-quote">
-            <span class="section-label reveal-text">Studio Notes</span>
-            <h2 class="reveal-text">“The cabinet feels like it’s always belonged to the house. Every joint is
-              intentional. Every surface begs to be touched.”</h2>
-            <p class="testimonial-author">— Avery Rhodes, Asheville, NC</p>
-          </div>
-          <div class="testimonial-card">
-            <h3>Private Atelier Visits</h3>
-            <p>We host a limited number of studio visits each season for prospective clients and design partners.</p>
-            <div class="testimonial-meta">
-              <span>By appointment</span>
-              <span>Spring + Autumn</span>
-            </div>
-            <a class="cta-link" href="#contact">Reserve a visit</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-section" id="contact">
-        <div class="container center-text">
-          <h2 class="cta-title reveal-text">Build Your Legacy</h2>
-          <p class="cta-desc reveal-text">We take on a limited number of commissions each year to ensure uncompromising
-            quality.</p>
-          <a href="mailto:hello@blackwoodandbrass.com" class="cta-button large">Start a Commission</a>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="container footer-inner">
-          <div class="footer-brand">
-            <div class="footer-logo">B&B</div>
-            <p class="footer-tagline">Blue Ridge Mountains<br>North Carolina</p>
-          </div>
-          <div class="footer-links">
-            <div class="link-col">
-              <span>Social</span>
-              <a href="#">Instagram</a>
-              <a href="#">Pinterest</a>
-            </div>
-            <div class="link-col">
-              <span>Company</span>
-              <a href="#process">Process</a>
-              <a href="#portfolio">Journal</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div class="link-col">
-              <span>Legal</span>
-              <a href="#">Terms</a>
-              <a href="#">Privacy</a>
-            </div>
-          </div>
-        </div>
-        <div class="container footer-bottom">
-          <p>&copy; 2026 Blackwood & Brass Atelier.</p>
-          <p>Made with intention.</p>
-        </div>
-      </footer>
-
-    </div>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Tradesman Atelier.</p>
+      <div>
+        <a href="mailto:hello@tradesmanatelier.com">hello@tradesmanatelier.com</a>
+      </div>
+    </div>
+  </footer>
 
   <script type="module" src="/src/main.js"></script>
 </body>

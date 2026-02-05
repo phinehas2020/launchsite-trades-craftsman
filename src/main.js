@@ -1,179 +1,169 @@
-import Lenis from 'lenis'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-gsap.registerPlugin(ScrollTrigger)
+if (reducedMotion) {
+  document.body.classList.add('reduce-motion')
+}
 
-document.documentElement.classList.add('js')
+const header = document.querySelector('[data-header]')
+const menuToggle = document.querySelector('[data-menu-toggle]')
+const navLinks = [...document.querySelectorAll('[data-nav] a')]
+const revealItems = [...document.querySelectorAll('[data-reveal]')]
+const counters = [...document.querySelectorAll('[data-counter]')]
+const form = document.querySelector('[data-inquiry-form]')
+const formStatus = document.querySelector('[data-form-status]')
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+const setHeaderState = () => {
+  if (!header) return
+  header.classList.toggle('is-scrolled', window.scrollY > 8)
+}
 
-// Header Scroll Effect
-const header = document.querySelector('.header')
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        header.classList.add('scrolled')
-    } else {
-        header.classList.remove('scrolled')
+const closeMenu = () => {
+  if (!menuToggle) return
+  document.body.classList.remove('menu-open')
+  menuToggle.setAttribute('aria-expanded', 'false')
+}
+
+const initMenu = () => {
+  if (!menuToggle) return
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true'
+    menuToggle.setAttribute('aria-expanded', String(!isOpen))
+    document.body.classList.toggle('menu-open', !isOpen)
+  })
+
+  navLinks.forEach((link) => link.addEventListener('click', closeMenu))
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu()
     }
-})
+  })
 
-if (prefersReducedMotion) {
-    document.body.classList.add('reduce-motion')
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 896) {
+      closeMenu()
+    }
+  })
 }
 
-let lenis
-if (!prefersReducedMotion) {
-    // Smooth Scroll
-    lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-    })
+const initReveal = () => {
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'))
+    return
+  }
 
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-visible')
+        currentObserver.unobserve(entry.target)
+      })
+    },
+    { threshold: 0.18 }
+  )
+
+  revealItems.forEach((item) => observer.observe(item))
+}
+
+const formatCount = (value, decimals) => {
+  return value.toLocaleString(undefined, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  })
+}
+
+const animateCount = (element, target, decimals, suffix) => {
+  const duration = 900
+  const start = performance.now()
+
+  const tick = (now) => {
+    const progress = Math.min(1, (now - start) / duration)
+    const eased = 1 - Math.pow(1 - progress, 3)
+    const current = target * eased
+    element.textContent = `${formatCount(current, decimals)}${suffix}`
+
+    if (progress < 1) {
+      requestAnimationFrame(tick)
+    }
+  }
+
+  requestAnimationFrame(tick)
+}
+
+const initCounters = () => {
+  counters.forEach((counter) => {
+    const target = Number(counter.dataset.counterValue || 0)
+    const decimals = Number(counter.dataset.counterDecimals || 0)
+    const suffix = counter.dataset.counterSuffix || ''
+
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      counter.textContent = `${formatCount(target, decimals)}${suffix}`
+      return
     }
 
-    requestAnimationFrame(raf)
-
-    // Connect GSAP to Lenis
-    lenis.on('scroll', ScrollTrigger.update)
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000)
-    })
-    gsap.ticker.lagSmoothing(0)
-}
-
-// Custom Cursor
-if (!prefersReducedMotion && supportsHover) {
-    const cursorDot = document.querySelector('[data-cursor-dot]')
-    const cursorOutline = document.querySelector('[data-cursor-outline]')
-
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX
-        const posY = e.clientY
-
-        cursorDot.style.left = `${posX}px`
-        cursorDot.style.top = `${posY}px`
-
-        gsap.to(cursorOutline, {
-            x: posX,
-            y: posY,
-            duration: 0.15,
-            ease: 'power2.out'
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+          animateCount(counter, target, decimals, suffix)
+          currentObserver.unobserve(entry.target)
         })
-    })
+      },
+      { threshold: 0.4 }
+    )
 
-    document.querySelectorAll('a, button, .process-step, .portfolio-item').forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('hovered'))
-        el.addEventListener('mouseleave', () => document.body.classList.remove('hovered'))
-    })
+    observer.observe(counter)
+  })
 }
 
-if (!prefersReducedMotion) {
-    // Hero Animations on Load
-    const tlHero = gsap.timeline()
+const initForm = () => {
+  if (!form || !formStatus) return
 
-    tlHero.from('.hero-title span', {
-        y: 90,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.12,
-        ease: 'power3.out',
-        delay: 0.2
-    })
-        .to('.hero-meta', {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        }, '-=0.5')
+  const setStatus = (message, type) => {
+    formStatus.textContent = message
+    formStatus.classList.remove('success', 'error')
+    if (type) formStatus.classList.add(type)
+  }
 
-    // Parallax Image Effect
-    gsap.utils.toArray('[data-speed]').forEach(el => {
-        gsap.to(el, {
-            y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.05,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: el,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 0
-            }
-        })
-    })
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
 
-    // Text Reveal Animations
-    gsap.utils.toArray('.reveal-text').forEach(text => {
-        gsap.fromTo(text,
-            {
-                y: 40,
-                opacity: 0
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.9,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: text,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none'
-                }
-            }
-        )
-    })
+    if (!form.checkValidity()) {
+      setStatus('Please complete all required fields.', 'error')
+      form.reportValidity()
+      return
+    }
 
-    // Process Image Reveals
-    gsap.utils.toArray('.process-image-wrapper').forEach(wrapper => {
-        const img = wrapper.querySelector('img')
+    const payload = Object.fromEntries(new FormData(form).entries())
+    const brief = String(payload.project || '').trim()
 
-        gsap.fromTo(wrapper,
-            { scaleY: 0.92, opacity: 0 },
-            {
-                scaleY: 1,
-                opacity: 1,
-                duration: 1.2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: wrapper,
-                    start: 'top 80%'
-                }
-            }
-        )
+    if (brief.length < 20) {
+      setStatus('Please add a little more detail in your project brief.', 'error')
+      return
+    }
 
-        gsap.fromTo(img,
-            { scale: 1.14 },
-            {
-                scale: 1,
-                duration: 1.2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: wrapper,
-                    start: 'top 80%'
-                }
-            }
-        )
-    })
+    setStatus('Thank you. Your message has been captured.', 'success')
+    form.reset()
 
-    // Portfolio Stagger
-    gsap.from('.portfolio-item', {
-        y: 80,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-            trigger: '.portfolio-grid',
-            start: 'top 80%'
-        }
-    })
+    if (import.meta.env.DEV) {
+      console.info('Inquiry payload:', payload)
+    }
+  })
 }
+
+const initScrollHandlers = () => {
+  window.addEventListener('scroll', setHeaderState, { passive: true })
+  setHeaderState()
+}
+
+const init = () => {
+  initMenu()
+  initReveal()
+  initCounters()
+  initForm()
+  initScrollHandlers()
+}
+
+init()

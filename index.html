@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Work+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
   <script type="application/ld+json">
@@ -69,9 +69,8 @@
     <section class="hero" id="home">
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="kicker" data-reveal>Digital Presence, Built Like Craft</p>
           <h1 data-reveal>
-            Websites for trades businesses that want to look established, feel trusted, and close better work.
+            Websites built for trades that close real work.
           </h1>
           <p class="hero-lead" data-reveal>
             We design and build premium websites for builders, fabrication studios, and skilled trades teams who are
@@ -81,20 +80,6 @@
             <a href="#contact" class="btn btn-primary">Start a Project</a>
             <a href="#work" class="btn btn-secondary">See Work</a>
           </div>
-          <ul class="hero-stats" data-reveal>
-            <li>
-              <strong data-counter data-counter-value="127" data-counter-suffix="+">127+</strong>
-              <span>projects delivered</span>
-            </li>
-            <li>
-              <strong data-counter data-counter-value="38" data-counter-suffix="%">38%</strong>
-              <span>average lift in qualified leads</span>
-            </li>
-            <li>
-              <strong data-counter data-counter-value="1.4" data-counter-decimals="1" data-counter-suffix="s">1.4s</strong>
-              <span>typical load time on launch builds</span>
-            </li>
-          </ul>
         </div>
 
         <figure class="hero-image" data-reveal>
@@ -102,6 +87,23 @@
             alt="Craft workshop desk with plans and tools" loading="eager" decoding="async" />
           <figcaption>Recent launch: Ashborne Metalworks</figcaption>
         </figure>
+      </div>
+
+      <div class="container">
+        <ul class="hero-stats" data-reveal>
+          <li>
+            <strong data-counter data-counter-value="127" data-counter-suffix="+">127+</strong>
+            <span>projects delivered</span>
+          </li>
+          <li>
+            <strong data-counter data-counter-value="38" data-counter-suffix="%">38%</strong>
+            <span>avg lift in qualified leads</span>
+          </li>
+          <li>
+            <strong data-counter data-counter-value="1.4" data-counter-decimals="1" data-counter-suffix="s">1.4s</strong>
+            <span>typical load time</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -117,43 +119,37 @@
       </div>
     </section>
 
-    <section class="services section" id="services">
+    <section class="services section--compact" id="services">
       <div class="container">
-        <header class="section-head" data-reveal>
-          <p class="kicker">Services</p>
-          <h2>Everything needed to launch a serious site.</h2>
-        </header>
+        <h2 class="services-heading" data-reveal>What we do</h2>
 
-        <div class="service-grid">
-          <article class="service" data-reveal>
-            <h3>Positioning + Messaging</h3>
-            <p>Clarify what you do, who you serve, and why your work commands premium fees.</p>
-          </article>
-          <article class="service" data-reveal>
-            <h3>Visual Direction</h3>
-            <p>A distinct look and art direction that feels bespoke to your business, not copied from trends.</p>
-          </article>
-          <article class="service" data-reveal>
-            <h3>Front-End Build</h3>
-            <p>Fast, accessible, responsive implementation that performs well and holds up in production.</p>
-          </article>
-          <article class="service" data-reveal>
-            <h3>Launch Support</h3>
-            <p>Handoff, QA, and practical guidance so your team can maintain and grow without friction.</p>
-          </article>
-        </div>
+        <dl class="service-list">
+          <div class="service-list-item" data-reveal>
+            <dt>Positioning + Messaging</dt>
+            <dd>Clarify what you do, who you serve, and why your work commands premium fees.</dd>
+          </div>
+          <div class="service-list-item" data-reveal>
+            <dt>Visual Direction</dt>
+            <dd>A distinct look and art direction that feels bespoke to your business, not copied from trends.</dd>
+          </div>
+          <div class="service-list-item" data-reveal>
+            <dt>Front-End Build</dt>
+            <dd>Fast, accessible, responsive implementation that performs well and holds up in production.</dd>
+          </div>
+          <div class="service-list-item" data-reveal>
+            <dt>Launch Support</dt>
+            <dd>Handoff, QA, and practical guidance so your team can maintain and grow without friction.</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <section class="work section" id="work">
+    <section class="work section--work" id="work">
       <div class="container">
-        <header class="section-head" data-reveal>
-          <p class="kicker">Selected Work</p>
-          <h2>Clean architecture, strong identity, clear conversion.</h2>
-        </header>
+        <h2 class="work-heading" data-reveal>Selected Work</h2>
 
         <div class="work-grid">
-          <article class="work-card wide" data-reveal>
+          <article class="work-card work-card--featured" data-reveal>
             <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1500&q=80"
               alt="Modern architecture website layout" loading="lazy" decoding="async" />
             <div class="work-meta">
@@ -181,64 +177,58 @@
       </div>
     </section>
 
-    <section class="process section" id="process">
-      <div class="container process-layout">
-        <header class="section-head" data-reveal>
-          <p class="kicker">Process</p>
-          <h2>Simple, transparent, and built for momentum.</h2>
-        </header>
+    <section class="testimonial-section" id="testimonial">
+      <div class="container">
+        <blockquote class="pull-quote" data-reveal>
+          <p>"They understood what we needed before we could articulate it. The site pays for itself every quarter."</p>
+          <cite>— Marcus Caldwell, Ridgepoint Homes</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="process section--process section--dark" id="process">
+      <div class="container">
+        <h2 class="process-heading" data-reveal>How we work</h2>
         <ol class="process-list">
           <li data-reveal>
-            <span>01</span>
-            <div>
-              <h3>Discovery</h3>
-              <p>Business goals, audience, services, and positioning foundation.</p>
-            </div>
+            <span class="process-num">01</span>
+            <h3>Discovery</h3>
+            <p>Business goals, audience, services, and positioning foundation.</p>
           </li>
           <li data-reveal>
-            <span>02</span>
-            <div>
-              <h3>Direction</h3>
-              <p>Wireframes and visual design grounded in your market and offer.</p>
-            </div>
+            <span class="process-num">02</span>
+            <h3>Direction</h3>
+            <p>Wireframes and visual design grounded in your market and offer.</p>
           </li>
           <li data-reveal>
-            <span>03</span>
-            <div>
-              <h3>Build</h3>
-              <p>Responsive implementation, QA, and content polish.</p>
-            </div>
+            <span class="process-num">03</span>
+            <h3>Build</h3>
+            <p>Responsive implementation, QA, and content polish.</p>
           </li>
           <li data-reveal>
-            <span>04</span>
-            <div>
-              <h3>Launch</h3>
-              <p>Final checks, deployment, and handoff documentation.</p>
-            </div>
+            <span class="process-num">04</span>
+            <h3>Launch</h3>
+            <p>Final checks, deployment, and handoff documentation.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <div class="container about-layout">
-        <div data-reveal>
-          <p class="kicker">About</p>
-          <h2>We believe trust is a design outcome.</h2>
-        </div>
-        <p data-reveal>
+    <section class="about section--about" id="about">
+      <div class="container">
+        <h2 class="about-statement" data-reveal>We believe trust is a design outcome.</h2>
+        <p class="about-body" data-reveal>
           When someone lands on your site, they make a judgment in seconds. We design for that moment with clear
-          structure, intentional typography, and copy that sounds like an expert wrote it—not a generator.
+          structure, intentional typography, and copy that sounds like an expert wrote it.
         </p>
       </div>
     </section>
 
-    <section class="contact section" id="contact">
+    <section class="contact section--contact" id="contact">
       <div class="container contact-layout">
         <div data-reveal>
-          <p class="kicker">Contact</p>
-          <h2>Tell us what you’re building.</h2>
-          <p>We’ll send back a practical recommendation with scope, timeline, and next step.</p>
+          <h2 class="contact-heading">Tell us what you're building.</h2>
+          <p>We'll send back a practical recommendation with scope, timeline, and next step.</p>
         </div>
 
         <form class="contact-form" data-inquiry-form novalidate data-reveal>

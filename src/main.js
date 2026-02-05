@@ -47,19 +47,39 @@ const initMenu = () => {
   })
 }
 
+const STAGGER_CAP_MS = 150
+const REVEAL_DURATION_MS = 200
+
 const initReveal = () => {
   if (reducedMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'))
     return
   }
 
+  let pendingBatch = []
+  let batchTimer = null
+
+  const flushBatch = () => {
+    pendingBatch.forEach((el, i) => {
+      const delay = Math.min(i * 60, STAGGER_CAP_MS)
+      el.style.transitionDelay = `${delay}ms`
+      el.style.transitionDuration = `${REVEAL_DURATION_MS}ms`
+      el.classList.add('is-visible')
+    })
+    pendingBatch = []
+    batchTimer = null
+  }
+
   const observer = new IntersectionObserver(
     (entries, currentObserver) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
-        entry.target.classList.add('is-visible')
+        pendingBatch.push(entry.target)
         currentObserver.unobserve(entry.target)
       })
+      if (pendingBatch.length && !batchTimer) {
+        batchTimer = requestAnimationFrame(flushBatch)
+      }
     },
     { threshold: 0.18 }
   )

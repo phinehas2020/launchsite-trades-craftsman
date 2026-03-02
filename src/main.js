@@ -1,114 +1,103 @@
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const prefersReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-if (reducedMotion) {
+if (prefersReduceMotion) {
   document.body.classList.add('reduce-motion')
 }
 
 const header = document.querySelector('[data-header]')
 const menuToggle = document.querySelector('[data-menu-toggle]')
+const nav = document.querySelector('[data-nav]')
 const navLinks = [...document.querySelectorAll('[data-nav] a')]
+const navAnchors = [...document.querySelectorAll('a[href^="#"]')]
 const revealItems = [...document.querySelectorAll('[data-reveal]')]
 const counters = [...document.querySelectorAll('[data-counter]')]
 const form = document.querySelector('[data-inquiry-form]')
 const formStatus = document.querySelector('[data-form-status]')
+const yearNode = document.querySelector('[data-year]')
 
 const setHeaderState = () => {
   if (!header) return
-  header.classList.toggle('is-scrolled', window.scrollY > 8)
+  header.classList.toggle('is-scrolled', window.scrollY > 12)
 }
 
 const closeMenu = () => {
   if (!menuToggle) return
   document.body.classList.remove('menu-open')
   menuToggle.setAttribute('aria-expanded', 'false')
+  if (nav) nav.setAttribute('aria-hidden', 'true')
 }
 
 const initMenu = () => {
-  if (!menuToggle) return
+  if (!menuToggle || !nav) return
+
+  nav.setAttribute('aria-hidden', 'true')
 
   menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true'
-    menuToggle.setAttribute('aria-expanded', String(!isOpen))
-    document.body.classList.toggle('menu-open', !isOpen)
+    const open = menuToggle.getAttribute('aria-expanded') === 'true'
+    const next = !open
+
+    menuToggle.setAttribute('aria-expanded', String(next))
+    document.body.classList.toggle('menu-open', next)
+    nav.setAttribute('aria-hidden', String(!next))
   })
 
   navLinks.forEach((link) => link.addEventListener('click', closeMenu))
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu()
-    }
-  })
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 896) {
       closeMenu()
     }
   })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu()
+    }
+  })
 }
 
-const STAGGER_CAP_MS = 150
-const REVEAL_DURATION_MS = 200
-
 const initReveal = () => {
-  if (reducedMotion || !('IntersectionObserver' in window)) {
+  if (prefersReduceMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'))
     return
   }
 
-  let pendingBatch = []
-  let batchTimer = null
-
-  const flushBatch = () => {
-    pendingBatch.forEach((el, i) => {
-      const delay = Math.min(i * 60, STAGGER_CAP_MS)
-      el.style.transitionDelay = `${delay}ms`
-      el.style.transitionDuration = `${REVEAL_DURATION_MS}ms`
-      el.classList.add('is-visible')
-    })
-    pendingBatch = []
-    batchTimer = null
-  }
-
   const observer = new IntersectionObserver(
     (entries, currentObserver) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (!entry.isIntersecting) return
-        pendingBatch.push(entry.target)
-        currentObserver.unobserve(entry.target)
+        const node = entry.target
+        node.style.transitionDelay = `${Math.min(120 * index, 260)}ms`
+        node.classList.add('is-visible')
+        currentObserver.unobserve(node)
       })
-      if (pendingBatch.length && !batchTimer) {
-        batchTimer = requestAnimationFrame(flushBatch)
-      }
     },
-    { threshold: 0.18 }
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -8% 0px',
+    },
   )
 
   revealItems.forEach((item) => observer.observe(item))
 }
 
-const formatCount = (value, decimals) => {
-  return value.toLocaleString(undefined, {
+const formatCount = (value, decimals) =>
+  value.toLocaleString(undefined, {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   })
-}
 
-const animateCount = (element, target, decimals, suffix) => {
-  const duration = 900
+const animateCount = (element, target, decimals, suffix, duration = 1100) => {
   const start = performance.now()
-
   const tick = (now) => {
-    const progress = Math.min(1, (now - start) / duration)
-    const eased = 1 - Math.pow(1 - progress, 3)
+    const ratio = Math.min(1, (now - start) / duration)
+    const eased = 1 - Math.pow(1 - ratio, 3)
     const current = target * eased
     element.textContent = `${formatCount(current, decimals)}${suffix}`
-
-    if (progress < 1) {
+    if (ratio < 1) {
       requestAnimationFrame(tick)
     }
   }
-
   requestAnimationFrame(tick)
 }
 
@@ -118,7 +107,7 @@ const initCounters = () => {
     const decimals = Number(counter.dataset.counterDecimals || 0)
     const suffix = counter.dataset.counterSuffix || ''
 
-    if (reducedMotion || !('IntersectionObserver' in window)) {
+    if (prefersReduceMotion || !('IntersectionObserver' in window)) {
       counter.textContent = `${formatCount(target, decimals)}${suffix}`
       return
     }
@@ -131,7 +120,7 @@ const initCounters = () => {
           currentObserver.unobserve(entry.target)
         })
       },
-      { threshold: 0.4 }
+      { threshold: 0.35 },
     )
 
     observer.observe(counter)
@@ -160,11 +149,11 @@ const initForm = () => {
     const brief = String(payload.project || '').trim()
 
     if (brief.length < 20) {
-      setStatus('Please add a little more detail in your project brief.', 'error')
+      setStatus('Give us a fuller brief (at least 20 characters).', 'error')
       return
     }
 
-    setStatus('Thank you. Your message has been captured.', 'success')
+    setStatus('Your inquiry is ready. We will reach out today to schedule a consult.', 'success')
     form.reset()
 
     if (import.meta.env.DEV) {
@@ -173,9 +162,67 @@ const initForm = () => {
   })
 }
 
+const initActiveNav = () => {
+  const sectionAnchors = navLinks
+    .map((link) => {
+      const id = link.getAttribute('href')?.slice(1)
+      if (!id) return null
+      const section = document.getElementById(id)
+      return section ? { link, section } : null
+    })
+    .filter(Boolean)
+
+  if (!sectionAnchors.length) return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+      if (!visible) return
+
+      sectionAnchors.forEach(({ link }) => link.removeAttribute('aria-current'))
+      const active = sectionAnchors.find((entry) => entry.section.id === visible.target.id)
+
+      if (active) {
+        active.link.setAttribute('aria-current', 'true')
+      }
+    },
+    {
+      threshold: 0.35,
+      rootMargin: '-15% 0px -55% 0px',
+    },
+  )
+
+  sectionAnchors.forEach(({ section }) => observer.observe(section))
+}
+
+const initYear = () => {
+  if (!yearNode) return
+  yearNode.textContent = new Date().getFullYear().toString()
+}
+
 const initScrollHandlers = () => {
-  window.addEventListener('scroll', setHeaderState, { passive: true })
+  const onScroll = () => setHeaderState()
+
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('scrollend', onScroll, { passive: true })
   setHeaderState()
+}
+
+const initAnchorOffsets = () => {
+  navAnchors.forEach((anchor) => {
+    const href = anchor.getAttribute('href')
+    if (!href || !href.startsWith('#')) return
+
+    anchor.addEventListener('click', (event) => {
+      const target = document.querySelector(href)
+      if (!target) return
+      event.preventDefault()
+      target.scrollIntoView({ behavior: prefersReduceMotion ? 'auto' : 'smooth', block: 'start' })
+    })
+  })
 }
 
 const init = () => {
@@ -183,7 +230,10 @@ const init = () => {
   initReveal()
   initCounters()
   initForm()
+  initActiveNav()
   initScrollHandlers()
+  initAnchorOffsets()
+  initYear()
 }
 
 init()

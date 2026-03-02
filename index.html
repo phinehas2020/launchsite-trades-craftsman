@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tradesman Atelier — Architectural Fabrication & Custom Building</title>
+  <title>Tradesman Atelier | Home Contractor & Design-Builder</title>
   <meta name="description"
-    content="Tradesman Atelier is an architectural fabrication studio and high-end building firm specializing in bespoke timber, metal, and concrete works." />
-  <meta name="theme-color" content="#f4f2ec" />
-  <meta property="og:title" content="Tradesman Atelier — Architectural Fabrication & Custom Building" />
+    content="Tradesman Atelier is a home contractor and design-build team based in the U.S., specializing in additions, remodels, and fully custom homes. Built with precision, launched with care." />
+  <meta name="theme-color" content="#14120f" />
+  <meta property="og:title" content="Tradesman Atelier | Home Contractor & Design-Builder" />
   <meta property="og:description"
-    content="A master craftsman studio creating distinct, architectural elements and premium custom homes." />
+    content="One-page showcase of home craft: concrete timelines, transparent process, and a portfolio of completed build projects." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/craftsman-hero.png" />
   <meta property="twitter:card" content="summary_large_image" />
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
   <script type="application/ld+json">
@@ -26,16 +26,29 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "Tradesman Atelier",
-      "description": "Architectural fabrication and high-end custom building for premium residential and commercial projects.",
+      "description": "Home contractor and design-build services for additions, renovations, and custom builds.",
       "url": "https://tradesmanatelier.com",
-      "areaServed": "Worldwide",
-      "serviceType": "Architectural Fabrication"
+      "telephone": "+1-555-0148",
+      "email": "hello@tradesmanatelier.com",
+      "areaServed": "United States",
+      "serviceType": "General Contractor",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Reservations",
+        "telephone": "+1-555-0148",
+        "availableLanguage": ["English"]
+      }
     }
   </script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#home">Skip to content</a>
 
   <header class="site-header" data-header>
     <div class="container header-inner">
@@ -52,217 +65,238 @@
 
       <nav class="site-nav" id="site-nav" data-nav>
         <ul>
-          <li><a href="#services">Capabilities</a></li>
-          <li><a href="#work">Portfolio</a></li>
-          <li><a href="#process">The Method</a></li>
-          <li><a href="#about">The Studio</a></li>
-          <li><a href="#contact">Inquiry</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#workflow">Process</a></li>
+          <li><a href="#craft">Craft</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="#contact" class="header-cta">Begin a project</a>
+      <a href="#contact" class="header-cta">Start your build</a>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-spec" data-reveal>
-          <span>Established 2014</span>
-          <span>Bespoke Architectural Build</span>
-        </div>
-        <h1 data-reveal>
-          Monuments to <br>precise craftsmanship.
-        </h1>
-      </div>
-
-      <div class="container hero-split">
-        <div class="hero-copy" data-reveal>
-          <p class="hero-lead">
-            We are a high-end fabrication studio and building firm. We partner with architects and homeowners to execute
-            the most demanding physical details in timber, steel, and stone.
+      <div class="hero-fx" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker" data-reveal>Residential Contractors · Design-Build Execution</p>
+          <h1 data-reveal>
+            Build better.
+            <span>Repair smarter.</span>
+            <span>Craft with intention.</span>
+          </h1>
+          <p class="hero-lead" data-reveal>
+            Tradesman Atelier is a small, disciplined team focused on high-end home projects.
+            We handle everything from architectural plans and permitting through final cleanup,
+            so your home upgrade arrives on budget, on time, and exactly as promised.
           </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Start a Project</a>
-            <a href="#work" class="btn btn-secondary">View Work</a>
+          <div class="hero-actions" data-reveal>
+            <a href="#contact" class="btn btn-primary">Book a consult</a>
+            <a href="#work" class="btn btn-secondary">Explore projects</a>
           </div>
+
+          <ul class="hero-stats" data-reveal>
+            <li>
+              <strong data-counter data-counter-value="168">0</strong>
+              <span>Projects completed</span>
+            </li>
+            <li>
+              <strong data-counter data-counter-value="15">0</strong>
+              <span>Years renovating homes</span>
+            </li>
+            <li>
+              <strong data-counter data-counter-value="98" data-counter-suffix="%">0</strong>
+              <span>Client referrals</span>
+            </li>
+          </ul>
         </div>
 
         <figure class="hero-image" data-reveal>
-          <img src="/craftsman-hero.png" alt="Close-up of master craftsman assembly timber joinery on a workshop table"
-            loading="eager" decoding="async" />
-          <figcaption>Studio Profile: Master joinery in Black Walnut</figcaption>
+          <img src="/craftsman-hero.png" alt="Precision-crafted stair and railing restoration" loading="eager" decoding="async" />
+          <figcaption>Built details that hold up in real life for decades.</figcaption>
         </figure>
-      </div>
-
-      <div class="container">
-        <ul class="hero-stats" data-reveal>
-          <li>
-            <strong data-counter data-counter-value="142" data-counter-suffix="">142</strong>
-            <span>projects completed</span>
-          </li>
-          <li>
-            <strong data-counter data-counter-value="12" data-counter-suffix="">12</strong>
-            <span>years of craft</span>
-          </li>
-          <li>
-            <strong data-counter data-counter-value="0" data-counter-decimals="0"
-              data-counter-suffix=" tolerance">0</strong>
-            <span>compromise mindset</span>
-          </li>
-        </ul>
       </div>
     </section>
 
-    <section class="client-rail" aria-label="Our core disciplines">
+    <section class="specialty-strip" aria-label="Service areas">
       <div class="container">
-        <ul>
-          <li>Fine Woodworking</li>
-          <li>Custom Architectural Metalwork</li>
-          <li>Design-Build Construction</li>
-          <li>Material Innovation</li>
-          <li>Structural Restoration</li>
-        </ul>
+        <p>Kitchen • Bathroom • Additions • Roofing • Decks • Exterior rehab • Whole-home remodeling</p>
       </div>
     </section>
 
     <section class="services" id="services">
       <div class="container">
-        <div class="section-label" data-reveal>Capabilities</div>
+        <p class="section-label" data-reveal>What we do</p>
+        <div class="section-title-wrap" data-reveal>
+          <h2>Built for people who want fewer headaches and better outcomes.</h2>
+        </div>
 
-        <dl class="service-list">
-          <div class="service-list-item" data-reveal>
-            <span class="service-idx" aria-hidden="true">01</span>
-            <dt>Architectural Woodwork</dt>
-            <dd>From complex timber frame structures to seamless millwork and bespoke furniture installations.</dd>
-          </div>
-          <div class="service-list-item" data-reveal>
-            <span class="service-idx" aria-hidden="true">02</span>
-            <dt>Custom Metal Fabrication</dt>
-            <dd>Structural steel, architectural hardware, and hand-burnished patinas for residential and commercial
-              environments.</dd>
-          </div>
-          <div class="service-list-item" data-reveal>
-            <span class="service-idx" aria-hidden="true">03</span>
-            <dt>High-End General Contracting</dt>
-            <dd>We manage and execute full-scale residential builds with a focus on uncompromising physical quality.
-            </dd>
-          </div>
-          <div class="service-list-item" data-reveal>
-            <span class="service-idx" aria-hidden="true">04</span>
-            <dt>Design Consultation</dt>
-            <dd>Early-stage material advice and technical drafting to ensure complex designs are buildable and durable.
-            </dd>
-          </div>
-        </dl>
+        <div class="services-grid" data-reveal>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">01</p>
+            <h3>Full-Home Remodels</h3>
+            <p>Complete kitchen, bath, and floor-plan transformations managed end-to-end.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">02</p>
+            <h3>Room Additions</h3>
+            <p>Seamless room expansions with structural, mechanical, and finishes coordination.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">03</p>
+            <h3>Decks & Exterior Systems</h3>
+            <p>Weather-proof decks, porches, and façades designed for long-term performance.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">04</p>
+            <h3>Custom Fabrication</h3>
+            <p>Built-in cabinetry, railings, and details made by experienced hands with a modern eye.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">05</p>
+            <h3>Repair & Reliability</h3>
+            <p>Roof, structural, and finish repairs executed with transparent communication and timelines.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-step" aria-hidden="true">06</p>
+            <h3>Maintenance Planning</h3>
+            <p>Post-project care notes and annual walkthrough recommendations for owners.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="work" id="work">
+    <section class="portfolio" id="work">
       <div class="container">
-        <div class="work-header" data-reveal>
-          <h2 class="work-heading">Selected Portfolio</h2>
-          <span class="work-count">Featured Works</span>
+        <div class="section-title-wrap" data-reveal>
+          <p class="section-label">Selected work</p>
+          <h2>Proof in wood, concrete, and clean schedules.</h2>
+          <p class="section-copy">Recent jobs that moved from first sketch to occupied spaces with calm project management.</p>
         </div>
 
-        <article class="work-card work-card--featured" data-reveal>
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80"
-            alt="Modern architecturally designed timber house" loading="lazy" decoding="async" />
-          <div class="work-meta">
-            <p>Design-Build</p>
-            <h3>The Boulder Creek Residence</h3>
+        <article class="featured-project" data-reveal>
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f7c3d6f6b3?auto=format&fit=crop&w=1600&q=80"
+            alt="Modern kitchen remodel under renovation with artisan millwork" loading="lazy" decoding="async" />
+          <div class="project-meta">
+            <span>2026 · Renovation</span>
+            <h3>Greentree Family Residence</h3>
+            <p>Kitchen, bath package, and engineered entry extension.</p>
           </div>
         </article>
 
-        <div class="work-secondary">
-          <article class="work-card" data-reveal>
-            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80"
-              alt="Custom metal staircase in modern home" loading="lazy" decoding="async" />
-            <div class="work-meta">
-              <p>Metal Fabrication</p>
-              <h3>Helix Steel Staircase</h3>
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+              alt="Contemporary family room with built-in fireplace and timber beams" loading="lazy" decoding="async" />
+            <div class="project-meta project-meta--compact">
+              <span>2025 · Addition</span>
+              <h3>Ridgefield Sunroom + Deck</h3>
             </div>
           </article>
-          <article class="work-card" data-reveal>
-            <img src="https://images.unsplash.com/photo-1541888941257-2342df88022d?auto=format&fit=crop&w=1200&q=80"
-              alt="Detail of Japanese joinery" loading="lazy" decoding="async" />
-            <div class="work-meta">
-              <p>Fine Joinery</p>
-              <h3>Kyoto-Inspired Guest Suite</h3>
+          <article class="project-card" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1600585154506-5a0b0c0a9f4b?auto=format&fit=crop&w=1200&q=80"
+              alt="Exterior deck and railing work on timber-framed home" loading="lazy" decoding="async" />
+            <div class="project-meta project-meta--compact">
+              <span>2025 · Exterior</span>
+              <h3>Walnut Street Deck Rebuild</h3>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-8d8f8e3b5f8e?auto=format&fit=crop&w=1200&q=80"
+              alt="Bathroom renovation with warm wood and stone finish details" loading="lazy" decoding="async" />
+            <div class="project-meta project-meta--compact">
+              <span>2024 · Remodel</span>
+              <h3>Hillcrest Bath Transformation</h3>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="testimonial" id="testimonial">
+    <section class="workflow" id="workflow">
       <div class="container">
-        <blockquote class="pull-quote" data-reveal>
-          <span class="quote-glyph" aria-hidden="true">&ldquo;</span>
-          <div class="quote-content">
-            <p>Their attention to detail isn't just a marketing phrase—it is visible in every joint and every weld.
-              Truly world-class craft.</p>
-            <cite>Julian Thorne, Lead Architect at Thorne &amp; Associates</cite>
-          </div>
-        </blockquote>
-      </div>
-    </section>
+        <div class="section-title-wrap" data-reveal>
+          <p class="section-label">Execution model</p>
+          <h2>A predictable process that keeps everyone in sync.</h2>
+        </div>
 
-    <section class="process" id="process">
-      <div class="container">
-        <div class="section-label section-label--light" data-reveal>The Method</div>
-        <ol class="process-list">
+        <ol class="workflow-list">
           <li data-reveal>
-            <span class="process-num">01</span>
+            <span>01</span>
             <div>
-              <h3>Drafting</h3>
-              <p>High-fidelity technical drawings and material sourcing Strategy.</p>
+              <h3>Discovery & Scope</h3>
+              <p>We lock budget ranges, quality goals, and timeline at the first call, then map permits and dependencies.</p>
             </div>
           </li>
           <li data-reveal>
-            <span class="process-num">02</span>
+            <span>02</span>
             <div>
-              <h3>Fabrication</h3>
-              <p>Precise workshop execution using traditional methods and modern tech.</p>
+              <h3>Detailed Plan</h3>
+              <p>Drawings, materials, milestone list, and weekly check-ins before a single nail is lifted.</p>
             </div>
           </li>
           <li data-reveal>
-            <span class="process-num">03</span>
+            <span>03</span>
             <div>
-              <h3>Installation</h3>
-              <p>Surgical site integration and final finishing on-location.</p>
+              <h3>Build Phase</h3>
+              <p>Skilled crews execute with daily logs, safety checks, and clear field communication.</p>
             </div>
           </li>
           <li data-reveal>
-            <span class="process-num">04</span>
+            <span>04</span>
             <div>
-              <h3>Maintenance</h3>
-              <p>Long-term care documentation to ensure the craft ages gracefully.</p>
+              <h3>Final Reveal</h3>
+              <p>Final inspection, punch-list refinement, and handoff with long-term care recommendations.</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="container about-layout">
-        <div class="about-accent" aria-hidden="true"></div>
-        <div class="about-content" data-reveal>
-          <h2 class="about-statement">A studio built on the obsession of detail.</h2>
-          <p class="about-body">
-            At Tradesman Atelier, we believe the best work happens when the thinking and the doing are inseparable. Our
-            studio is or workshop—where every project is handled by master builders, not account managers.
+    <section class="craft" id="craft">
+      <div class="container craft-layout">
+        <div class="craft-copy" data-reveal>
+          <p class="section-label">Built to stand</p>
+          <h2>Craftsmanship isn’t a slogan for us.</h2>
+          <p>
+            We select every material for durability, weather behavior, and installability. We do not guess at lead times.
+            You get clear dates, proactive notices, and honest tradeoffs when conditions change.
           </p>
+          <ul>
+            <li>Licensed and bonded team members</li>
+            <li>Detailed scheduling and payment milestones</li>
+            <li>Detailed material tracking and source notes</li>
+            <li>Post-completion walkthrough and service options</li>
+          </ul>
         </div>
+
+        <aside class="craft-panel" data-reveal>
+          <p>“We don’t just finish projects. We finish them so they still look and perform like originals a decade later.”</p>
+          <strong>Project philosophy</strong>
+          <span>Durable choices, precise details, calm execution.</span>
+        </aside>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container contact-layout">
         <div data-reveal>
-          <h2 class="contact-heading">Discuss your next commission.</h2>
-          <p class="contact-sub">Directly connect with our studio leads to discuss architectural details, custom builds,
-            or complex fabrications.</p>
+          <p class="section-label">Next step</p>
+          <h2>Ready to start planning your project?</h2>
+          <p class="contact-sub">Send your brief and timeline. We reply with scope options and a realistic budget window.</p>
+
+          <div class="contact-links">
+            <a href="tel:+15550148">+1 (555) 011-48</a>
+            <a href="mailto:hello@tradesmanatelier.com">hello@tradesmanatelier.com</a>
+            <a href="https://maps.google.com/?q=United%20States" rel="noreferrer" target="_blank">Service area in the U.S.</a>
+          </div>
         </div>
 
         <form class="contact-form" data-inquiry-form novalidate data-reveal>
@@ -277,17 +311,16 @@
           </div>
 
           <div class="form-field">
-            <label for="company">Firm / Project Name</label>
-            <input id="company" name="company" type="text" autocomplete="organization" required />
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
           </div>
 
           <div class="form-field">
-            <label for="project">The Brief</label>
-            <textarea id="project" name="project" rows="4" required
-              placeholder="Tell us about the project, materials, and timeline."></textarea>
+            <label for="project">Project brief</label>
+            <textarea id="project" name="project" rows="4" required placeholder="Tell us about the scope, rooms, timeline, and budget range."></textarea>
           </div>
 
-          <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+          <button class="btn btn-primary" type="submit">Send inquiry</button>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -296,12 +329,12 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Tradesman Atelier. Master Builders & Fabricators.</p>
-      <div>
-        <a href="mailto:studio@tradesmanatelier.com">studio@tradesmanatelier.com</a>
-      </div>
+      <p><span aria-hidden="true">© </span><span data-year="">2026</span> Tradesman Atelier · Licensed Home Contractor.</p>
+      <a href="#home">Back to top</a>
     </div>
   </footer>
+
+  <a class="floating-cta" href="#contact" aria-label="Jump to inquiry form">Book consult</a>
 
   <script type="module" src="/src/main.js"></script>
 </body>

@@ -25,6 +25,7 @@ USER_AGENT = "Mozilla/5.0 (compatible; TandemLocalClone/1.0)"
 
 URL_PATTERN = re.compile(r"https?://[^\s\"'<>]+|//[^\s\"'<>]+")
 CSS_URL_PATTERN = re.compile(r"url\(\s*(?P<q>['\"]?)(?P<u>[^)'\"]+)(?P=q)\s*\)")
+SRI_ATTR_PATTERN = re.compile(r'\s(?:integrity|crossorigin)="[^"]*"')
 
 url_to_local: dict[str, Path] = {}
 local_to_url: dict[Path, str] = {}
@@ -155,6 +156,11 @@ def apply_replacements(content: str, replacements: dict[str, str]) -> str:
     return result
 
 
+def sanitize_html(content: str) -> str:
+    """Strip SRI attributes that break locally mirrored assets."""
+    return SRI_ATTR_PATTERN.sub("", content)
+
+
 def process_css_file(css_path: Path) -> None:
     source_url = local_to_url.get(css_path)
     if source_url is None:
@@ -227,6 +233,7 @@ def clone_route(route: str) -> Path:
             replacements[candidate] = internal
 
     localized = apply_replacements(html_text, replacements)
+    localized = sanitize_html(localized)
     output_path.write_text(localized, encoding="utf-8")
     return output_path
 

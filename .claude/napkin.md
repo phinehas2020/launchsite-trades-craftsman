@@ -75,6 +75,18 @@
 - For launch-first one-page builds, keeping semantic sections (`hero`, `services`, `portfolio`, `process`, `contact`) and sticky nav anchors gives immediate conversion clarity.
 - Replacing generic backgrounds with a controlled gradient + texture layer adds atmosphere without heavy animation overhead.
 
+## 2026-03-03 Heritage Youth Missions Content Swap
+
+- Rebranded Tandem clone to Heritage Youth Missions: mission trips, discipleship, community partnerships.
+- **HYM brand colors applied**: #C5221F (red), #F5A623 (yellow). Hero background cycles between these; cards is-1 → yellow, is-3 → red; timeline section → light yellow tint; link hovers → red.
+- index.html: hero, Built Together, grid, How We Differ, project CTAs (Haiti, Honduras), All-In Commitment, timeline, footer.
+- what-we-do: Mission Trips, Discipleship, Community Partnerships sections with missions-focused copy.
+- contact: "Let's serve together", church/youth leader/volunteer/supporter audience, HYM meta.
+- team: HYM meta; titles mapped (Director of Mission Trips, Discipleship, Community Partnerships).
+- portfolio: HYM meta; project names (Avenir, Avra, Sage, MODE, Tampa) kept for now—detailed descriptions still real-estate; footer links use #avenir etc.
+- Footer anchor: /what-we-do#development → /what-we-do#property-development (matches section id).
+- Curly apostrophes (') in HTML cause search_replace failures; use sed with . or character class for portability.
+
 ## 2026-03-03 Deploy Reliability Notes
 
 - User preference: when pushing/deploying, use plain Git CLI flow and avoid SSH-specific detours.

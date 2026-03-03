@@ -1,0 +1,307 @@
+{
+  "captured_at_utc": "2026-03-03T00:38:29.196717+00:00",
+  "keyframes": [
+    {
+      "name": "spin",
+      "frames": [
+        {
+          "keyText": "0%",
+          "style": "transform: rotate(0deg);"
+        },
+        {
+          "keyText": "100%",
+          "style": "transform: rotate(360deg);"
+        }
+      ]
+    }
+  ],
+  "animated_elements": [
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image.is-square:nth-of-type(1)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(2)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(3)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(4)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image.is-square:nth-of-type(5)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(6)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(7)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image.is-square:nth-of-type(8)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(9)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(10)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(1) > img.hero_marquee-image:nth-of-type(11)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image.is-square:nth-of-type(1)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(2)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(3)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(4)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image.is-square:nth-of-type(5)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(6)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(7)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image.is-square:nth-of-type(8)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(9)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(10)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "section.section_hero:nth-of-type(1) > div.hero_marquee:nth-of-type(2) > div.hero_marquee-wrapper:nth-of-type(2) > div.hero_marquee-inner > div.hero_marquee-track:nth-of-type(2) > img.hero_marquee-image:nth-of-type(11)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.4s",
+      "transitionTimingFunction": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "main.main-wrapper > section.section_cta:nth-of-type(12) > div.cta_wrapper:nth-of-type(2) > div.cta_block.is-1 > div.cta_block-bottom:nth-of-type(2) > div.cta_bottom-image-wrapper.is-1:nth-of-type(1)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "filter",
+      "transitionDuration": "0.6s",
+      "transitionTimingFunction": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "main.main-wrapper > section.section_cta:nth-of-type(12) > div.cta_wrapper:nth-of-type(2) > div.cta_block.is-1 > div.cta_block-bottom:nth-of-type(2) > div.cta_bottom-image-wrapper.is-2:nth-of-type(2)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "filter",
+      "transitionDuration": "0.6s",
+      "transitionTimingFunction": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "main.main-wrapper > section.section_cta:nth-of-type(12) > div.cta_wrapper:nth-of-type(2) > div.cta_block.is-1 > div.cta_block-bottom:nth-of-type(2) > div.cta_bottom-image-wrapper.is-3:nth-of-type(3)",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "filter",
+      "transitionDuration": "0.6s",
+      "transitionTimingFunction": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "transitionDelay": "0s"
+    },
+    {
+      "selector": "div.footer_block.is-6:nth-of-type(6) > div.footer_inner > div.footer_form-block.w-form > form.footer_form > div.footer_form-bottom-wrapper:nth-of-type(4) > input.footer_form-button.w-button",
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationTimingFunction": "ease",
+      "animationDelay": "0s",
+      "transitionProperty": "all",
+      "transitionDuration": "0.25s",
+      "transitionTimingFunction": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+      "transitionDelay": "0s"
+    }
+  ],
+  "web_animations": []
+}

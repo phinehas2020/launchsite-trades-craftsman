@@ -1,0 +1,1556 @@
+{
+  "captured_at_utc": "2026-03-03T00:39:42.502521+00:00",
+  "input_url": "https://www.thetandemco.com",
+  "final_url": "https://www.thetandemco.com/",
+  "title": "Tandem – Building Common Ground",
+  "lang": null,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "files": {
+    "rendered_html": "rendered.html",
+    "collected_css": "collected.css",
+    "animations": "animations.json",
+    "asset_urls": "asset_urls.txt",
+    "screenshot": "reference.png"
+  },
+  "capture_summary": {
+    "css_rule_count": 948,
+    "inline_style_block_count": 7,
+    "animated_element_count": 26,
+    "web_animation_count": 0,
+    "stylesheet_error_count": 0
+  },
+  "links": {
+    "stylesheets": [
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css"
+    ],
+    "scripts": [
+      "https://challenges.cloudflare.com/turnstile/v0/api.js",
+      "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=688b2b7f61d51fc0f60ed9e2",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.36b8fb49256177c8.js",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.3bbe04f2a590d904.js",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.03aad7cc.7bc30c51c0cd035f.js",
+      "https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js",
+      "https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js",
+      "https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js"
+    ],
+    "media": [
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b3378a4dc696fbd4bbaa2_tandem_lockup.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b3378a4dc696fbd4bbaa2_tandem_lockup.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad4ee8c4d17f9c0f6f_Marquee_Mode_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad4ee8c4d17f9c0f6f_Marquee_Mode_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-transcode.mp4",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-transcode.webm",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea24cc5908532a848666_circle-1.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea3c29f1da9e4e4a4196_circle-2.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea469df353f89d1ae16b_circle-3.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891eb60fcd75d4e39b802dd_triangle-1.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ebb49256794e1c25fe42_triangle-2.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef805c0b212f720c1382_arrow_3.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef754df483f82531ea03_arrow_2.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef69e3d93ad17e2cda8d_arrow_1.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6893173cc957cd8bd5c413c8_ProjectCTA_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689350779f358c8c74905f40_tandem-logo.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68930adb6d8cbf994383be27_lines.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689217e35bb4661006df4be6_ProjectCTA_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eebdc4a5363c90f5a0_tandem_timeline_3.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee4950e5825be85136_tandem_timeline_7.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eebdc4a5363c90f5a0_tandem_timeline_3.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef97d43290d72ba5cc_tandem_timeline_5.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee4950e5825be85136_tandem_timeline_7.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e1111bba933c0488a_portrait_3.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9fa_portrait_4.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7e940305d00aaad087ece_cta_portrait_6.jpg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251da6ec3bdbe53e5724_portrait_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9e3_portrait_6.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e21dd7ff3a78bb383_portrait_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c83e0a9600b13a5bcbda0_tandem_logotype.svg",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c825cb06a2a88112451e3_tandem_symbol.svg"
+    ],
+    "srcset": [
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-1080.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-500.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-800.avif",
+      "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3.avif"
+    ]
+  },
+  "fonts": [
+    {
+      "family": "webflow-icons",
+      "style": "normal",
+      "weight": "400",
+      "status": "unloaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "normal",
+      "weight": "800",
+      "status": "loaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "normal",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "italic",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Season Serif",
+      "style": "normal",
+      "weight": "300",
+      "status": "unloaded"
+    },
+    {
+      "family": "Season Serif",
+      "style": "italic",
+      "weight": "300",
+      "status": "unloaded"
+    },
+    {
+      "family": "Season Serif",
+      "style": "normal",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Season Serif",
+      "style": "italic",
+      "weight": "400",
+      "status": "unloaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "italic",
+      "weight": "800",
+      "status": "unloaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "normal",
+      "weight": "700",
+      "status": "loaded"
+    },
+    {
+      "family": "Sohne",
+      "style": "italic",
+      "weight": "700",
+      "status": "unloaded"
+    }
+  ],
+  "stylesheet_errors": [],
+  "assets": {
+    "downloaded": [
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-poster-00001.jpg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2_2F68b98c8a91dfc86adfb56778_Tandem_20Reel_20V4-poster-00001.jpg",
+        "bytes": 15284,
+        "content_type": "image/jpeg"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-transcode.mp4",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2_2F68b98c8a91dfc86adfb56778_Tandem_20Reel_20V4-transcode.mp4",
+        "bytes": 7511840,
+        "content_type": "video/mp4"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-transcode.webm",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2_2F68b98c8a91dfc86adfb56778_Tandem_20Reel_20V4-transcode.webm",
+        "bytes": 7767671,
+        "content_type": "video/webm"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b2f4d3b476e3b54ac601e_SeasonSerifTRIAL-Regular.otf",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b2f4d3b476e3b54ac601e_SeasonSerifTRIAL-Regular.otf",
+        "bytes": 103224,
+        "content_type": "font/otf"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b305173913a4a479ecf0c_TestSo%CC%88hne-Kra%CC%88ftig.otf",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b305173913a4a479ecf0c_TestSo_CC_88hne-Kra_CC_88ftig.otf",
+        "bytes": 11952,
+        "content_type": "font/otf"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b3378a4dc696fbd4bbaa2_tandem_lockup.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b3378a4dc696fbd4bbaa2_tandem_lockup.svg",
+        "bytes": 9251,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1-p-500.avif",
+        "bytes": 28266,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+        "bytes": 36048,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-500.avif",
+        "bytes": 30060,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2-p-800.avif",
+        "bytes": 70030,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+        "bytes": 95602,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-500.avif",
+        "bytes": 25956,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2-p-800.avif",
+        "bytes": 61514,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad23cd4e3035233270_Marquee_Sage_2-2.avif",
+        "bytes": 82747,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-500.avif",
+        "bytes": 45752,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2-p-800.avif",
+        "bytes": 105446,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+        "bytes": 129481,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad4ee8c4d17f9c0f6f_Marquee_Mode_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad4ee8c4d17f9c0f6f_Marquee_Mode_1.avif",
+        "bytes": 207479,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-500.avif",
+        "bytes": 27632,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1-p-800.avif",
+        "bytes": 67170,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+        "bytes": 85278,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-500.avif",
+        "bytes": 20574,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2-p-800.avif",
+        "bytes": 53168,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+        "bytes": 61678,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1-p-500.avif",
+        "bytes": 75062,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+        "bytes": 140770,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1-p-500.avif",
+        "bytes": 22154,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+        "bytes": 22506,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea24cc5908532a848666_circle-1.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea24cc5908532a848666_circle-1.svg",
+        "bytes": 9955,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea3c29f1da9e4e4a4196_circle-2.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea3c29f1da9e4e4a4196_circle-2.svg",
+        "bytes": 14720,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea469df353f89d1ae16b_circle-3.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea469df353f89d1ae16b_circle-3.svg",
+        "bytes": 14808,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891eb60fcd75d4e39b802dd_triangle-1.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891eb60fcd75d4e39b802dd_triangle-1.svg",
+        "bytes": 2375,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ebb49256794e1c25fe42_triangle-2.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ebb49256794e1c25fe42_triangle-2.svg",
+        "bytes": 2116,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef69e3d93ad17e2cda8d_arrow_1.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef69e3d93ad17e2cda8d_arrow_1.svg",
+        "bytes": 751,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef754df483f82531ea03_arrow_2.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef754df483f82531ea03_arrow_2.svg",
+        "bytes": 14195,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef805c0b212f720c1382_arrow_3.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef805c0b212f720c1382_arrow_3.svg",
+        "bytes": 14190,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689217e35bb4661006df4be6_ProjectCTA_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689217e35bb4661006df4be6_ProjectCTA_1.avif",
+        "bytes": 108162,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68930adb6d8cbf994383be27_lines.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68930adb6d8cbf994383be27_lines.svg",
+        "bytes": 442,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6893173cc957cd8bd5c413c8_ProjectCTA_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6893173cc957cd8bd5c413c8_ProjectCTA_2.avif",
+        "bytes": 197931,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689350779f358c8c74905f40_tandem-logo.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689350779f358c8c74905f40_tandem-logo.svg",
+        "bytes": 3620,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-1080.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-1080.avif",
+        "bytes": 78378,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-500.avif",
+        "bytes": 14010,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1-p-800.avif",
+        "bytes": 35292,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f66d6bcdf2de17121499_Tandem_Timeline_1.avif",
+        "bytes": 234721,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-500.avif",
+        "bytes": 30578,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6-p-800.avif",
+        "bytes": 56158,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee2a3cdbf6e5e059ab_tandem_timeline_6.avif",
+        "bytes": 57498,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9-p-500.avif",
+        "bytes": 18576,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee332d5ad77796d461_tandem_timeline_9.avif",
+        "bytes": 31832,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee4950e5825be85136_tandem_timeline_7.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee4950e5825be85136_tandem_timeline_7.avif",
+        "bytes": 12445,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-500.avif",
+        "bytes": 14388,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2-p-800.avif",
+        "bytes": 31592,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee7cbd88d4b7b2be89_tandem_timeline_2.avif",
+        "bytes": 39754,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-500.avif",
+        "bytes": 22976,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8-p-800.avif",
+        "bytes": 47890,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ee801af000b7cd7aea_tandem_timeline_8.avif",
+        "bytes": 55797,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eebdc4a5363c90f5a0_tandem_timeline_3.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eebdc4a5363c90f5a0_tandem_timeline_3.avif",
+        "bytes": 48411,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-500.avif",
+        "bytes": 12376,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12-p-800.avif",
+        "bytes": 25046,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef339d047801881d15_tandem_timeline_12.avif",
+        "bytes": 34519,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-1080.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-1080.avif",
+        "bytes": 97562,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-500.avif",
+        "bytes": 27256,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10-p-800.avif",
+        "bytes": 59532,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef399cdfb370410d8e_tandem_timeline_10.avif",
+        "bytes": 101109,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-1080.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-1080.avif",
+        "bytes": 100616,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-500.avif",
+        "bytes": 26814,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13-p-800.avif",
+        "bytes": 59476,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef39f4ccce7a36ea09_tandem_timeline_13.avif",
+        "bytes": 102921,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-1080.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-1080.avif",
+        "bytes": 86406,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-500.avif",
+        "bytes": 23714,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17-p-800.avif",
+        "bytes": 54310,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef41c9c9cdd6398fe7_tandem_timeline_17.avif",
+        "bytes": 89454,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-500.avif",
+        "bytes": 30054,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16-p-800.avif",
+        "bytes": 67480,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef48a7897506b4be47_tandem_timeline_16.avif",
+        "bytes": 98059,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11-p-500.avif",
+        "bytes": 60822,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef8b1106be1f022523_tandem_timeline_11.avif",
+        "bytes": 133576,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef97d43290d72ba5cc_tandem_timeline_5.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8ef97d43290d72ba5cc_tandem_timeline_5.avif",
+        "bytes": 80028,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15-p-500.avif",
+        "bytes": 34190,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8efd641ccb3a547e66f_tandem_timeline_15.avif",
+        "bytes": 50929,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4-p-500.avif",
+        "bytes": 72950,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8eff6cf4ede16799ec1_tandem_timeline_4.avif",
+        "bytes": 136784,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-1080.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-1080.avif",
+        "bytes": 97088,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-500.avif",
+        "bytes": 24154,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14-p-800.avif",
+        "bytes": 56552,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8effaa67ffbe71da4c1_tandem_timeline_14.avif",
+        "bytes": 106093,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-500.avif",
+        "bytes": 22392,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18-p-800.avif",
+        "bytes": 37956,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6899f8f029293be21e8f079c_tandem_timeline_18.avif",
+        "bytes": 39802,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-500.avif",
+        "bytes": 18344,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3-p-800.avif",
+        "bytes": 44086,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3.avif",
+        "bytes": 61298,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-500.avif",
+        "bytes": 21318,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1-p-800.avif",
+        "bytes": 52074,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1.avif",
+        "bytes": 78287,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-500.avif",
+        "bytes": 19506,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2-p-800.avif",
+        "bytes": 47800,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2.avif",
+        "bytes": 61253,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c825cb06a2a88112451e3_tandem_symbol.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c825cb06a2a88112451e3_tandem_symbol.svg",
+        "bytes": 8085,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c83e0a9600b13a5bcbda0_tandem_logotype.svg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c83e0a9600b13a5bcbda0_tandem_logotype.svg",
+        "bytes": 4953,
+        "content_type": "image/svg+xml"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68a6f057b33cd4ecbc79c85b_soehne-web-halbfett.ttf",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68a6f057b33cd4ecbc79c85b_soehne-web-halbfett.ttf",
+        "bytes": 108176,
+        "content_type": "font/ttf"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251da6ec3bdbe53e5724_portrait_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251da6ec3bdbe53e5724_portrait_1.avif",
+        "bytes": 8313,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9e3_portrait_6.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9e3_portrait_6.avif",
+        "bytes": 5627,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9fa_portrait_4.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9fa_portrait_4.avif",
+        "bytes": 4299,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e1111bba933c0488a_portrait_3.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e1111bba933c0488a_portrait_3.avif",
+        "bytes": 9348,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e21dd7ff3a78bb383_portrait_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e21dd7ff3a78bb383_portrait_2.avif",
+        "bytes": 13328,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027af738fc57555d69e94_soehne-web-buch-kursiv.ttf",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027af738fc57555d69e94_soehne-web-buch-kursiv.ttf",
+        "bytes": 107936,
+        "content_type": "font/ttf"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027b0e8d3ada73a438bbc_soehne-web-buch.ttf",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027b0e8d3ada73a438bbc_soehne-web-buch.ttf",
+        "bytes": 107028,
+        "content_type": "font/ttf"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-500.avif",
+        "bytes": 19820,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20-p-800.avif",
+        "bytes": 41090,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7d45b9b40ad39ece7a634_tandem_timeline_20.avif",
+        "bytes": 54567,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7e940305d00aaad087ece_cta_portrait_6.jpg",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7e940305d00aaad087ece_cta_portrait_6.jpg",
+        "bytes": 153627,
+        "content_type": "image/jpeg"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-500.avif",
+        "bytes": 34038,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2-p-800.avif",
+        "bytes": 74440,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+        "bytes": 76110,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-500.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-500.avif",
+        "bytes": 39858,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-800.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1-p-800.avif",
+        "bytes": 88146,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+        "bytes": 105339,
+        "content_type": "image/avif"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css",
+        "bytes": 120350,
+        "content_type": "text/css"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.03aad7cc.7bc30c51c0cd035f.js",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.03aad7cc.7bc30c51c0cd035f.js",
+        "bytes": 4917,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.36b8fb49256177c8.js",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.36b8fb49256177c8.js",
+        "bytes": 41429,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.3bbe04f2a590d904.js",
+        "path": "assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.3bbe04f2a590d904.js",
+        "bytes": 315545,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js",
+        "path": "assets/cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js",
+        "bytes": 44235,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js",
+        "path": "assets/cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js",
+        "bytes": 7779,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js",
+        "path": "assets/cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js",
+        "bytes": 72779,
+        "content_type": "text/javascript"
+      },
+      {
+        "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/cmg/1",
+        "path": "assets/challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/cmg/1",
+        "bytes": 86,
+        "content_type": "image/png"
+      },
+      {
+        "url": "https://challenges.cloudflare.com/turnstile/v0/api.js",
+        "path": "assets/challenges.cloudflare.com/turnstile/v0/api.js",
+        "bytes": 51125,
+        "content_type": "application/javascript; charset=UTF-8"
+      },
+      {
+        "url": "https://challenges.cloudflare.com/turnstile/v0/g/ea2d291c0fdc/api.js",
+        "path": "assets/challenges.cloudflare.com/turnstile/v0/g/ea2d291c0fdc/api.js",
+        "bytes": 51125,
+        "content_type": "application/javascript; charset=UTF-8"
+      },
+      {
+        "url": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=688b2b7f61d51fc0f60ed9e2",
+        "path": "assets/d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js__q_site_688b2b7f61d51fc0f60ed9e2",
+        "bytes": 89476,
+        "content_type": "application/javascript"
+      }
+    ],
+    "skipped": [
+      {
+        "url": "blob:https://challenges.cloudflare.com/c3439264-b28d-4a5d-bbce-fdc7ae4b3244",
+        "reason": "third_party_blocked"
+      }
+    ],
+    "failed": []
+  },
+  "network_sample": [
+    {
+      "url": "https://www.thetandemco.com/",
+      "status": 200,
+      "resource_type": "document",
+      "method": "GET",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68930adb6d8cbf994383be27_lines.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css",
+      "status": 200,
+      "resource_type": "stylesheet",
+      "method": "GET",
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=688b2b7f61d51fc0f60ed9e2",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.36b8fb49256177c8.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.03aad7cc.7bc30c51c0cd035f.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-poster-00001.jpg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adcee45ceb0e476b88_Marquee_Sage_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/js/webflow.schunk.3bbe04f2a590d904.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adfbd0ee462990ba8d_Marquee_Avenir_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b3378a4dc696fbd4bbaa2_tandem_lockup.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79adaaf0231d345f89cb_Marquee_Sage_2-1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57e49c83c3eb49b9d9_Marquee_New_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ac75254f069b82a660_Marquee_Avra_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad4ee8c4d17f9c0f6f_Marquee_Mode_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68d3bc57631376bbcc28aa12_Marquee_New_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79add090d33d6fb5be33_Marquee_Sage_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad2df6acb4e758b422_Marquee_Avenir_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b79ad049ef9607b73a078_Marquee_Avra_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef805c0b212f720c1382_arrow_3.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef754df483f82531ea03_arrow_2.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ef69e3d93ad17e2cda8d_arrow_1.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2%2F68b98c8a91dfc86adfb56778_Tandem%20Reel%20V4-transcode.mp4",
+      "status": 206,
+      "resource_type": "media",
+      "method": "GET",
+      "content_type": "video/mp4"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b2f4d3b476e3b54ac601e_SeasonSerifTRIAL-Regular.otf",
+      "status": 200,
+      "resource_type": "font",
+      "method": "GET",
+      "content_type": "font/otf"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/688b305173913a4a479ecf0c_TestSo%CC%88hne-Kra%CC%88ftig.otf",
+      "status": 200,
+      "resource_type": "font",
+      "method": "GET",
+      "content_type": "font/otf"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/turnstile/v0/api.js",
+      "status": 302,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027b0e8d3ada73a438bbc_soehne-web-buch.ttf",
+      "status": 200,
+      "resource_type": "font",
+      "method": "GET",
+      "content_type": "font/ttf"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea24cc5908532a848666_circle-1.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6893173cc957cd8bd5c413c8_ProjectCTA_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea3c29f1da9e4e4a4196_circle-2.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ea469df353f89d1ae16b_circle-3.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891ebb49256794e1c25fe42_triangle-2.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/6891eb60fcd75d4e39b802dd_triangle-1.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/turnstile/v0/g/ea2d291c0fdc/api.js",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689350779f358c8c74905f40_tandem-logo.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689217e35bb4661006df4be6_ProjectCTA_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/f/ov2/av0/rch/9uhlq/0x4AAAAAAAQTptj2So4dx43e/auto/fbE/new/normal?lang=auto",
+      "status": 200,
+      "resource_type": "document",
+      "method": "GET",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68a6f057b33cd4ecbc79c85b_soehne-web-halbfett.ttf",
+      "status": 200,
+      "resource_type": "font",
+      "method": "GET",
+      "content_type": "font/ttf"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/cmg/1",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/flow/ov1/1688324782:1772496581:tdpnk_VWenmK-09ToVRZYo6p6MKJFkG3aEVYZSJEFlQ/9d6493d63c704760/H4JDrRaOzGRTczDdUO6BETB8WukbmfYZY.KnVzD0y9w-1772498297-1.2.1.1-6a2UxMQWwdfzMUaE7AMrrqStBLkcuebGF5AbeKIv9jNxAEst.KL9fgiggn28RyJx",
+      "status": 200,
+      "resource_type": "xhr",
+      "method": "POST",
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b17a2905321cf04a65_cta_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36c88be7a3ad64f8bdeb_cta_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689b36b1032bfbc912a59c0f_cta_3.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e1111bba933c0488a_portrait_3.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9fa_portrait_4.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68c7e940305d00aaad087ece_cta_portrait_6.jpg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251da6ec3bdbe53e5724_portrait_1.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251dd8369acd19b4f9e3_portrait_6.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b0251e21dd7ff3a78bb383_portrait_2.avif",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/avif"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c83e0a9600b13a5bcbda0_tandem_logotype.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/689c825cb06a2a88112451e3_tandem_symbol.svg",
+      "status": 200,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "blob:https://challenges.cloudflare.com/c3439264-b28d-4a5d-bbce-fdc7ae4b3244",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/d/9d6493d63c704760/1772498297571/GkXXxocmxsgyJQ9",
+      "status": 400,
+      "resource_type": "image",
+      "method": "GET",
+      "content_type": "application/json"
+    },
+    {
+      "url": "blob:https://challenges.cloudflare.com/c3439264-b28d-4a5d-bbce-fdc7ae4b3244",
+      "status": 200,
+      "resource_type": "script",
+      "method": "GET",
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/9d6493d63c704760/1772498297573/5a0a1ed9a5595fe759a64372c7844effebe624283ff5a25d8387975fa0d5dcd2/aLu_8cH1qkV6_JP",
+      "status": 400,
+      "resource_type": "fetch",
+      "method": "GET",
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/68b027af738fc57555d69e94_soehne-web-buch-kursiv.ttf",
+      "status": 200,
+      "resource_type": "font",
+      "method": "GET",
+      "content_type": "font/ttf"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/flow/ov1/1688324782:1772496581:tdpnk_VWenmK-09ToVRZYo6p6MKJFkG3aEVYZSJEFlQ/9d6493d63c704760/H4JDrRaOzGRTczDdUO6BETB8WukbmfYZY.KnVzD0y9w-1772498297-1.2.1.1-6a2UxMQWwdfzMUaE7AMrrqStBLkcuebGF5AbeKIv9jNxAEst.KL9fgiggn28RyJx",
+      "status": 400,
+      "resource_type": "xhr",
+      "method": "POST",
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/f/ov2/av0/rchyYiPnRm7ZJKC79OfqYBN.oXMF58GSZM8Iic.OUNSyTU-1772498297-1.3.1.1-F.DyxR9gh62dleFcHpCNblVTgUTzsf0VN6WbllwIBJ4/9uhlq/0x4AAAAAAAQTptj2So4dx43e/auto/fbE/failure_retry/normal?lang=auto",
+      "status": 200,
+      "resource_type": "document",
+      "method": "GET",
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "notes": [
+    "Backend behavior is not cloned by this capture.",
+    "Cross-origin stylesheet rules may be restricted by browser security and appear in stylesheet_errors.",
+    "For multi-page sites, run capture per route and merge shared assets/components."
+  ]
+}

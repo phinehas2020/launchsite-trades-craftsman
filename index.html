@@ -4,44 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riverbend Custom Homes | Home Contractor & Design-Builder</title>
+  <title>Craftsman – Built With Care</title>
   <meta name="description"
-    content="Riverbend Custom Homes is a home contractor and design-build team based in the U.S., specializing in additions, remodels, and fully custom homes. Built with precision, launched with care." />
-  <meta name="theme-color" content="#14120f" />
-  <meta property="og:title" content="Riverbend Custom Homes | Home Contractor & Design-Builder" />
+    content="Custom home builders and remodelers. We build lasting partnerships with homeowners through craftsmanship, transparency, and accountability." />
+  <meta name="theme-color" content="#f7f7f0" />
+  <meta property="og:title" content="Craftsman – Built With Care" />
   <meta property="og:description"
-    content="One-page showcase of home craft: concrete timelines, transparent process, and a portfolio of completed build projects." />
+    content="Custom home builders and remodelers. Doing right by those who trust us isn't a strategy — it's the only way we know how to work." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/craftsman-hero.png" />
-  <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
   <link rel="stylesheet" href="/src/style.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Riverbend Custom Homes",
-      "description": "Home contractor and design-build services for additions, renovations, and custom builds.",
-      "url": "https://riverbendcustomhomes.com",
-      "telephone": "+1-555-0148",
-      "email": "hello@riverbendcustomhomes.com",
-      "areaServed": "United States",
-      "serviceType": "General Contractor",
-      "priceRange": "$$",
+      "@type": "LocalBusiness",
+      "name": "Craftsman",
+      "description": "Custom home builders and remodelers. Remodeling, additions, kitchen and bath, custom builds.",
+      "url": "https://craftsman.example.com",
+      "foundingDate": "2010",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60601"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "Reservations",
-        "telephone": "+1-555-0148",
-        "availableLanguage": ["English"]
+        "telephone": "+1-312-555-0100",
+        "email": "hello@craftsman.example.com",
+        "contactType": "General Inquiries",
+        "areaServed": "Chicago Metro"
       }
     }
   </script>
@@ -50,11 +44,10 @@
 <body>
   <a class="skip-link" href="#home">Skip to content</a>
 
-  <header class="site-header" data-header>
+  <header class="site-header nav_component" data-header>
     <div class="container header-inner">
-      <a href="#home" class="brand" aria-label="Riverbend Custom Homes home">
-        <span class="brand-mark" aria-hidden="true">RCH</span>
-        <span class="brand-text">Riverbend Custom Homes</span>
+      <a href="#home" class="brand" aria-label="Craftsman home">
+        <span class="brand-text">Craftsman</span>
       </a>
 
       <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false" aria-controls="site-nav"
@@ -65,283 +58,351 @@
 
       <nav class="site-nav" id="site-nav" data-nav>
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Projects</a></li>
-          <li><a href="#workflow">Process</a></li>
-          <li><a href="#craft">Craft</a></li>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#process">Our process</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
-      <a href="#contact" class="header-cta">Start your build</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-fx" aria-hidden="true"></div>
-      <div class="hero-background" aria-hidden="true">
-        <img src="/riverbend-hero.png" alt="Stunning exterior of a luxury custom modern mountain home at twilight"
-          loading="eager" decoding="async" />
-        <div class="hero-overlay"></div>
+  <main class="main-wrapper">
+    <section class="section_hero" id="home">
+      <div class="hero_top-wrapper">
+        <div class="hero_top" data-reveal>
+          <h1 class="text-regular">Custom home builders and remodelers</h1>
+          <h2 class="hero_heading h-display">Doing <span class="hero_heading-slant">right</span> by those who trust us isn't a strategy — it's the <span class="hero_heading-slant">only</span> way we know how to work.</h2>
+        </div>
       </div>
-      <div class="container">
-        <div class="hero-copy hero-copy--light">
-          <p class="hero-kicker" data-reveal>Residential Contractors · Design-Build Execution</p>
-          <h1 data-reveal>
-            Build better.
-            <span>Live beautifully.</span>
-            <span>Craft your legacy.</span>
-          </h1>
-          <p class="hero-lead" data-reveal>
-            Riverbend Custom Homes is a small, disciplined team focused on high-end custom home builds.
-            We handle everything from architectural plans and permitting through final cleanup,
-            so your home upgrade arrives on budget, on time, and exactly as promised.
-          </p>
-          <div class="hero-actions" data-reveal>
-            <a href="#contact" class="btn btn-primary">Book a consult</a>
-            <a href="#work" class="btn btn-secondary btn-outline">Explore projects</a>
+
+      <div class="hero_marquee">
+        <div class="hero_furniture" data-reveal>
+          <div class="hero_furniture-block">
+            <div class="hero_furniture-text">Serving Chicago & suburbs</div>
           </div>
-
-          <ul class="hero-stats" data-reveal>
-            <li>
-              <strong data-counter data-counter-value="168">0</strong>
-              <span>Projects completed</span>
-            </li>
-            <li>
-              <strong data-counter data-counter-value="15">0</strong>
-              <span>Years renovating homes</span>
-            </li>
-            <li>
-              <strong data-counter data-counter-value="98" data-counter-suffix="%">0</strong>
-              <span>Client referrals</span>
-            </li>
-          </ul>
+          <div class="hero_furniture-block">
+            <div class="hero_furniture-text">Craftsman © Since 2010</div>
+          </div>
         </div>
 
-
-      </div>
-    </section>
-
-    <section class="specialty-strip" aria-label="Service areas">
-      <div class="container">
-        <p>Kitchen • Bathroom • Additions • Roofing • Decks • Exterior rehab • Whole-home remodeling</p>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container">
-        <p class="section-label" data-reveal>What we do</p>
-        <div class="section-title-wrap" data-reveal>
-          <h2>Built for people who want fewer headaches and better outcomes.</h2>
+        <div class="hero_marquee-wrapper" data-marquee>
+          <div class="hero_marquee-inner">
+            <div class="hero_marquee-track">
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" alt="Kitchen remodel" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Modern home exterior" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="Bathroom renovation" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800" alt="Living room addition" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800" alt="Custom cabinetry" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800" alt="Home construction" loading="lazy" />
+            </div>
+            <div class="hero_marquee-track" aria-hidden="true">
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" alt="" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800" alt="" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800" alt="" loading="lazy" />
+              <img class="hero_marquee-image" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800" alt="" loading="lazy" />
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="hero_background"></div>
+    </section>
 
-        <div class="services-grid" data-reveal>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">01</p>
-            <h3>Full-Home Remodels</h3>
-            <p>Complete kitchen, bath, and floor-plan transformations managed end-to-end.</p>
-          </article>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">02</p>
-            <h3>Room Additions</h3>
-            <p>Seamless room expansions with structural, mechanical, and finishes coordination.</p>
-          </article>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">03</p>
-            <h3>Decks & Exterior Systems</h3>
-            <p>Weather-proof decks, porches, and façades designed for long-term performance.</p>
-          </article>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">04</p>
-            <h3>Custom Fabrication</h3>
-            <p>Built-in cabinetry, railings, and details made by experienced hands with a modern eye.</p>
-          </article>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">05</p>
-            <h3>Repair & Reliability</h3>
-            <p>Roof, structural, and finish repairs executed with transparent communication and timelines.</p>
-          </article>
-          <article class="service-card">
-            <p class="service-step" aria-hidden="true">06</p>
-            <h3>Maintenance Planning</h3>
-            <p>Post-project care notes and annual walkthrough recommendations for owners.</p>
-          </article>
+    <section class="section_page-title">
+      <div class="title_component">
+        <div class="title_heading-wrapper">
+          <h2 class="title_heading is-built-together">BUILT WITH CARE</h2>
+        </div>
+        <div class="title_subheader is-maxwidth-0">
+          <h3 class="title_subheader-text">We build lasting partnerships with homeowners based on shared vision and clear communication. From kitchen remodels to whole-home additions, we bring craftsmanship and accountability to every project.</h3>
         </div>
       </div>
     </section>
 
-    <section class="portfolio" id="work">
-      <div class="container">
-        <div class="section-title-wrap" data-reveal>
-          <p class="section-label">Selected work</p>
-          <h2>Proof in wood, concrete, and clean schedules.</h2>
-          <p class="section-copy">Recent jobs that moved from first sketch to occupied spaces with calm project
-            management.</p>
-        </div>
+    <section class="section_video">
+      <div class="video_element">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920" alt="Our work" class="video_placeholder" />
+      </div>
+    </section>
 
-        <article class="featured-project" data-reveal>
-          <img src="/kitchen-remodel.png" alt="Modern kitchen remodel under renovation with artisan millwork"
-            loading="lazy" decoding="async" />
-          <div class="project-meta">
-            <span>2026 · Renovation</span>
-            <h3>Greentree Family Residence</h3>
-            <p>Kitchen, bath package, and engineered entry extension.</p>
+    <section class="section_grid" id="what-we-do">
+      <div class="padding-large">
+        <div class="container-large">
+          <div class="grid_component">
+            <div class="grid_block-text" data-reveal>
+              <h4 class="grid_block-heading text-regular">The long game</h4>
+              <p class="grid_block-paragraph">We're long-term thinkers. Your home is your biggest investment — we treat it that way. Quality materials, solid craftsmanship, and honest timelines create lasting value.</p>
+            </div>
+            <div class="grid_block-text" data-reveal>
+              <h4 class="grid_block-heading text-regular">One project at a time</h4>
+              <p class="grid_block-paragraph">We take on one to two projects at a time. For us, success is about doing things right – bringing steadiness and clarity to every job we do.</p>
+            </div>
+            <div class="grid_block-image-wrapper" data-reveal>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200" loading="lazy" alt="Custom home build" class="grid_block-image" />
+            </div>
+            <div class="grid_block-image-wrapper" data-reveal>
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200" loading="lazy" alt="Kitchen renovation" class="grid_block-image" />
+            </div>
+            <div class="grid_block-text" data-reveal>
+              <h4 class="grid_block-heading text-regular">Your neighborhood, your home</h4>
+              <p class="grid_block-paragraph">We work where you live. Whether it's a historic bungalow or a modern addition, we respect the character of your home and the fabric of your neighborhood.</p>
+            </div>
+            <div class="grid_block-text" data-reveal>
+              <h4 class="grid_block-heading text-regular">Skin in the game</h4>
+              <p class="grid_block-paragraph">We stand behind our work. Clear contracts, no surprise change orders, and a warranty you can count on. We're invested in your satisfaction.</p>
+            </div>
+            <div class="grid_block-text" data-reveal>
+              <h4 class="grid_block-heading text-regular">No shortcuts</h4>
+              <p class="grid_block-paragraph">When others cut corners, we don't. Quality materials, proper permits, and skilled tradespeople — every time. Your home deserves it.</p>
+            </div>
           </div>
-        </article>
-
-        <div class="project-grid">
-          <article class="project-card" data-reveal>
-            <img src="/sunroom-deck.png" alt="Contemporary family room with built-in fireplace and timber beams"
-              loading="lazy" decoding="async" />
-            <div class="project-meta project-meta--compact">
-              <span>2025 · Addition</span>
-              <h3>Ridgefield Sunroom + Deck</h3>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <img src="/deck-rebuild.png" alt="Exterior deck and railing work on timber-framed home" loading="lazy"
-              decoding="async" />
-            <div class="project-meta project-meta--compact">
-              <span>2025 · Exterior</span>
-              <h3>Walnut Street Deck Rebuild</h3>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <img src="/bath-transformation.png" alt="Bathroom renovation with warm wood and stone finish details"
-              loading="lazy" decoding="async" />
-            <div class="project-meta project-meta--compact">
-              <span>2024 · Remodel</span>
-              <h3>Hillcrest Bath Transformation</h3>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <section class="workflow" id="workflow">
-      <div class="container">
-        <div class="section-title-wrap" data-reveal>
-          <p class="section-label">Execution model</p>
-          <h2>A predictable process that keeps everyone in sync.</h2>
+    <section class="section_page-title">
+      <div class="title_component">
+        <div class="title_heading-wrapper">
+          <h2 class="title_heading is-how-we-differ">HOW WE DIFFER</h2>
         </div>
-
-        <ol class="workflow-list">
-          <li data-reveal>
-            <span>01</span>
-            <div>
-              <h3>Discovery & Scope</h3>
-              <p>We lock budget ranges, quality goals, and timeline at the first call, then map permits and
-                dependencies.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span>02</span>
-            <div>
-              <h3>Detailed Plan</h3>
-              <p>Drawings, materials, milestone list, and weekly check-ins before a single nail is lifted.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span>03</span>
-            <div>
-              <h3>Build Phase</h3>
-              <p>Skilled crews execute with daily logs, safety checks, and clear field communication.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span>04</span>
-            <div>
-              <h3>Final Reveal</h3>
-              <p>Final inspection, punch-list refinement, and handoff with long-term care recommendations.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="title_subheader is-maxwidth-3">
+          <h3 class="title_subheader-text">These 3 principles guide every project we take on — and why homeowners keep coming back.</h3>
+        </div>
       </div>
     </section>
 
-    <section class="craft" id="craft">
-      <div class="container craft-layout">
-        <div class="craft-copy" data-reveal>
-          <p class="section-label">Built to stand</p>
-          <h2>Craftsmanship isn’t a slogan for us.</h2>
-          <p>
-            We select every material for durability, weather behavior, and installability. We do not guess at lead
-            times.
-            You get clear dates, proactive notices, and honest tradeoffs when conditions change.
-          </p>
-          <ul>
-            <li>Licensed and bonded team members</li>
-            <li>Detailed scheduling and payment milestones</li>
-            <li>Detailed material tracking and source notes</li>
-            <li>Post-completion walkthrough and service options</li>
-          </ul>
+    <section class="section_cards">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="cards_wrapper">
+            <article class="cards_card is-1" data-reveal>
+              <div class="cards_text">
+                <h4 class="cards_heading">Grit with Vision</h4>
+                <p class="cards_paragraph">We think big by staying small – nimble, precise, and creative. Every project gets our full attention.</p>
+              </div>
+              <div class="cards_number">01</div>
+            </article>
+            <article class="cards_card is-2" data-reveal>
+              <div class="cards_text">
+                <h4 class="cards_heading">Radical Transparency</h4>
+                <p class="cards_paragraph is-dimmed">We share timelines, costs, and decisions openly. No hidden fees, no surprises – just clear communication from start to finish.</p>
+              </div>
+              <div class="cards_number">02</div>
+            </article>
+            <article class="cards_card is-3" data-reveal>
+              <div class="cards_text">
+                <h4 class="cards_heading">Long-Term Alignment</h4>
+                <p class="cards_paragraph">We build relationships, not just homes. Our reputation rides on every project – we're in it for the long haul.</p>
+              </div>
+              <div class="cards_number">03</div>
+            </article>
+          </div>
+          <div class="cards_bottom-text" data-reveal>
+            <p class="cards_bottom-paragraph">What sets us apart isn't just our <a href="#what-we-do">capabilities</a>. It's how we show up and how we treat the people we work with. We bring a rare mix of craftsmanship and clarity to every project – always keeping you, your family, and your investment in view.<br /><br />We keep our heads down, solve problems fast, and avoid the drama that often surrounds home renovation. We don't posture — we perform. Every handshake, every hard conversation, every detail we sweat is part of building something that lasts.</p>
+          </div>
         </div>
-
-        <aside class="craft-panel" data-reveal>
-          <p>“We don’t just finish projects. We finish them so they still look and perform like originals a decade
-            later.”</p>
-          <strong>Project philosophy</strong>
-          <span>Durable choices, precise details, calm execution.</span>
-        </aside>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container contact-layout">
-        <div data-reveal>
-          <p class="section-label">Next step</p>
-          <h2>Ready to start planning your project?</h2>
-          <p class="contact-sub">Send your brief and timeline. We reply with scope options and a realistic budget
-            window.</p>
+    <section class="section_project-cta" id="portfolio">
+      <a href="#portfolio" class="project-cta_component">
+        <div class="project-cta_top">
+          <div class="project-cta_top-text">Kitchen & Bath Remodel</div>
+          <div class="button_link"><div class="button_arrow"></div></div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920" loading="lazy" alt="Kitchen remodel" class="project-cta_image" />
+      </a>
+    </section>
 
-          <div class="contact-links">
-            <a href="tel:+15550148">+1 (555) 011-48</a>
-            <a href="mailto:hello@riverbendcustomhomes.com">hello@riverbendcustomhomes.com</a>
-            <a href="https://maps.google.com/?q=United%20States" rel="noreferrer" target="_blank">Service area in the
-              U.S.</a>
+    <section class="section_page-title">
+      <div class="title_component">
+        <div class="title_all-in-wrapper">
+          <div class="title_heading-wrapper">
+            <h2 class="title_heading is-all-in">ALL-IN CRAFTSMANSHIP</h2>
           </div>
         </div>
+        <div class="title_subheader is-maxwidth-1">
+          <h3 class="title_subheader-text">We practice All-In Craftsmanship. That means we take full accountability for every project we touch — no shortcuts, no excuses, just total commitment from first consultation to final walk-through.</h3>
+        </div>
+      </div>
+    </section>
 
-        <form class="contact-form" data-inquiry-form novalidate data-reveal>
-          <div class="form-field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+    <section class="section_all-in">
+      <div class="all-in_component">
+        <div class="all-in_text-wrapper" data-reveal>
+          <p class="cards_bottom-paragraph">At Craftsman, craftsmanship is a mindset. We plan like builders, design with you in mind, and act like long-term partners. That means we anticipate problems, sweat the details early, and keep you informed – all to protect your investment and avoid surprises.</p>
+        </div>
+        <div class="all-in_illustration-wrapper" data-reveal>
+          <span class="all-in_illustration-logo brand-text">Craftsman</span>
+        </div>
+        <div class="all-in_text-wrapper is-2" data-reveal>
+          <p class="cards_bottom-paragraph">Because we handle design, permits, construction, and finishing under one roof, we move faster, communicate better, and stay focused on what matters most. We don't pass the buck — we stay in it. From the first sketch to the final walk-through, All-In Craftsmanship is what ensures your project is smarter, smoother, and built to last.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_project-cta">
+      <a href="#portfolio" class="project-cta_component">
+        <div class="project-cta_top">
+          <div class="project-cta_top-text">Whole-Home Addition</div>
+          <div class="button_link"><div class="button_arrow"></div></div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920" loading="lazy" alt="Whole-home addition" class="project-cta_image" />
+      </a>
+    </section>
+
+    <section class="section_timeline is-green-bg" id="process">
+      <div class="title_component">
+        <div class="title_heading-wrapper">
+          <h2 class="title_heading is-how-we-got">HOW WE GOT HERE</h2>
+        </div>
+      </div>
+      <div class="timeline_component">
+        <div class="timeline_track" data-timeline>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">2010</h3>
+              <h3 class="timeline_text-heading">The Starting Line</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">Craftsman is founded as a carpentry and remodeling company, focused on quality over volume.</p>
+            </div>
+          </article>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">2013</h3>
+              <h3 class="timeline_text-heading">First Big Addition</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">We complete our first whole-home addition, establishing our reputation for on-time, on-budget delivery.</p>
+            </div>
+          </article>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">2016</h3>
+              <h3 class="timeline_text-heading">Kitchen & Bath Focus</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">We expand into full kitchen and bathroom remodels, building a dedicated team of skilled tradespeople.</p>
+            </div>
+          </article>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">2019</h3>
+              <h3 class="timeline_text-heading">Design-Build</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">We add in-house design support, offering a seamless design-build experience for homeowners.</p>
+            </div>
+          </article>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">2022</h3>
+              <h3 class="timeline_text-heading">100+ Projects</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">We hit a milestone: over 100 completed projects, with most clients coming from referrals.</p>
+            </div>
+          </article>
+          <article class="timeline_item" data-reveal>
+            <div class="timeline_top">
+              <h3 class="timeline_year-text">Today</h3>
+              <h3 class="timeline_text-heading">Built With Care</h3>
+            </div>
+            <div class="timeline_bottom">
+              <p class="timeline_paragraph">We continue to grow deliberately – one project at a time – building homes and relationships that last.</p>
+            </div>
+          </article>
+        </div>
+        <p class="timeline_cta" data-reveal><a href="#contact">Get in touch.</a></p>
+      </div>
+    </section>
+
+    <section class="section_cta">
+      <div class="cta_heading">
+        <div>Ready to start?</div>
+        <h2 class="title_subheader-text">We're easy to reach and even easier to work with.</h2>
+      </div>
+      <div class="cta_wrapper">
+        <div class="cta_block is-1">
+          <h3 class="cta_block-top-text text-small">Our services</h3>
+          <div class="cta_block-link-wrapper">
+            <a href="#what-we-do" class="cta_block-link">Remodeling</a>
+            <a href="#what-we-do" class="cta_block-link">Additions</a>
+            <a href="#what-we-do" class="cta_block-link">Kitchen & Bath</a>
+            <a href="#what-we-do" class="cta_block-link">Custom Builds</a>
           </div>
+        </div>
+        <div class="cta_block is-2">
+          <h3 class="cta_block-top-text text-small">Our process</h3>
+          <a href="#process" class="cta_block-link">How we work</a>
+        </div>
+      </div>
+    </section>
 
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+    <section class="section_contact" id="contact">
+      <div class="footer_grid contact-layout">
+        <div class="footer_block is-1">
+          <div class="footer_inner">
+            <div class="footer_text-block">
+              <h2 class="footer_heading text-large">Get in touch</h2>
+              <address class="footer_offices">
+                <p>123 Main Street<br />Chicago, IL 60601</p>
+                <p><a href="tel:+13125550100">(312) 555-0100</a><br /><a href="mailto:hello@craftsman.example.com">hello@craftsman.example.com</a></p>
+              </address>
+            </div>
           </div>
-
-          <div class="form-field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+        </div>
+        <div class="footer_block is-2">
+          <div class="footer_inner">
+            <div class="footer_text-block">
+              <a href="#what-we-do" class="footer_heading text-large is-link">What we do</a>
+              <div class="footer_link-wrapper">
+                <a href="#what-we-do" class="footer_link">Remodeling</a>
+                <a href="#what-we-do" class="footer_link">Additions</a>
+                <a href="#what-we-do" class="footer_link">Kitchen & Bath</a>
+                <a href="#what-we-do" class="footer_link">Custom Builds</a>
+              </div>
+            </div>
           </div>
-
-          <div class="form-field">
-            <label for="project">Project brief</label>
-            <textarea id="project" name="project" rows="4" required
-              placeholder="Tell us about the scope, rooms, timeline, and budget range."></textarea>
-          </div>
-
-          <button class="btn btn-primary" type="submit">Send inquiry</button>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        </form>
+        </div>
+        <div class="footer_block is-3">
+          <form class="contact-form" data-inquiry-form novalidate>
+            <p class="form-intro">Start your project</p>
+            <p class="form-desc">Tell us about your home and your vision. We'll get back to you within 24 hours to schedule a consultation.</p>
+            <p class="form-label">Write us</p>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="form-field">
+              <label for="project">Project type</label>
+              <input id="project" name="project" type="text" placeholder="e.g. Kitchen remodel, addition" />
+            </div>
+            <button class="btn btn-primary" type="submit">Send</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p><span aria-hidden="true">© </span><span data-year="">2026</span> Riverbend Custom Homes · Licensed Home
-        Contractor.
-      </p>
-      <a href="#home">Back to top</a>
+  <footer class="footer">
+    <div class="footer_grid footer-inner">
+      <p class="footer_display-text">Built With Care.</p>
+      <p><span aria-hidden="true">© </span><span data-year="">2026</span> Craftsman</p>
     </div>
   </footer>
-
-  <a class="floating-cta" href="#contact" aria-label="Jump to inquiry form">Book consult</a>
 
   <script type="module" src="/src/main.js"></script>
 </body>

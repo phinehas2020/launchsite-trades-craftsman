@@ -7,13 +7,14 @@ if (prefersReduceMotion) {
 const header = document.querySelector('[data-header]')
 const menuToggle = document.querySelector('[data-menu-toggle]')
 const nav = document.querySelector('[data-nav]')
-const navLinks = [...document.querySelectorAll('[data-nav] a')]
+const navLinks = [...document.querySelectorAll('[data-nav] a[href^="#"]')]
 const navAnchors = [...document.querySelectorAll('a[href^="#"]')]
 const revealItems = [...document.querySelectorAll('[data-reveal]')]
-const counters = [...document.querySelectorAll('[data-counter]')]
 const form = document.querySelector('[data-inquiry-form]')
 const formStatus = document.querySelector('[data-form-status]')
 const yearNode = document.querySelector('[data-year]')
+const locationBtns = [...document.querySelectorAll('[data-location]')]
+const timerNodes = document.querySelectorAll('[data-timer], [data-timer-tampa]')
 
 const setHeaderState = () => {
   if (!header) return
@@ -56,6 +57,36 @@ const initMenu = () => {
   })
 }
 
+const initLocationToggle = () => {
+  const container = document.querySelector('[data-location-toggle]')
+  if (!container) return
+
+  const buttons = container.querySelectorAll('.location-btn')
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const location = btn.dataset.location
+      document.body.setAttribute('data-location', location)
+      buttons.forEach((b) => b.classList.remove('is-active'))
+      btn.classList.add('is-active')
+    })
+  })
+}
+
+const initTimer = () => {
+  if (!timerNodes.length || prefersReduceMotion) return
+
+  let seconds = 72
+  const tick = () => {
+    const m = Math.floor(seconds / 60)
+    const s = seconds % 60
+    const text = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+    timerNodes.forEach((node) => { node.textContent = text })
+    seconds = (seconds + 1) % 3600
+  }
+  tick()
+  setInterval(tick, 1000)
+}
+
 const initReveal = () => {
   if (prefersReduceMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'))
@@ -67,64 +98,18 @@ const initReveal = () => {
       entries.forEach((entry, index) => {
         if (!entry.isIntersecting) return
         const node = entry.target
-        node.style.transitionDelay = `${Math.min(120 * index, 260)}ms`
+        node.style.transitionDelay = `${Math.min(100 * index, 240)}ms`
         node.classList.add('is-visible')
         currentObserver.unobserve(node)
       })
     },
     {
-      threshold: 0.1,
-      rootMargin: '0px 0px -8% 0px',
+      threshold: 0.08,
+      rootMargin: '0px 0px -6% 0px',
     },
   )
 
   revealItems.forEach((item) => observer.observe(item))
-}
-
-const formatCount = (value, decimals) =>
-  value.toLocaleString(undefined, {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  })
-
-const animateCount = (element, target, decimals, suffix, duration = 1100) => {
-  const start = performance.now()
-  const tick = (now) => {
-    const ratio = Math.min(1, (now - start) / duration)
-    const eased = 1 - Math.pow(1 - ratio, 3)
-    const current = target * eased
-    element.textContent = `${formatCount(current, decimals)}${suffix}`
-    if (ratio < 1) {
-      requestAnimationFrame(tick)
-    }
-  }
-  requestAnimationFrame(tick)
-}
-
-const initCounters = () => {
-  counters.forEach((counter) => {
-    const target = Number(counter.dataset.counterValue || 0)
-    const decimals = Number(counter.dataset.counterDecimals || 0)
-    const suffix = counter.dataset.counterSuffix || ''
-
-    if (prefersReduceMotion || !('IntersectionObserver' in window)) {
-      counter.textContent = `${formatCount(target, decimals)}${suffix}`
-      return
-    }
-
-    const observer = new IntersectionObserver(
-      (entries, currentObserver) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return
-          animateCount(counter, target, decimals, suffix)
-          currentObserver.unobserve(entry.target)
-        })
-      },
-      { threshold: 0.35 },
-    )
-
-    observer.observe(counter)
-  })
 }
 
 const initForm = () => {
@@ -146,14 +131,11 @@ const initForm = () => {
     }
 
     const payload = Object.fromEntries(new FormData(form).entries())
-    const brief = String(payload.project || '').trim()
 
-    if (brief.length < 20) {
-      setStatus('Give us a fuller brief (at least 20 characters).', 'error')
-      return
-    }
-
-    setStatus('Your inquiry is ready. We will reach out today to schedule a consult.', 'success')
+    setStatus(
+      'Thanks for reaching out. We\'ll be in touch within 24 hours to schedule a consultation and discuss your project.',
+      'success',
+    )
     form.reset()
 
     if (import.meta.env.DEV) {
@@ -190,8 +172,8 @@ const initActiveNav = () => {
       }
     },
     {
-      threshold: 0.35,
-      rootMargin: '-15% 0px -55% 0px',
+      threshold: 0.25,
+      rootMargin: '-12% 0px -50% 0px',
     },
   )
 
@@ -227,8 +209,9 @@ const initAnchorOffsets = () => {
 
 const init = () => {
   initMenu()
+  initLocationToggle()
+  initTimer()
   initReveal()
-  initCounters()
   initForm()
   initActiveNav()
   initScrollHandlers()

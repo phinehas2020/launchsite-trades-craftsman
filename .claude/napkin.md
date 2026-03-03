@@ -74,3 +74,9 @@
 
 - For launch-first one-page builds, keeping semantic sections (`hero`, `services`, `portfolio`, `process`, `contact`) and sticky nav anchors gives immediate conversion clarity.
 - Replacing generic backgrounds with a controlled gradient + texture layer adds atmosphere without heavy animation overhead.
+
+## 2026-03-03 Deploy Reliability Notes
+
+- User preference: when pushing/deploying, use plain Git CLI flow and avoid SSH-specific detours.
+- Webflow clone startup delay came from `html.w-mod-js:not(.w-mod-ix3) ... { visibility:hidden }` gating; adding a tiny head fallback script to set `w-mod-ix3` quickly avoids long blank-first-paint.
+- Keep fallback lightweight (`setTimeout(...,120)` + `load` listener) so content appears fast while still letting native Webflow init win when available.

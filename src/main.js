@@ -1,3 +1,5 @@
+import { initAnimations } from './animations.js'
+
 const prefersReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 if (prefersReduceMotion) {
@@ -90,26 +92,7 @@ const initTimer = () => {
 const initReveal = () => {
   if (prefersReduceMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'))
-    return
   }
-
-  const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
-      entries.forEach((entry, index) => {
-        if (!entry.isIntersecting) return
-        const node = entry.target
-        node.style.transitionDelay = `${Math.min(100 * index, 240)}ms`
-        node.classList.add('is-visible')
-        currentObserver.unobserve(node)
-      })
-    },
-    {
-      threshold: 0.08,
-      rootMargin: '0px 0px -6% 0px',
-    },
-  )
-
-  revealItems.forEach((item) => observer.observe(item))
 }
 
 const initForm = () => {
@@ -217,6 +200,7 @@ const init = () => {
   initScrollHandlers()
   initAnchorOffsets()
   initYear()
+  initAnimations()
 }
 
 init()

@@ -301,6 +301,11 @@ button, input, textarea {
   font-style: italic;
 }
 
+.gsap_split_word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* Hero furniture */
 .hero_furniture {
   position: absolute;
@@ -399,6 +404,7 @@ button, input, textarea {
 ----------------------------------- */
 .section_page-title {
   padding: var(--space-2xl) 1rem;
+  min-height: 60vh;
 }
 
 .title_component {

@@ -41,6 +41,15 @@
 - Images: Unsplash for home renovation. Placeholder contact: 123 Main St, (312) 555-0100, hello@craftsman.example.com.
 - Form: added Project type field; success message: "Within 24 hours to schedule a consultation."
 
+## 2026-03-02 Tandem Animation Clone
+
+- GSAP + ScrollTrigger for all Tandem-style animations.
+- Hero: word-by-word stagger in, slant words ("right", "only") skew from -18deg to italic.
+- Section titles: scroll-linked horizontal movement (title scrolls as you scroll through section).
+- Reveal: grid blocks, cards, timeline, CTA, footer with ScrollTrigger.
+- Cards numbers: scale-in with back.out. Nav and footer display-text fade in.
+- project-cta hover: overlay + image scale. Respects prefers-reduced-motion.
+
 ## Corrections
 
 | 2026-03-02 | self | Existing page copy leaned toward an architectural fabrication studio and lacked contractor-specific messaging | Reframed copy/features around home remodeling, additions, and client process to match one-page contractor positioning |

@@ -156,10 +156,16 @@
     }
 
     /* –––––––––––––––– Section: Timeline –––––––––––––––– */
-    @media screen and (min-width: 991px) {
-      .timeline_bottom {
-        display: none;
+    @media screen and (min-width: 992px) {
+      .timeline_component.is-desktop .timeline_bottom {
+        display: none !important;
         pointer-events: none;
+      }
+
+      .timeline_component.is-desktop .timeline_item:hover>.timeline_bottom,
+      .timeline_component.is-desktop .timeline_item.is-open>.timeline_bottom {
+        display: flex !important;
+        pointer-events: auto;
       }
     }
 
@@ -2337,10 +2343,34 @@ Oimachi's Additional Styles
     $(function () {
       function desktop() { return $(window).width() > 991; }
 
-      $('.timeline_item').hover(
-        function () { if (desktop()) $(this).find('.timeline_bottom').css('display', 'flex').end().css('z-index', '1'); },
-        function () { if (desktop()) $(this).find('.timeline_bottom').css('display', 'none').end().css('z-index', 'unset'); }
-      );
+      const $items = $('.timeline_component.is-desktop .timeline_item');
+
+      function closePanels() {
+        $items
+          .removeClass('is-open')
+          .css('z-index', '')
+          .children('.timeline_bottom')
+          .css('display', '');
+      }
+
+      $items
+        .on('mouseenter.timelineDesktop', function () {
+          if (!desktop()) return;
+          closePanels();
+          $(this).addClass('is-open').css('z-index', '1');
+        })
+        .on('mouseleave.timelineDesktop', function () {
+          if (!desktop()) return;
+          $(this)
+            .removeClass('is-open')
+            .css('z-index', '')
+            .children('.timeline_bottom')
+            .css('display', '');
+        });
+
+      $(window).on('resize.timelineDesktop', function () {
+        if (!desktop()) closePanels();
+      });
 
     });
 

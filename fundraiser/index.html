@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-domain="www.thetandemco.com">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Heritage Youth Missions – Annual Fundraiser</title>
+  <meta name="description"
+    content="Join Heritage Youth Missions for our annual fundraiser on Tuesday, July 7, 2026. A night to gather, celebrate, and give — fueling the next generation through rallies, discipleship, and community." />
+  <meta property="og:title" content="An Evening for the Next Generation — HYM Annual Fundraiser" />
+  <meta property="og:description"
+    content="Tuesday, July 7, 2026 · Waco, TX. Reserve your seat and help equip the next generation for a whole life for the whole world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../site-assets/mission-images/real_mission_6.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Inherit the site's fonts (Season Serif + Söhne) and color tokens from the shared stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="../site-assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css" />
+
+  <style>
+    /* ==========================================================
+       HYM Annual Fundraiser — landing page
+       Built on the site's existing design tokens. All styles
+       are scoped with the .fr- prefix so nothing collides with
+       the shared Webflow stylesheet.
+       ========================================================== */
+
+    :root {
+      --brand-red: #c5221f;
+      --brand-yellow: #f5a623;
+      --ember: #e0531f;
+      --ink: #1e1e1c;
+      --paper: #faf5ec;
+      --paper-warm: #fbeed8;
+      --muted: #6b645c;
+      --line: rgba(30, 30, 28, 0.12);
+      --line-warm: rgba(197, 34, 31, 0.16);
+      --fr-display: 'Season Serif', Georgia, serif;
+      --fr-body: 'Sohne', Arial, sans-serif;
+      --fr-shell: min(1180px, calc(100% - 3rem));
+    }
+
+    .fr-page * { box-sizing: border-box; }
+
+    .fr-page {
+      margin: 0;
+      font-family: var(--fr-body);
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .fr-page img { display: block; max-width: 100%; height: auto; }
+    .fr-page a { color: inherit; text-decoration: none; }
+
+    .fr-shell { width: var(--fr-shell); margin-inline: auto; }
+
+    .fr-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--brand-red);
+      margin: 0;
+    }
+
+    .fr-eyebrow.is-muted { color: var(--muted); }
+
+    /* ---------- Buttons ---------- */
+    .fr-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+    .fr-btn:hover { transform: translateY(-2px); }
+    /* .fr-page prefix keeps these ahead of the generic `.fr-page a { color: inherit }` reset */
+    .fr-page .fr-btn--primary { background: var(--brand-red); color: #fff; box-shadow: 0 12px 28px -14px rgba(197, 34, 31, 0.7); }
+    .fr-page .fr-btn--primary:hover { background: var(--ember); color: #fff; box-shadow: 0 16px 32px -14px rgba(224, 83, 31, 0.8); }
+    .fr-page .fr-btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .fr-page .fr-btn--ghost:hover { border-color: var(--brand-red); color: var(--brand-red); }
+    .fr-page .fr-btn--light { background: var(--paper); color: var(--ink); }
+    .fr-page .fr-btn--light:hover { background: var(--brand-yellow); color: var(--ink); }
+    .fr-btn__arrow { width: 0.7rem; height: 0.7rem; }
+
+    /* ---------- Nav ---------- */
+    .fr-nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 40;
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .fr-nav.is-scrolled {
+      background: rgba(247, 247, 240, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom-color: var(--line);
+    }
+    .fr-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-block: 1rem;
+    }
+    .fr-nav__logo img { height: 2.1rem; width: auto; }
+    .fr-nav__links { display: flex; align-items: center; gap: 2rem; }
+    .fr-nav__link {
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      transition: color 0.25s ease;
+    }
+    .fr-nav__link:hover { color: var(--brand-red); }
+    .fr-nav__link.is-back { color: var(--muted); }
+    .fr-nav .fr-btn { padding-block: 0.7rem; }
+
+    /* ---------- Hero ---------- */
+    .fr-hero {
+      position: relative;
+      text-align: center;
+      padding-top: clamp(8.5rem, 15vh, 12rem);
+      padding-bottom: clamp(3.5rem, 7vw, 6rem);
+      overflow: hidden;
+      background:
+        radial-gradient(58% 50% at 50% 16%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%),
+        var(--paper);
+    }
+    .fr-hero__glow {
+      position: absolute;
+      top: clamp(4.5rem, 10vh, 7.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(40rem, 86vw);
+      height: 26rem;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 42%, rgba(245, 166, 35, 0.42) 0%, rgba(224, 83, 31, 0.2) 34%, rgba(224, 83, 31, 0) 68%);
+      filter: blur(6px);
+    }
+    .fr-hero__inner { position: relative; z-index: 1; max-width: 47rem; margin-inline: auto; }
+    /* .fr-page prefix beats the generic `.fr-page img { height: auto }` reset */
+    .fr-page .fr-hero__torch {
+      width: auto;
+      height: clamp(6.5rem, 13vw, 9.5rem);
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 16px 26px rgba(197, 34, 31, 0.28));
+      animation: frFloat 5.5s ease-in-out infinite;
+    }
+    @keyframes frFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
+    .fr-hero__title {
+      font-family: var(--fr-display);
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.03;
+      letter-spacing: -0.015em;
+      margin: 1rem 0 0;
+    }
+    .fr-hero__title em { font-style: italic; color: var(--brand-red); }
+    .fr-hero__meta {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.55rem 1rem;
+      margin-top: 1.5rem;
+      font-size: 1.02rem;
+      color: var(--ink);
+    }
+    .fr-hero__meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brand-red); }
+    .fr-hero__lede {
+      max-width: 35rem;
+      margin: 1.3rem auto 0;
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+    .fr-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; margin-top: 2rem; }
+
+    /* ---------- Facts bar ---------- */
+    .fr-facts {
+      border-block: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .fr-fact {
+      padding: clamp(1.4rem, 3vw, 2.2rem) 0;
+      padding-right: 1.5rem;
+    }
+    .fr-fact + .fr-fact { border-left: 1px solid var(--line); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
+    .fr-fact__label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .fr-fact__value {
+      font-family: var(--fr-display);
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      line-height: 1.15;
+      margin: 0;
+    }
+    .fr-fact__value small { display: block; font-family: var(--fr-body); font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0; }
+
+    /* ---------- Section scaffolding ---------- */
+    .fr-section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+    .fr-section__head { max-width: 44rem; }
+    .fr-section__title {
+      font-family: var(--fr-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin: 1.1rem 0 0;
+    }
+    .fr-section__lede { font-size: 1.12rem; color: var(--muted); margin-top: 1.3rem; max-width: 40rem; }
+
+    /* ---------- Pillars ---------- */
+    .fr-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .fr-pillar {
+      padding: 1.9rem 1.7rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.55);
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .fr-pillar:hover {
+      border-color: var(--line-warm);
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px -28px rgba(197, 34, 31, 0.4);
+    }
+    .fr-pillar__num {
+      font-family: var(--fr-display);
+      font-size: 0.95rem;
+      color: var(--brand-red);
+      letter-spacing: 0.1em;
+    }
+    .fr-pillar__title { font-family: var(--fr-display); font-size: 1.45rem; margin: 0.9rem 0 0.6rem; font-weight: 400; }
+    .fr-pillar__text { font-size: 0.98rem; color: var(--muted); margin: 0; }
+
+    /* ---------- Motto band ---------- */
+    .fr-band {
+      position: relative;
+      text-align: center;
+      padding-block: clamp(4.5rem, 11vw, 8rem);
+      border-block: 1px solid var(--line-warm);
+      background:
+        radial-gradient(78% 130% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%),
+        var(--paper);
+    }
+    .fr-band__script {
+      width: min(34rem, 82%);
+      height: auto;
+      margin: 1.4rem auto 0;
+      /* source art is black on an opaque white box; multiply drops the white into the warm bg, keeping the black script */
+      mix-blend-mode: multiply;
+    }
+    .fr-band__cite { margin-top: 1.5rem; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+    /* ---------- Give ---------- */
+    .fr-give { background: var(--ink); color: var(--paper); }
+    .fr-give .fr-eyebrow { color: var(--brand-yellow); }
+    .fr-give__grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: center;
+    }
+    .fr-give__title {
+      font-family: var(--fr-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      margin: 1.1rem 0 0;
+    }
+    .fr-give__text { color: rgba(247, 247, 240, 0.72); margin-top: 1.3rem; font-size: 1.08rem; max-width: 36rem; }
+    .fr-give__text strong { color: var(--paper); font-weight: 500; }
+
+    /* Givebutter embed slot */
+    .fr-embed {
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 2rem;
+      box-shadow: 0 40px 80px -50px rgba(0, 0, 0, 0.6);
+    }
+    .fr-embed__label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.2rem; }
+    .fr-embed__amounts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.4rem; }
+    .fr-embed__amount {
+      flex: 1 1 28%;
+      text-align: center;
+      padding: 0.85rem 0.5rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-family: var(--fr-display);
+      font-size: 1.25rem;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+    .fr-embed__amount:hover { border-color: var(--brand-red); background: rgba(197, 34, 31, 0.06); }
+    .fr-embed .fr-btn { width: 100%; justify-content: center; }
+    .fr-embed__note { font-size: 0.82rem; color: var(--muted); margin: 1rem 0 0; text-align: center; }
+
+    /* ---------- FAQ ---------- */
+    .fr-faq { max-width: 48rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+    .fr-faq details { border-top: 1px solid var(--line); }
+    .fr-faq details:last-child { border-bottom: 1px solid var(--line); }
+    .fr-faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.3rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      font-family: var(--fr-display);
+      font-size: 1.2rem;
+    }
+    .fr-faq summary::-webkit-details-marker { display: none; }
+    .fr-faq summary .sign { color: var(--brand-red); font-family: var(--fr-body); font-size: 1.4rem; transition: transform 0.3s ease; flex: none; }
+    .fr-faq details[open] summary .sign { transform: rotate(45deg); }
+    .fr-faq__answer { padding: 0 0 1.4rem; color: var(--muted); max-width: 42rem; }
+
+    /* ---------- Footer ---------- */
+    .fr-footer { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 5vw, 3.5rem); }
+    .fr-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    .fr-footer__brand { display: flex; align-items: center; gap: 0.9rem; }
+    .fr-footer__brand img { height: 2rem; width: auto; }
+    .fr-footer__tag { font-family: var(--fr-display); font-style: italic; color: var(--muted); }
+    .fr-footer__meta { font-size: 0.85rem; color: var(--muted); text-align: right; }
+    .fr-footer__meta a:hover { color: var(--brand-red); }
+
+    /* ---------- Reveal animation ---------- */
+    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    [data-reveal].is-in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      .fr-btn:hover, .fr-pillar:hover { transform: none; }
+      .fr-hero__torch { animation: none; }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 920px) {
+      .fr-facts { grid-template-columns: repeat(2, 1fr); }
+      .fr-fact:nth-child(3) { border-left: none; padding-left: 0; }
+      .fr-fact:nth-child(odd) { padding-right: 1rem; }
+      .fr-fact:nth-child(2), .fr-fact:nth-child(4) { border-left: 1px solid var(--line); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
+      .fr-pillars { grid-template-columns: 1fr; }
+      .fr-give__grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .fr-nav__links { gap: 1rem; }
+      .fr-nav__link:not(.is-back) { display: none; }
+    }
+  </style>
+</head>
+
+<body class="fr-page">
+  <!-- ======================= NAV ======================= -->
+  <header class="fr-nav" id="frNav">
+    <div class="fr-shell fr-nav__inner">
+      <a href="/" class="fr-nav__logo" aria-label="Heritage Youth Missions home">
+        <img src="../site-assets/logo-new.png" alt="Heritage Youth Missions" />
+      </a>
+      <nav class="fr-nav__links">
+        <a href="#evening" class="fr-nav__link">The Evening</a>
+        <a href="#impact" class="fr-nav__link">Your Impact</a>
+        <a href="#faq" class="fr-nav__link">FAQ</a>
+        <a href="/" class="fr-nav__link is-back">Main site</a>
+        <a href="#give" class="fr-btn fr-btn--primary">Reserve a seat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="fr-hero">
+      <div class="fr-hero__glow" aria-hidden="true"></div>
+      <div class="fr-shell">
+        <div class="fr-hero__inner">
+          <img class="fr-hero__torch" src="../site-assets/hym-torch.png" alt="Heritage Youth Missions torch" data-reveal />
+          <p class="fr-eyebrow" data-reveal>Heritage Youth Missions · Annual Fundraiser 2026</p>
+          <h1 class="fr-hero__title" data-reveal>An Evening for the <em>Next Generation</em></h1>
+          <div class="fr-hero__meta" data-reveal>
+            <span>Tuesday, July 7, 2026</span>
+            <span class="dot"></span>
+            <span>Waco, Texas</span>
+          </div>
+          <p class="fr-hero__lede" data-reveal>
+            One night to gather, celebrate, and give — and to fuel everything God is doing through the
+            next generation. You belong in the room.
+          </p>
+          <div class="fr-cta-row" data-reveal>
+            <a href="#give" class="fr-btn fr-btn--primary">
+              Reserve your seat
+              <svg class="fr-btn__arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#give" class="fr-btn fr-btn--ghost">Give a gift</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FACTS ======================= -->
+    <section class="fr-shell" aria-label="Event details">
+      <div class="fr-facts">
+        <div class="fr-fact" data-reveal>
+          <p class="fr-fact__label">When</p>
+          <p class="fr-fact__value">Tuesday, July 7<small>Doors 6:00 PM · Program 7:00 PM</small></p>
+        </div>
+        <div class="fr-fact" data-reveal>
+          <p class="fr-fact__label">Where</p>
+          <p class="fr-fact__value">Waco, TX<small>Venue details to come</small></p>
+        </div>
+        <div class="fr-fact" data-reveal>
+          <p class="fr-fact__label">Evening</p>
+          <p class="fr-fact__value">Dinner &amp; Story<small>Cocktail attire</small></p>
+        </div>
+        <div class="fr-fact" data-reveal>
+          <p class="fr-fact__label">Seats</p>
+          <p class="fr-fact__value">By reservation<small>Individual &amp; table sponsorships</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= IMPACT ======================= -->
+    <section class="fr-section" id="impact">
+      <div class="fr-shell">
+        <div class="fr-section__head">
+          <p class="fr-eyebrow is-muted" data-reveal>Why we gather</p>
+          <h2 class="fr-section__title" data-reveal>Every seat at the table sends someone out.</h2>
+          <p class="fr-section__lede" data-reveal>
+            Heritage Youth Missions exists to set young people on fire for a whole life for the whole
+            world. Your gift tonight becomes rallies, discipleship, and the leaders who walk it out —
+            in Waco and far beyond.
+          </p>
+        </div>
+        <div class="fr-pillars">
+          <article class="fr-pillar" data-reveal>
+            <span class="fr-pillar__num">01</span>
+            <h3 class="fr-pillar__title">Rallies</h3>
+            <p class="fr-pillar__text">High-energy nights where students encounter God together — the spark that sets a whole generation on fire.</p>
+          </article>
+          <article class="fr-pillar" data-reveal>
+            <span class="fr-pillar__num">02</span>
+            <h3 class="fr-pillar__title">Discipleship</h3>
+            <p class="fr-pillar__text">The rally lights the spark; discipleship keeps the fire burning. We walk with students long after the lights come up.</p>
+          </article>
+          <article class="fr-pillar" data-reveal>
+            <span class="fr-pillar__num">03</span>
+            <h3 class="fr-pillar__title">Community Partnerships</h3>
+            <p class="fr-pillar__text">We build with churches, families, and communities who trust HYM — accountable, local, and lasting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= QUOTE BAND ======================= -->
+    <section class="fr-band">
+      <div class="fr-shell">
+        <p class="fr-eyebrow" data-reveal>The heart of the night</p>
+        <img class="fr-band__script" src="../site-assets/faith-works.png" alt="Faith Works. — James 2:18" data-reveal />
+        <p class="fr-band__cite" data-reveal>Every gift is faith, at work in the world.</p>
+      </div>
+    </section>
+
+    <!-- ======================= GIVE ======================= -->
+    <section class="fr-section fr-give" id="give">
+      <div class="fr-shell fr-give__grid">
+        <div>
+          <p class="fr-eyebrow" data-reveal>Reserve · Sponsor · Give</p>
+          <h2 class="fr-give__title" data-reveal>Be part of the evening.</h2>
+          <p class="fr-give__text" data-reveal>
+            Reserve a seat, sponsor a table, or give from wherever you are — every gift goes directly to
+            sending and discipling the next generation. <strong>Can't make it on July 7?</strong> You can
+            still be part of the night with a gift below.
+          </p>
+          <div class="fr-cta-row" data-reveal>
+            <!-- Replace REPLACE-ME with your Givebutter campaign slug -->
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--light">
+              Open the giving page
+              <svg class="fr-btn__arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             GIVEBUTTER EMBED
+             To drop in the live form, paste your Givebutter widget here.
+             From Givebutter → your campaign → Share → Embed, you'll get:
+
+               <script src="https://widgets.givebutter.com/latest.umd.cjs?acct=ACCOUNT_ID&p=other" async></script>
+               <givebutter-widget id="YOUR_WIDGET_ID"></givebutter-widget>
+
+             Add the <script> tag just before </body> below, and replace
+             the .fr-embed card markup with <givebutter-widget ...>.
+             Until then, the styled card below links to your campaign.
+             ============================================================ -->
+        <aside class="fr-embed" data-reveal aria-label="Make a gift">
+          <p class="fr-embed__label">Make a gift to HYM</p>
+          <div class="fr-embed__amounts">
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$50</a>
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$150</a>
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$500</a>
+          </div>
+          <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--primary">Give securely</a>
+          <p class="fr-embed__note">Powered by Givebutter · 100% secure</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="fr-section" id="faq">
+      <div class="fr-shell">
+        <div class="fr-section__head">
+          <p class="fr-eyebrow is-muted" data-reveal>Good to know</p>
+          <h2 class="fr-section__title" data-reveal>Questions, answered.</h2>
+        </div>
+        <div class="fr-faq" data-reveal>
+          <details>
+            <summary>What is the HYM Annual Fundraiser? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">It's our one night each year to gather friends, families, and partners — to share stories from the year, celebrate the students God is moving in, and raise the support that makes the year ahead possible.</p>
+          </details>
+          <details>
+            <summary>How do I reserve a seat or sponsor a table? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Use the “Reserve your seat” button to open our Givebutter page, where you can claim individual seats or sponsor a full table. Sponsorships are a wonderful way to bring guests who are new to HYM.</p>
+          </details>
+          <details>
+            <summary>I can't attend — can I still give? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Absolutely. Every gift counts whether or not you're in the room. Use the giving page above to contribute any amount toward this year's goal.</p>
+          </details>
+          <details>
+            <summary>Who can I contact with questions? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Email us anytime at <a href="mailto:info@heritageyouthmissions.org" style="color: var(--brand-red);">info@heritageyouthmissions.org</a> and a member of the HYM team will be glad to help.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="fr-footer">
+    <div class="fr-shell fr-footer__inner">
+      <a href="/" class="fr-footer__brand">
+        <img src="../site-assets/logo-new.png" alt="Heritage Youth Missions" />
+        <span class="fr-footer__tag">A whole life for the whole world.</span>
+      </a>
+      <div class="fr-footer__meta">
+        Waco, Texas · <a href="mailto:info@heritageyouthmissions.org">info@heritageyouthmissions.org</a><br />
+        © 2026 Heritage Youth Missions
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav background on scroll
+    (function () {
+      var nav = document.getElementById('frNav');
+      var onScroll = function () {
+        if (window.scrollY > 24) nav.classList.add('is-scrolled');
+        else nav.classList.remove('is-scrolled');
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Reveal-on-scroll
+      var items = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      // Reveal anything already in view immediately (so the hero never waits on a scroll)
+      items.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.92 && r.bottom > 0) el.classList.add('is-in');
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(function (el) { if (!el.classList.contains('is-in')) io.observe(el); });
+    })();
+  </script>
+
+  <!-- Paste your Givebutter <script> tag here when you're ready to embed the live form. -->
+</body>
+
+</html>

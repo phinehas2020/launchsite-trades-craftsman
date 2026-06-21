@@ -10,6 +10,7 @@ export default defineConfig({
         portfolio: resolve(__dirname, 'portfolio/index.html'),
         team: resolve(__dirname, 'team/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
+        fundraiser: resolve(__dirname, 'fundraiser/index.html'),
       },
     },
   },

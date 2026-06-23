@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Heritage Youth Missions – Annual Fundraiser</title>
+  <title>Heritage Youth Missions – Annual Fundraiser 2026</title>
   <meta name="description"
-    content="Join Heritage Youth Missions for our annual fundraiser on Tuesday, July 7, 2026. A night to gather, celebrate, and give — fueling the next generation through rallies, discipleship, and community." />
-  <meta property="og:title" content="An Evening for the Next Generation — HYM Annual Fundraiser" />
+    content="Join Heritage Youth Missions for our annual fundraiser on Tuesday, July 7, 2026 at the Heritage Center in Waco, TX — a grand night of dinner, music, and story as we grow a mission fund built to give for generations." />
+  <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026" />
   <meta property="og:description"
-    content="Tuesday, July 7, 2026 · Waco, TX. Reserve your seat and help equip the next generation for a whole life for the whole world." />
+    content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. Save your spot and help grow a mission fund built to fuel the gospel for generations." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../site-assets/mission-images/real_mission_6.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -183,7 +183,7 @@
     }
     .fr-hero__meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brand-red); }
     .fr-hero__lede {
-      max-width: 35rem;
+      max-width: 36rem;
       margin: 1.3rem auto 0;
       font-size: 1.12rem;
       color: var(--muted);
@@ -218,6 +218,11 @@
 
     /* ---------- Section scaffolding ---------- */
     .fr-section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+    .fr-section--warm {
+      background:
+        radial-gradient(72% 60% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 70%),
+        var(--paper);
+    }
     .fr-section__head { max-width: 44rem; }
     .fr-section__title {
       font-family: var(--fr-display);
@@ -228,6 +233,47 @@
       margin: 1.1rem 0 0;
     }
     .fr-section__lede { font-size: 1.12rem; color: var(--muted); margin-top: 1.3rem; max-width: 40rem; }
+
+    /* ---------- The Evening (run of show) ---------- */
+    .fr-flow {
+      max-width: 46rem;
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .fr-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3.2rem 1fr;
+      gap: 1.3rem;
+      padding-bottom: 2rem;
+    }
+    .fr-step:last-child { padding-bottom: 0; }
+    /* connecting line down the gutter between the numbered markers */
+    .fr-step::before {
+      content: '';
+      position: absolute;
+      left: 1.6rem;
+      top: 3.2rem;
+      bottom: -0.1rem;
+      width: 1px;
+      background: var(--line-warm);
+    }
+    .fr-step:last-child::before { display: none; }
+    .fr-step__num {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      border: 1px solid var(--line-warm);
+      background: var(--paper);
+      display: grid;
+      place-items: center;
+      font-family: var(--fr-display);
+      font-size: 1.15rem;
+      color: var(--brand-red);
+      position: relative;
+      z-index: 1;
+    }
+    .fr-step__title { font-family: var(--fr-display); font-size: 1.3rem; font-weight: 400; margin: 0.4rem 0 0.4rem; }
+    .fr-step__text { color: var(--muted); margin: 0; font-size: 0.98rem; }
 
     /* ---------- Pillars ---------- */
     .fr-pillars {
@@ -294,6 +340,7 @@
     }
     .fr-give__text { color: rgba(247, 247, 240, 0.72); margin-top: 1.3rem; font-size: 1.08rem; max-width: 36rem; }
     .fr-give__text strong { color: var(--paper); font-weight: 500; }
+    .fr-give__text + .fr-give__text { margin-top: 1rem; }
 
     /* Givebutter embed slot */
     .fr-embed {
@@ -338,6 +385,7 @@
     .fr-faq summary .sign { color: var(--brand-red); font-family: var(--fr-body); font-size: 1.4rem; transition: transform 0.3s ease; flex: none; }
     .fr-faq details[open] summary .sign { transform: rotate(45deg); }
     .fr-faq__answer { padding: 0 0 1.4rem; color: var(--muted); max-width: 42rem; }
+    .fr-faq__answer a { color: var(--brand-red); }
 
     /* ---------- Footer ---------- */
     .fr-footer { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 5vw, 3.5rem); }
@@ -384,10 +432,10 @@
       </a>
       <nav class="fr-nav__links">
         <a href="#evening" class="fr-nav__link">The Evening</a>
-        <a href="#impact" class="fr-nav__link">Your Impact</a>
+        <a href="#impact" class="fr-nav__link">The Fund</a>
         <a href="#faq" class="fr-nav__link">FAQ</a>
         <a href="/" class="fr-nav__link is-back">Main site</a>
-        <a href="#give" class="fr-btn fr-btn--primary">Reserve a seat</a>
+        <a href="#give" class="fr-btn fr-btn--primary">Save your spot</a>
       </nav>
     </div>
   </header>
@@ -400,19 +448,20 @@
         <div class="fr-hero__inner">
           <img class="fr-hero__torch" src="../site-assets/hym-torch.png" alt="Heritage Youth Missions torch" data-reveal />
           <p class="fr-eyebrow" data-reveal>Heritage Youth Missions · Annual Fundraiser 2026</p>
-          <h1 class="fr-hero__title" data-reveal>An Evening for the <em>Next Generation</em></h1>
+          <h1 class="fr-hero__title" data-reveal>One night. A fund that <em>never stops giving</em>.</h1>
           <div class="fr-hero__meta" data-reveal>
             <span>Tuesday, July 7, 2026</span>
             <span class="dot"></span>
-            <span>Waco, Texas</span>
+            <span>Heritage Center · Waco, Texas</span>
           </div>
           <p class="fr-hero__lede" data-reveal>
-            One night to gather, celebrate, and give — and to fuel everything God is doing through the
-            next generation. You belong in the room.
+            Our grandest night yet — brass and banquet, music and story, and a room full of people who
+            believe the gospel is worth everything. Together we're growing a mission fund built to give
+            for generations. You belong in the room.
           </p>
           <div class="fr-cta-row" data-reveal>
             <a href="#give" class="fr-btn fr-btn--primary">
-              Reserve your seat
+              Save your spot
               <svg class="fr-btn__arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="#give" class="fr-btn fr-btn--ghost">Give a gift</a>
@@ -426,50 +475,101 @@
       <div class="fr-facts">
         <div class="fr-fact" data-reveal>
           <p class="fr-fact__label">When</p>
-          <p class="fr-fact__value">Tuesday, July 7<small>Doors 6:00 PM · Program 7:00 PM</small></p>
+          <p class="fr-fact__value">Tuesday, July 7<small>2026 · evening (time to come)</small></p>
         </div>
         <div class="fr-fact" data-reveal>
           <p class="fr-fact__label">Where</p>
-          <p class="fr-fact__value">Waco, TX<small>Venue details to come</small></p>
+          <p class="fr-fact__value">Heritage Center<small>Waco, Texas</small></p>
         </div>
         <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">Evening</p>
-          <p class="fr-fact__value">Dinner &amp; Story<small>Cocktail attire</small></p>
+          <p class="fr-fact__label">The night</p>
+          <p class="fr-fact__value">Dinner &amp; Celebration<small>Music, story &amp; giving</small></p>
         </div>
         <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">Seats</p>
-          <p class="fr-fact__value">By reservation<small>Individual &amp; table sponsorships</small></p>
+          <p class="fr-fact__label">Admission</p>
+          <p class="fr-fact__value">Free to attend<small>Come ready to give</small></p>
         </div>
       </div>
     </section>
 
-    <!-- ======================= IMPACT ======================= -->
+    <!-- ======================= THE EVENING ======================= -->
+    <section class="fr-section fr-section--warm" id="evening">
+      <div class="fr-shell">
+        <div class="fr-section__head">
+          <p class="fr-eyebrow is-muted" data-reveal>How the night unfolds</p>
+          <h2 class="fr-section__title" data-reveal>An epic night, start to finish.</h2>
+          <p class="fr-section__lede" data-reveal>
+            From the first note of the brass to the last burst of confetti, July 7 is built to be our
+            grandest celebration yet — a night of music, story, great food, and generosity.
+          </p>
+        </div>
+        <div class="fr-flow">
+          <div class="fr-step" data-reveal>
+            <div class="fr-step__num">1</div>
+            <div>
+              <h3 class="fr-step__title">A grand opening</h3>
+              <p class="fr-step__text">Brass and banners and a room on its feet — we open the night the way it deserves.</p>
+            </div>
+          </div>
+          <div class="fr-step" data-reveal>
+            <div class="fr-step__num">2</div>
+            <div>
+              <h3 class="fr-step__title">Dinner &amp; live music</h3>
+              <p class="fr-step__text">A banquet around the table, with rotating live folk and bluegrass sets between courses.</p>
+            </div>
+          </div>
+          <div class="fr-step" data-reveal>
+            <div class="fr-step__num">3</div>
+            <div>
+              <h3 class="fr-step__title">The story</h3>
+              <p class="fr-step__text">The HYM film, premiered live on the big screen, and a word about where we're headed.</p>
+            </div>
+          </div>
+          <div class="fr-step" data-reveal>
+            <div class="fr-step__num">4</div>
+            <div>
+              <h3 class="fr-step__title">The giving</h3>
+              <p class="fr-step__text">Giveaway drawings throughout the room and a shared push toward the mission-fund vision.</p>
+            </div>
+          </div>
+          <div class="fr-step" data-reveal>
+            <div class="fr-step__num">5</div>
+            <div>
+              <h3 class="fr-step__title">The celebration</h3>
+              <p class="fr-step__text">Confetti, music, and a send-off to remember as we mark what we've built together.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= THE FUND ======================= -->
     <section class="fr-section" id="impact">
       <div class="fr-shell">
         <div class="fr-section__head">
           <p class="fr-eyebrow is-muted" data-reveal>Why we gather</p>
-          <h2 class="fr-section__title" data-reveal>Every seat at the table sends someone out.</h2>
+          <h2 class="fr-section__title" data-reveal>A fund built to give — forever.</h2>
           <p class="fr-section__lede" data-reveal>
-            Heritage Youth Missions exists to set young people on fire for a whole life for the whole
-            world. Your gift tonight becomes rallies, discipleship, and the leaders who walk it out —
-            in Waco and far beyond.
+            Tonight isn't about meeting one year's budget. We're building a permanent mission fund —
+            invested, protected, and never spent down — so its returns can fuel the gospel year after
+            year, here in Texas and around the world. Our vision: grow it to $5 million.
           </p>
         </div>
         <div class="fr-pillars">
           <article class="fr-pillar" data-reveal>
             <span class="fr-pillar__num">01</span>
-            <h3 class="fr-pillar__title">Rallies</h3>
-            <p class="fr-pillar__text">High-energy nights where students encounter God together — the spark that sets a whole generation on fire.</p>
+            <h3 class="fr-pillar__title">A seed we never spend</h3>
+            <p class="fr-pillar__text">Every gift becomes part of a permanent fund. We invest the principal and leave it untouched — so your generosity keeps working long after tonight.</p>
           </article>
           <article class="fr-pillar" data-reveal>
             <span class="fr-pillar__num">02</span>
-            <h3 class="fr-pillar__title">Discipleship</h3>
-            <p class="fr-pillar__text">The rally lights the spark; discipleship keeps the fire burning. We walk with students long after the lights come up.</p>
+            <h3 class="fr-pillar__title">Missions, funded for good</h3>
+            <p class="fr-pillar__text">The returns go to work — supporting gospel-driven missions and the next generation of leaders, across Texas and around the world.</p>
           </article>
           <article class="fr-pillar" data-reveal>
             <span class="fr-pillar__num">03</span>
-            <h3 class="fr-pillar__title">Community Partnerships</h3>
-            <p class="fr-pillar__text">We build with churches, families, and communities who trust HYM — accountable, local, and lasting.</p>
+            <h3 class="fr-pillar__title">A $5 million vision</h3>
+            <p class="fr-pillar__text">Our goal is a fund big enough to sustain the mission for generations. Every seat filled and every gift given is another step toward it.</p>
           </article>
         </div>
       </div>
@@ -488,12 +588,16 @@
     <section class="fr-section fr-give" id="give">
       <div class="fr-shell fr-give__grid">
         <div>
-          <p class="fr-eyebrow" data-reveal>Reserve · Sponsor · Give</p>
-          <h2 class="fr-give__title" data-reveal>Be part of the evening.</h2>
+          <p class="fr-eyebrow" data-reveal>Attend · Give · Sponsor</p>
+          <h2 class="fr-give__title" data-reveal>Be part of the night.</h2>
           <p class="fr-give__text" data-reveal>
-            Reserve a seat, sponsor a table, or give from wherever you are — every gift goes directly to
-            sending and discipling the next generation. <strong>Can't make it on July 7?</strong> You can
-            still be part of the night with a gift below.
+            Save your spot and join us on July 7 — admission is free, and we simply ask that you come
+            ready to give. Every gift goes straight into the mission fund.
+          </p>
+          <p class="fr-give__text" data-reveal>
+            <strong>Own a business?</strong> Sponsor the evening and we'll recognize you in front of the
+            whole room. <strong>Can't make it on July 7?</strong> You can still be part of the night with
+            a gift from wherever you are.
           </p>
           <div class="fr-cta-row" data-reveal>
             <!-- Replace REPLACE-ME with your Givebutter campaign slug -->
@@ -517,7 +621,7 @@
              Until then, the styled card below links to your campaign.
              ============================================================ -->
         <aside class="fr-embed" data-reveal aria-label="Make a gift">
-          <p class="fr-embed__label">Make a gift to HYM</p>
+          <p class="fr-embed__label">Give to the mission fund</p>
           <div class="fr-embed__amounts">
             <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$50</a>
             <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$150</a>
@@ -539,19 +643,27 @@
         <div class="fr-faq" data-reveal>
           <details>
             <summary>What is the HYM Annual Fundraiser? <span class="sign">+</span></summary>
-            <p class="fr-faq__answer">It's our one night each year to gather friends, families, and partners — to share stories from the year, celebrate the students God is moving in, and raise the support that makes the year ahead possible.</p>
+            <p class="fr-faq__answer">It's our one grand night each year to gather as a community — to share the story of what God is doing through Heritage Youth Missions, celebrate together, and grow the mission fund that fuels the work ahead.</p>
           </details>
           <details>
-            <summary>How do I reserve a seat or sponsor a table? <span class="sign">+</span></summary>
-            <p class="fr-faq__answer">Use the “Reserve your seat” button to open our Givebutter page, where you can claim individual seats or sponsor a full table. Sponsorships are a wonderful way to bring guests who are new to HYM.</p>
+            <summary>What does it cost to attend? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Nothing — the evening is free and open to everyone. We simply ask that you come ready to give. Every gift goes directly into the mission fund.</p>
+          </details>
+          <details>
+            <summary>How do I RSVP? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Use the “Save your spot” button to let us know you're coming, so we can plan seating and food. Bring your family and friends — there's room at the table.</p>
           </details>
           <details>
             <summary>I can't attend — can I still give? <span class="sign">+</span></summary>
-            <p class="fr-faq__answer">Absolutely. Every gift counts whether or not you're in the room. Use the giving page above to contribute any amount toward this year's goal.</p>
+            <p class="fr-faq__answer">Absolutely. Every gift counts whether or not you're in the room. Use the giving page above to contribute any amount toward the mission fund.</p>
+          </details>
+          <details>
+            <summary>Can my business sponsor the event? <span class="sign">+</span></summary>
+            <p class="fr-faq__answer">Yes — business sponsors are a big part of the night, and we recognize our sponsors in front of the whole room. Email us and we'll share the details.</p>
           </details>
           <details>
             <summary>Who can I contact with questions? <span class="sign">+</span></summary>
-            <p class="fr-faq__answer">Email us anytime at <a href="mailto:info@heritageyouthmissions.org" style="color: var(--brand-red);">info@heritageyouthmissions.org</a> and a member of the HYM team will be glad to help.</p>
+            <p class="fr-faq__answer">Email us anytime at <a href="mailto:info@heritageyouthmissions.org">info@heritageyouthmissions.org</a> and a member of the HYM team will be glad to help.</p>
           </details>
         </div>
       </div>

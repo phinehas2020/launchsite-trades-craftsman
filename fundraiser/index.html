@@ -5,41 +5,50 @@
   <meta charset="utf-8" />
   <title>Heritage Youth Missions – Annual Fundraiser 2026</title>
   <meta name="description"
-    content="Join Heritage Youth Missions for our annual fundraiser on Tuesday, July 7, 2026 at the Heritage Center in Waco, TX — a grand night of dinner, music, and story as we grow a mission fund built to give for generations." />
-  <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026" />
+    content="The grandest night yet — Heritage Youth Missions' annual fundraiser, Tuesday, July 7, 2026 at the Heritage Center in Waco, TX. Brass, banquet, live music, and one bold goal: a mission fund that never stops giving." />
+  <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026 — The grandest night yet" />
   <meta property="og:description"
-    content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. Save your spot and help grow a mission fund built to fuel the gospel for generations." />
+    content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. Brass, banquet, and a mission fund built to give for generations. Save your spot." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../site-assets/mission-images/real_mission_6.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
 
-  <!-- Inherit the site's fonts (Season Serif + Söhne) and color tokens from the shared stylesheet -->
+  <!-- Inherit the site's fonts (Season Serif + Söhne) from the shared stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="../site-assets/cdn.prod.website-files.com/688b2b7f61d51fc0f60ed9e2/css/tandeminc.webflow.shared.0db2934d2.min.css" />
 
   <style>
     /* ==========================================================
        HYM Annual Fundraiser — landing page
-       Built on the site's existing design tokens. All styles
-       are scoped with the .fr- prefix so nothing collides with
-       the shared Webflow stylesheet.
+       Bold "rally / grand celebration" rebuild. All styles are
+       scoped with the .fr- prefix so nothing collides with the
+       shared Webflow stylesheet. Sohne ships 400/700/800;
+       Season Serif ships 300/400 — heavy caps come from Sohne 800.
        ========================================================== */
 
     :root {
       --brand-red: #c5221f;
+      --red-deep: #8d1410;
       --brand-yellow: #f5a623;
+      --gold: #eaa53c;
       --ember: #e0531f;
-      --ink: #1e1e1c;
+      --ink: #190f0a;          /* warm near-black */
+      --ink-2: #251710;
       --paper: #faf5ec;
       --paper-warm: #fbeed8;
+      --cream-2: #f2e6d1;
       --muted: #6b645c;
+      --on-dark: rgba(250, 245, 236, 0.72);
       --line: rgba(30, 30, 28, 0.12);
-      --line-warm: rgba(197, 34, 31, 0.16);
+      --line-warm: rgba(197, 34, 31, 0.2);
+      --line-dark: rgba(250, 245, 236, 0.16);
       --fr-display: 'Season Serif', Georgia, serif;
       --fr-body: 'Sohne', Arial, sans-serif;
-      --fr-shell: min(1180px, calc(100% - 3rem));
+      --fr-shell: min(1200px, calc(100% - 3rem));
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
     }
 
     .fr-page * { box-sizing: border-box; }
@@ -47,10 +56,10 @@
     .fr-page {
       margin: 0;
       font-family: var(--fr-body);
-      font-weight: 300;
+      font-weight: 400;
       color: var(--ink);
       background: var(--paper);
-      line-height: 1.65;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -60,364 +69,401 @@
 
     .fr-shell { width: var(--fr-shell); margin-inline: auto; }
 
+    /* ---------- Eyebrow pill ---------- */
     .fr-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.28em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--fr-body);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--brand-red);
+      padding: 0.45rem 0.95rem;
+      border: 1px solid var(--line-warm);
+      border-radius: 999px;
       margin: 0;
     }
+    .fr-eyebrow::before {
+      content: '';
+      width: 0.42rem; height: 0.42rem;
+      border-radius: 50%;
+      background: var(--brand-red);
+      box-shadow: 0 0 0 3px rgba(197, 34, 31, 0.16);
+    }
+    .fr-eyebrow--light { color: var(--gold); border-color: var(--line-dark); }
+    .fr-eyebrow--light::before { background: var(--gold); box-shadow: 0 0 10px 1px rgba(234, 165, 60, 0.6); }
 
-    .fr-eyebrow.is-muted { color: var(--muted); }
-
-    /* ---------- Buttons ---------- */
+    /* ---------- Buttons (button-in-button) ---------- */
     .fr-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 0.95rem 1.6rem;
+      gap: 0.7rem;
+      padding: 0.6rem 0.7rem 0.6rem 1.5rem;
       border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
+      font-family: var(--fr-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+      transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease);
     }
-    .fr-btn:hover { transform: translateY(-2px); }
-    /* .fr-page prefix keeps these ahead of the generic `.fr-page a { color: inherit }` reset */
-    .fr-page .fr-btn--primary { background: var(--brand-red); color: #fff; box-shadow: 0 12px 28px -14px rgba(197, 34, 31, 0.7); }
-    .fr-page .fr-btn--primary:hover { background: var(--ember); color: #fff; box-shadow: 0 16px 32px -14px rgba(224, 83, 31, 0.8); }
-    .fr-page .fr-btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .fr-btn__ico {
+      width: 1.85rem; height: 1.85rem;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(255, 255, 255, 0.18);
+      transition: transform 0.5s var(--ease-spring), background 0.4s var(--ease);
+    }
+    .fr-btn__ico svg { width: 0.72rem; height: 0.72rem; }
+    .fr-btn:hover .fr-btn__ico { transform: translate(2px, -2px) scale(1.06); }
+    .fr-btn:active { transform: scale(0.97); }
+    /* .fr-page prefix beats the generic `.fr-page a { color: inherit }` reset */
+    .fr-page .fr-btn--primary { background: var(--brand-red); color: #fff; box-shadow: 0 16px 34px -16px rgba(197, 34, 31, 0.85); }
+    .fr-page .fr-btn--primary:hover { background: var(--ember); color: #fff; box-shadow: 0 20px 40px -16px rgba(224, 83, 31, 0.95); }
+    .fr-page .fr-btn--primary .fr-btn__ico { background: rgba(255, 255, 255, 0.22); }
+    .fr-page .fr-btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); padding-left: 1.5rem; }
     .fr-page .fr-btn--ghost:hover { border-color: var(--brand-red); color: var(--brand-red); }
-    .fr-page .fr-btn--light { background: var(--paper); color: var(--ink); }
-    .fr-page .fr-btn--light:hover { background: var(--brand-yellow); color: var(--ink); }
-    .fr-btn__arrow { width: 0.7rem; height: 0.7rem; }
+    .fr-page .fr-btn--ghost .fr-btn__ico { background: rgba(30, 30, 28, 0.07); }
+    .fr-page .fr-btn--on-dark { background: transparent; color: var(--paper); border-color: var(--line-dark); }
+    .fr-page .fr-btn--on-dark:hover { border-color: var(--gold); color: var(--gold); }
+    .fr-page .fr-btn--on-dark .fr-btn__ico { background: rgba(250, 245, 236, 0.14); }
+    .fr-page .fr-btn--cream { background: var(--paper); color: var(--ink); }
+    .fr-page .fr-btn--cream:hover { background: #fff; }
+    .fr-page .fr-btn--cream .fr-btn__ico { background: rgba(197, 34, 31, 0.12); }
 
-    /* ---------- Nav ---------- */
+    /* ---------- Bunting (pennant flags) ---------- */
+    .fr-bunting {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 1.85rem;
+      overflow: hidden;
+      gap: 0.18rem;
+    }
+    .fr-bunting::before {
+      content: '';
+      position: absolute;
+      top: 1px; left: 0; right: 0;
+      height: 1px;
+      background: var(--line-dark);
+    }
+    .fr-bunting.is-warm::before { background: var(--line-warm); }
+    .fr-pennant {
+      flex: none;
+      width: 1.5rem; height: 1.45rem;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      animation: frSway 4.5s var(--ease) infinite;
+    }
+    .fr-pennant:nth-child(3n) { background: var(--brand-red); animation-delay: -0.4s; }
+    .fr-pennant:nth-child(3n+1) { background: var(--gold); animation-delay: -1.6s; }
+    .fr-pennant:nth-child(3n+2) { background: var(--cream-2); animation-delay: -2.7s; }
+    @keyframes frSway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+
+    /* ---------- Nav (floating glass pill) ---------- */
     .fr-nav {
       position: fixed;
       inset: 0 0 auto 0;
       z-index: 40;
-      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-      border-bottom: 1px solid transparent;
-    }
-    .fr-nav.is-scrolled {
-      background: rgba(247, 247, 240, 0.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom-color: var(--line);
+      padding: 1rem 1.5rem 0;
+      display: flex;
+      justify-content: center;
     }
     .fr-nav__inner {
+      width: min(1200px, 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      padding-block: 1rem;
+      padding: 0.55rem 0.65rem 0.55rem 1.4rem;
+      border-radius: 999px;
+      background: rgba(250, 245, 236, 0.66);
+      border: 1px solid rgba(250, 245, 236, 0.5);
+      backdrop-filter: blur(16px) saturate(1.4);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4);
+      box-shadow: 0 18px 40px -28px rgba(25, 15, 10, 0.55);
+      transition: background 0.45s var(--ease), box-shadow 0.45s var(--ease);
     }
-    .fr-nav__logo img { height: 2.1rem; width: auto; }
-    .fr-nav__links { display: flex; align-items: center; gap: 2rem; }
+    .fr-nav.is-scrolled .fr-nav__inner { background: rgba(250, 245, 236, 0.9); box-shadow: 0 14px 34px -26px rgba(25, 15, 10, 0.7); }
+    .fr-nav__logo img { height: 2rem; width: auto; }
+    .fr-nav__links { display: flex; align-items: center; gap: 1.9rem; }
     .fr-nav__link {
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
       color: var(--ink);
-      transition: color 0.25s ease;
+      transition: color 0.25s var(--ease);
     }
     .fr-nav__link:hover { color: var(--brand-red); }
     .fr-nav__link.is-back { color: var(--muted); }
-    .fr-nav .fr-btn { padding-block: 0.7rem; }
+    .fr-nav .fr-btn { padding-block: 0.5rem; }
 
-    /* ---------- Hero ---------- */
+    /* ---------- Hero (dark / dramatic) ---------- */
     .fr-hero {
       position: relative;
-      text-align: center;
-      padding-top: clamp(8.5rem, 15vh, 12rem);
-      padding-bottom: clamp(3.5rem, 7vw, 6rem);
       overflow: hidden;
       background:
-        radial-gradient(58% 50% at 50% 16%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%),
-        var(--paper);
+        radial-gradient(62% 48% at 50% 30%, #2a1810 0%, rgba(42, 24, 16, 0) 70%),
+        var(--ink);
+      color: var(--paper);
+      padding-top: clamp(7rem, 12vh, 9.5rem);
     }
     .fr-hero__glow {
       position: absolute;
-      top: clamp(4.5rem, 10vh, 7.5rem);
+      top: clamp(5rem, 14vh, 9rem);
       left: 50%;
       transform: translateX(-50%);
-      width: min(40rem, 86vw);
-      height: 26rem;
+      width: min(48rem, 92vw);
+      height: 32rem;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(circle at 50% 42%, rgba(245, 166, 35, 0.42) 0%, rgba(224, 83, 31, 0.2) 34%, rgba(224, 83, 31, 0) 68%);
-      filter: blur(6px);
+      background: radial-gradient(circle at 50% 38%, rgba(245, 166, 35, 0.5) 0%, rgba(224, 83, 31, 0.28) 32%, rgba(224, 83, 31, 0) 66%);
+      filter: blur(8px);
     }
-    .fr-hero__inner { position: relative; z-index: 1; max-width: 47rem; margin-inline: auto; }
-    /* .fr-page prefix beats the generic `.fr-page img { height: auto }` reset */
+    .fr-hero__inner { position: relative; z-index: 1; text-align: center; max-width: 52rem; margin-inline: auto; padding-top: clamp(1.5rem, 4vw, 2.5rem); }
     .fr-page .fr-hero__torch {
       width: auto;
       height: clamp(6.5rem, 13vw, 9.5rem);
-      margin: 0 auto 1.5rem;
-      filter: drop-shadow(0 16px 26px rgba(197, 34, 31, 0.28));
+      margin: 0 auto 1.6rem;
+      filter: drop-shadow(0 18px 40px rgba(245, 166, 35, 0.45));
       animation: frFloat 5.5s ease-in-out infinite;
     }
-    @keyframes frFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
+    @keyframes frFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
     .fr-hero__title {
       font-family: var(--fr-display);
-      font-weight: 300;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      line-height: 1.03;
-      letter-spacing: -0.015em;
-      margin: 1rem 0 0;
+      font-weight: 400;
+      font-size: clamp(3rem, 8.5vw, 7rem);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      margin: 1.4rem 0 0;
+      color: var(--paper); /* beat the shared Webflow h1{color:#1e1e1c} on the dark hero */
     }
-    .fr-hero__title em { font-style: italic; color: var(--brand-red); }
-    .fr-hero__meta {
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0.55rem 1rem;
-      margin-top: 1.5rem;
-      font-size: 1.02rem;
-      color: var(--ink);
-    }
-    .fr-hero__meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brand-red); }
+    .fr-hero__title em { font-style: italic; color: var(--gold); }
     .fr-hero__lede {
-      max-width: 36rem;
-      margin: 1.3rem auto 0;
-      font-size: 1.12rem;
-      color: var(--muted);
+      max-width: 38rem;
+      margin: 1.6rem auto 0;
+      font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+      color: var(--on-dark);
     }
-    .fr-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; margin-top: 2rem; }
+    .fr-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; margin-top: 2.2rem; }
 
-    /* ---------- Facts bar ---------- */
-    .fr-facts {
-      border-block: 1px solid var(--line);
+    /* facts row inside hero */
+    .fr-hero__facts {
+      position: relative;
+      z-index: 1;
+      margin-top: clamp(3.5rem, 7vw, 5.5rem);
+      border-top: 1px solid var(--line-dark);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
-    .fr-fact {
-      padding: clamp(1.4rem, 3vw, 2.2rem) 0;
-      padding-right: 1.5rem;
-    }
-    .fr-fact + .fr-fact { border-left: 1px solid var(--line); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
+    .fr-fact { padding: clamp(1.5rem, 3vw, 2.3rem) 1.4rem clamp(1.6rem, 3vw, 2.3rem) 0; }
+    .fr-fact + .fr-fact { border-left: 1px solid var(--line-dark); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
     .fr-fact__label {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 0.5rem;
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin: 0 0 0.55rem;
     }
     .fr-fact__value {
-      font-family: var(--fr-display);
-      font-size: clamp(1.15rem, 2vw, 1.5rem);
-      line-height: 1.15;
-      margin: 0;
+      font-family: var(--fr-display); font-size: clamp(1.2rem, 2vw, 1.6rem);
+      line-height: 1.12; margin: 0; color: var(--paper);
     }
-    .fr-fact__value small { display: block; font-family: var(--fr-body); font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0; }
+    .fr-fact__value small { display: block; font-family: var(--fr-body); font-size: 0.8rem; color: var(--on-dark); margin-top: 0.35rem; letter-spacing: 0; }
 
-    /* ---------- Section scaffolding ---------- */
-    .fr-section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+    /* ---------- Marquee ---------- */
+    .fr-marquee {
+      overflow: hidden;
+      background: var(--brand-red);
+      color: var(--paper);
+      border-block: 1px solid var(--red-deep);
+    }
+    .fr-marquee__track { display: flex; width: max-content; will-change: transform; animation: frMarquee 32s linear infinite; }
+    .fr-marquee__group { display: flex; align-items: center; flex: none; }
+    .fr-marquee__group span {
+      font-family: var(--fr-body); font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.03em; font-size: clamp(1.05rem, 2.3vw, 1.65rem);
+      padding-block: 0.95rem; white-space: nowrap;
+    }
+    .fr-marquee__sep { color: var(--gold); padding-inline: 1.4rem; }
+    @keyframes frMarquee { to { transform: translateX(-50%); } }
+    .fr-marquee:hover .fr-marquee__track { animation-play-state: paused; }
+
+    /* ---------- Section scaffold ---------- */
+    .fr-section { padding-block: clamp(4.5rem, 10vw, 8.5rem); position: relative; }
     .fr-section--warm {
-      background:
-        radial-gradient(72% 60% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 70%),
-        var(--paper);
+      background: radial-gradient(80% 70% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%), var(--paper);
     }
-    .fr-section__head { max-width: 44rem; }
+    .fr-section--dark { background: var(--ink); color: var(--paper); overflow: hidden; }
+    .fr-section__head { max-width: 46rem; }
     .fr-section__title {
-      font-family: var(--fr-display);
-      font-weight: 300;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.08;
-      letter-spacing: -0.01em;
-      margin: 1.1rem 0 0;
+      font-family: var(--fr-display); font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.04;
+      letter-spacing: -0.015em; margin: 1.2rem 0 0;
     }
-    .fr-section__lede { font-size: 1.12rem; color: var(--muted); margin-top: 1.3rem; max-width: 40rem; }
+    .fr-section__title em { font-style: italic; color: var(--brand-red); }
+    /* dark sections: beat the shared Webflow h2{color:#1e1e1c} */
+    .fr-section--dark .fr-section__title { color: var(--paper); }
+    .fr-section--dark .fr-section__title em { color: var(--gold); }
+    .fr-section__lede { font-size: 1.12rem; color: var(--muted); margin-top: 1.4rem; max-width: 40rem; }
+    .fr-section--dark .fr-section__lede { color: var(--on-dark); }
 
     /* ---------- The Evening (run of show) ---------- */
-    .fr-flow {
-      max-width: 46rem;
-      margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    }
+    .fr-flow { max-width: 50rem; margin-top: clamp(3rem, 6vw, 4.5rem); }
     .fr-step {
       position: relative;
       display: grid;
-      grid-template-columns: 3.2rem 1fr;
-      gap: 1.3rem;
-      padding-bottom: 2rem;
+      grid-template-columns: 4rem 1fr;
+      gap: 1.6rem;
+      padding-bottom: 2.4rem;
     }
     .fr-step:last-child { padding-bottom: 0; }
-    /* connecting line down the gutter between the numbered markers */
     .fr-step::before {
       content: '';
       position: absolute;
-      left: 1.6rem;
-      top: 3.2rem;
-      bottom: -0.1rem;
+      left: 2rem; top: 4rem; bottom: -0.1rem;
       width: 1px;
-      background: var(--line-warm);
+      background: linear-gradient(var(--line-warm), rgba(197, 34, 31, 0.04));
     }
     .fr-step:last-child::before { display: none; }
     .fr-step__num {
-      width: 3.2rem;
-      height: 3.2rem;
+      width: 4rem; height: 4rem;
       border-radius: 50%;
       border: 1px solid var(--line-warm);
       background: var(--paper);
-      display: grid;
-      place-items: center;
-      font-family: var(--fr-display);
-      font-size: 1.15rem;
+      display: grid; place-items: center;
+      font-family: var(--fr-body); font-weight: 800; font-size: 1.05rem;
       color: var(--brand-red);
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
     }
-    .fr-step__title { font-family: var(--fr-display); font-size: 1.3rem; font-weight: 400; margin: 0.4rem 0 0.4rem; }
-    .fr-step__text { color: var(--muted); margin: 0; font-size: 0.98rem; }
+    .fr-step__title { font-family: var(--fr-display); font-size: clamp(1.4rem, 2.4vw, 1.85rem); font-weight: 400; margin: 0.5rem 0 0.5rem; }
+    .fr-step__text { color: var(--muted); margin: 0; font-size: 1.02rem; max-width: 38rem; }
 
-    /* ---------- Pillars ---------- */
-    .fr-pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    /* ---------- The Fund (dark, giant number) ---------- */
+    .fr-fund__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+    .fr-fund__big {
+      font-family: var(--fr-body);
+      font-weight: 800;
+      font-size: clamp(6rem, 22vw, 17rem);
+      line-height: 0.82;
+      letter-spacing: -0.04em;
+      margin: 0;
+      background: linear-gradient(135deg, var(--gold) 8%, var(--ember) 70%, var(--brand-red) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
-    .fr-pillar {
-      padding: 1.9rem 1.7rem;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.55);
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .fr-pillar:hover {
-      border-color: var(--line-warm);
-      transform: translateY(-4px);
-      box-shadow: 0 22px 40px -28px rgba(197, 34, 31, 0.4);
-    }
-    .fr-pillar__num {
-      font-family: var(--fr-display);
-      font-size: 0.95rem;
-      color: var(--brand-red);
-      letter-spacing: 0.1em;
-    }
-    .fr-pillar__title { font-family: var(--fr-display); font-size: 1.45rem; margin: 0.9rem 0 0.6rem; font-weight: 400; }
-    .fr-pillar__text { font-size: 0.98rem; color: var(--muted); margin: 0; }
+    .fr-fund__big small { display: block; font-family: var(--fr-display); font-weight: 400; -webkit-text-fill-color: var(--on-dark); color: var(--on-dark); font-size: clamp(1rem, 1.6vw, 1.3rem); letter-spacing: 0.02em; margin-top: 1.2rem; }
+    .fr-fund__points { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
+    .fr-fund__point { padding-left: 1.4rem; position: relative; }
+    .fr-fund__point::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
+    .fr-fund__point h3 { font-family: var(--fr-display); font-weight: 400; font-size: 1.4rem; margin: 0 0 0.3rem; color: var(--paper); }
+    .fr-fund__point p { margin: 0; color: var(--on-dark); font-size: 0.98rem; }
 
-    /* ---------- Motto band ---------- */
+    /* ---------- Faith Works band ---------- */
     .fr-band {
       position: relative;
       text-align: center;
-      padding-block: clamp(4.5rem, 11vw, 8rem);
+      padding-block: clamp(5rem, 12vw, 9rem);
       border-block: 1px solid var(--line-warm);
-      background:
-        radial-gradient(78% 130% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%),
-        var(--paper);
+      background: radial-gradient(80% 130% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 72%), var(--paper);
     }
     .fr-band__script {
-      width: min(34rem, 82%);
-      height: auto;
-      margin: 1.4rem auto 0;
-      /* source art is black on an opaque white box; multiply drops the white into the warm bg, keeping the black script */
+      width: min(36rem, 84%); height: auto; margin: 1.6rem auto 0;
+      /* source art is black on an opaque white box; multiply drops the white into the warm bg */
       mix-blend-mode: multiply;
     }
-    .fr-band__cite { margin-top: 1.5rem; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+    .fr-band__cite { margin-top: 1.6rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-red); }
 
-    /* ---------- Give ---------- */
-    .fr-give { background: var(--ink); color: var(--paper); }
-    .fr-give .fr-eyebrow { color: var(--brand-yellow); }
-    .fr-give__grid {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: clamp(2.5rem, 6vw, 5rem);
-      align-items: center;
-    }
-    .fr-give__title {
-      font-family: var(--fr-display);
-      font-weight: 300;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.08;
-      margin: 1.1rem 0 0;
-    }
-    .fr-give__text { color: rgba(247, 247, 240, 0.72); margin-top: 1.3rem; font-size: 1.08rem; max-width: 36rem; }
-    .fr-give__text strong { color: var(--paper); font-weight: 500; }
+    /* ---------- Give (bold red + confetti) ---------- */
+    .fr-give { position: relative; overflow: hidden; background: var(--brand-red); color: var(--paper); }
+    .fr-give .fr-section__title { color: var(--paper); }
+    .fr-give .fr-section__title em { color: var(--ink); font-style: italic; }
+    .fr-give__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 0.9fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+    .fr-give__text { color: rgba(250, 245, 236, 0.86); margin-top: 1.4rem; font-size: 1.1rem; max-width: 36rem; }
+    .fr-give__text strong { color: #fff; font-weight: 700; }
     .fr-give__text + .fr-give__text { margin-top: 1rem; }
 
-    /* Givebutter embed slot */
+    /* Givebutter embed slot — double-bezel card */
     .fr-embed {
-      background: var(--paper);
-      color: var(--ink);
-      border-radius: 6px;
-      padding: 2rem;
-      box-shadow: 0 40px 80px -50px rgba(0, 0, 0, 0.6);
+      background: rgba(250, 245, 236, 0.12);
+      border: 1px solid rgba(250, 245, 236, 0.22);
+      border-radius: 1.6rem;
+      padding: 0.7rem;
+      box-shadow: 0 50px 90px -50px rgba(0, 0, 0, 0.7);
     }
-    .fr-embed__label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.2rem; }
-    .fr-embed__amounts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.4rem; }
+    .fr-embed__core { background: var(--paper); color: var(--ink); border-radius: 1.1rem; padding: 1.9rem; }
+    .fr-embed__label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-red); margin: 0 0 1.2rem; }
+    .fr-embed__amounts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.3rem; }
     .fr-embed__amount {
-      flex: 1 1 28%;
-      text-align: center;
-      padding: 0.85rem 0.5rem;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      font-family: var(--fr-display);
-      font-size: 1.25rem;
-      transition: border-color 0.25s ease, background 0.25s ease;
+      flex: 1 1 28%; text-align: center; padding: 0.95rem 0.5rem;
+      border: 1px solid var(--line); border-radius: 0.7rem;
+      font-family: var(--fr-display); font-size: 1.4rem;
+      transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease-spring);
     }
-    .fr-embed__amount:hover { border-color: var(--brand-red); background: rgba(197, 34, 31, 0.06); }
-    .fr-embed .fr-btn { width: 100%; justify-content: center; }
-    .fr-embed__note { font-size: 0.82rem; color: var(--muted); margin: 1rem 0 0; text-align: center; }
+    .fr-embed__amount:hover { border-color: var(--brand-red); background: rgba(197, 34, 31, 0.07); transform: translateY(-2px); }
+    .fr-embed .fr-btn { width: 100%; justify-content: center; padding-left: 0.7rem; }
+    .fr-embed__note { font-size: 0.8rem; color: var(--muted); margin: 1rem 0 0; text-align: center; }
+
+    .fr-confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .fr-confetti i { position: absolute; top: -8%; width: 0.5rem; height: 0.85rem; border-radius: 1px; opacity: 0.85; animation: frFall linear infinite; }
+    @keyframes frFall { 0% { transform: translateY(-10vh) rotate(0deg); } 100% { transform: translateY(115vh) rotate(540deg); } }
 
     /* ---------- FAQ ---------- */
-    .fr-faq { max-width: 48rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+    .fr-faq { max-width: 50rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
     .fr-faq details { border-top: 1px solid var(--line); }
     .fr-faq details:last-child { border-bottom: 1px solid var(--line); }
     .fr-faq summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 1.3rem 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      align-items: center;
-      font-family: var(--fr-display);
-      font-size: 1.2rem;
+      list-style: none; cursor: pointer; padding: 1.4rem 0;
+      display: flex; justify-content: space-between; gap: 1.5rem; align-items: center;
+      font-family: var(--fr-display); font-size: clamp(1.15rem, 1.8vw, 1.35rem);
     }
     .fr-faq summary::-webkit-details-marker { display: none; }
-    .fr-faq summary .sign { color: var(--brand-red); font-family: var(--fr-body); font-size: 1.4rem; transition: transform 0.3s ease; flex: none; }
+    .fr-faq summary .sign { color: var(--brand-red); font-family: var(--fr-body); font-weight: 700; font-size: 1.5rem; transition: transform 0.4s var(--ease-spring); flex: none; }
     .fr-faq details[open] summary .sign { transform: rotate(45deg); }
-    .fr-faq__answer { padding: 0 0 1.4rem; color: var(--muted); max-width: 42rem; }
+    .fr-faq__answer { padding: 0 0 1.5rem; color: var(--muted); max-width: 44rem; font-size: 1.02rem; }
     .fr-faq__answer a { color: var(--brand-red); }
 
-    /* ---------- Footer ---------- */
-    .fr-footer { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 5vw, 3.5rem); }
+    /* ---------- Footer (dark) ---------- */
+    .fr-footer { background: var(--ink); color: var(--paper); padding-block: clamp(3rem, 6vw, 4.5rem); }
     .fr-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
-    .fr-footer__brand { display: flex; align-items: center; gap: 0.9rem; }
-    .fr-footer__brand img { height: 2rem; width: auto; }
-    .fr-footer__tag { font-family: var(--fr-display); font-style: italic; color: var(--muted); }
-    .fr-footer__meta { font-size: 0.85rem; color: var(--muted); text-align: right; }
-    .fr-footer__meta a:hover { color: var(--brand-red); }
+    .fr-footer__brand { display: flex; align-items: center; gap: 1rem; }
+    .fr-footer__brand img { height: 2.2rem; width: auto; }
+    .fr-footer__tag { font-family: var(--fr-display); font-style: italic; color: var(--gold); font-size: 1.05rem; }
+    .fr-footer__meta { font-size: 0.85rem; color: var(--on-dark); text-align: right; }
+    .fr-footer__meta a:hover { color: var(--gold); }
 
     /* ---------- Reveal animation ---------- */
-    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    [data-reveal].is-in { opacity: 1; transform: none; }
+    [data-reveal] {
+      opacity: 0; transform: translateY(26px); filter: blur(6px);
+      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), filter 0.9s var(--ease);
+    }
+    [data-reveal].is-in { opacity: 1; transform: none; filter: none; }
 
     @media (prefers-reduced-motion: reduce) {
-      [data-reveal] { opacity: 1; transform: none; transition: none; }
-      .fr-btn:hover, .fr-pillar:hover { transform: none; }
-      .fr-hero__torch { animation: none; }
+      [data-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
+      .fr-btn:hover, .fr-btn:active { transform: none; }
+      .fr-hero__torch, .fr-pennant, .fr-marquee__track, .fr-confetti i { animation: none; }
+      .fr-confetti { display: none; }
     }
 
     /* ---------- Responsive ---------- */
     @media (max-width: 920px) {
-      .fr-facts { grid-template-columns: repeat(2, 1fr); }
+      .fr-hero__facts { grid-template-columns: repeat(2, 1fr); }
       .fr-fact:nth-child(3) { border-left: none; padding-left: 0; }
       .fr-fact:nth-child(odd) { padding-right: 1rem; }
-      .fr-fact:nth-child(2), .fr-fact:nth-child(4) { border-left: 1px solid var(--line); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
-      .fr-pillars { grid-template-columns: 1fr; }
+      .fr-fact:nth-child(2), .fr-fact:nth-child(4) { border-left: 1px solid var(--line-dark); padding-left: clamp(1.2rem, 2.5vw, 2rem); }
+      .fr-fund__grid { grid-template-columns: 1fr; }
       .fr-give__grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      .fr-nav__links { gap: 1rem; }
+      .fr-nav { padding-inline: 0.9rem; }
+      .fr-nav__inner { padding-left: 1.1rem; }
+      .fr-nav__links { gap: 0.9rem; }
       .fr-nav__link:not(.is-back) { display: none; }
     }
   </style>
@@ -426,16 +472,19 @@
 <body class="fr-page">
   <!-- ======================= NAV ======================= -->
   <header class="fr-nav" id="frNav">
-    <div class="fr-shell fr-nav__inner">
+    <div class="fr-nav__inner">
       <a href="/" class="fr-nav__logo" aria-label="Heritage Youth Missions home">
         <img src="../site-assets/logo-new.png" alt="Heritage Youth Missions" />
       </a>
       <nav class="fr-nav__links">
         <a href="#evening" class="fr-nav__link">The Evening</a>
-        <a href="#impact" class="fr-nav__link">The Fund</a>
+        <a href="#fund" class="fr-nav__link">The Fund</a>
         <a href="#faq" class="fr-nav__link">FAQ</a>
         <a href="/" class="fr-nav__link is-back">Main site</a>
-        <a href="#give" class="fr-btn fr-btn--primary">Save your spot</a>
+        <a href="#give" class="fr-btn fr-btn--primary">
+          Save your spot
+          <span class="fr-btn__ico"><svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
       </nav>
     </div>
   </header>
@@ -443,64 +492,84 @@
   <main>
     <!-- ======================= HERO ======================= -->
     <section class="fr-hero">
+      <div class="fr-bunting" data-bunting aria-hidden="true"></div>
       <div class="fr-hero__glow" aria-hidden="true"></div>
       <div class="fr-shell">
         <div class="fr-hero__inner">
           <img class="fr-hero__torch" src="../site-assets/hym-torch.png" alt="Heritage Youth Missions torch" data-reveal />
-          <p class="fr-eyebrow" data-reveal>Heritage Youth Missions · Annual Fundraiser 2026</p>
-          <h1 class="fr-hero__title" data-reveal>One night. A fund that <em>never stops giving</em>.</h1>
-          <div class="fr-hero__meta" data-reveal>
-            <span>Tuesday, July 7, 2026</span>
-            <span class="dot"></span>
-            <span>Heritage Center · Waco, Texas</span>
-          </div>
+          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>Heritage Youth Missions · Annual Fundraiser 2026</p>
+          <h1 class="fr-hero__title" data-reveal>The grandest <em>night</em> yet.</h1>
           <p class="fr-hero__lede" data-reveal>
-            Our grandest night yet — brass and banquet, music and story, and a room full of people who
-            believe the gospel is worth everything. Together we're growing a mission fund built to give
-            for generations. You belong in the room.
+            Brass and banners, a banquet for a thousand, and one bold goal — to grow a mission fund that
+            never stops giving. Come ready to celebrate. Come ready to give.
           </p>
           <div class="fr-cta-row" data-reveal>
             <a href="#give" class="fr-btn fr-btn--primary">
               Save your spot
-              <svg class="fr-btn__arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="fr-btn__ico"><svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </a>
-            <a href="#give" class="fr-btn fr-btn--ghost">Give a gift</a>
+            <a href="#evening" class="fr-btn fr-btn--on-dark">
+              See the night
+              <span class="fr-btn__ico"><svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 1V7M4 7L1 4M4 7L7 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- facts row -->
+        <div class="fr-hero__facts" aria-label="Event details">
+          <div class="fr-fact" data-reveal>
+            <p class="fr-fact__label">When</p>
+            <p class="fr-fact__value">Tuesday, July 7<small>2026 · evening (time to come)</small></p>
+          </div>
+          <div class="fr-fact" data-reveal>
+            <p class="fr-fact__label">Where</p>
+            <p class="fr-fact__value">Heritage Center<small>Waco, Texas</small></p>
+          </div>
+          <div class="fr-fact" data-reveal>
+            <p class="fr-fact__label">The night</p>
+            <p class="fr-fact__value">Dinner &amp; Celebration<small>Music, story &amp; giving</small></p>
+          </div>
+          <div class="fr-fact" data-reveal>
+            <p class="fr-fact__label">Admission</p>
+            <p class="fr-fact__value">Free to attend<small>Come ready to give</small></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======================= FACTS ======================= -->
-    <section class="fr-shell" aria-label="Event details">
-      <div class="fr-facts">
-        <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">When</p>
-          <p class="fr-fact__value">Tuesday, July 7<small>2026 · evening (time to come)</small></p>
+    <!-- ======================= MARQUEE ======================= -->
+    <div class="fr-marquee" aria-hidden="true">
+      <div class="fr-marquee__track">
+        <div class="fr-marquee__group">
+          <span>One Night</span><span class="fr-marquee__sep">✦</span>
+          <span>Brass &amp; Banquet</span><span class="fr-marquee__sep">✦</span>
+          <span>Live Music</span><span class="fr-marquee__sep">✦</span>
+          <span>Giveaways</span><span class="fr-marquee__sep">✦</span>
+          <span>Confetti</span><span class="fr-marquee__sep">✦</span>
+          <span>A $5M Vision</span><span class="fr-marquee__sep">✦</span>
+          <span>July 7, 2026</span><span class="fr-marquee__sep">✦</span>
         </div>
-        <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">Where</p>
-          <p class="fr-fact__value">Heritage Center<small>Waco, Texas</small></p>
-        </div>
-        <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">The night</p>
-          <p class="fr-fact__value">Dinner &amp; Celebration<small>Music, story &amp; giving</small></p>
-        </div>
-        <div class="fr-fact" data-reveal>
-          <p class="fr-fact__label">Admission</p>
-          <p class="fr-fact__value">Free to attend<small>Come ready to give</small></p>
+        <div class="fr-marquee__group">
+          <span>One Night</span><span class="fr-marquee__sep">✦</span>
+          <span>Brass &amp; Banquet</span><span class="fr-marquee__sep">✦</span>
+          <span>Live Music</span><span class="fr-marquee__sep">✦</span>
+          <span>Giveaways</span><span class="fr-marquee__sep">✦</span>
+          <span>Confetti</span><span class="fr-marquee__sep">✦</span>
+          <span>A $5M Vision</span><span class="fr-marquee__sep">✦</span>
+          <span>July 7, 2026</span><span class="fr-marquee__sep">✦</span>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ======================= THE EVENING ======================= -->
     <section class="fr-section fr-section--warm" id="evening">
       <div class="fr-shell">
         <div class="fr-section__head">
-          <p class="fr-eyebrow is-muted" data-reveal>How the night unfolds</p>
-          <h2 class="fr-section__title" data-reveal>An epic night, start to finish.</h2>
+          <p class="fr-eyebrow" data-reveal>How the night unfolds</p>
+          <h2 class="fr-section__title" data-reveal>From the first <em>brass note</em> to the last burst of confetti.</h2>
           <p class="fr-section__lede" data-reveal>
-            From the first note of the brass to the last burst of confetti, July 7 is built to be our
-            grandest celebration yet — a night of music, story, great food, and generosity.
+            July 7 is built to be our grandest celebration yet — a night of music, story, great food, and
+            full-throated generosity. Here's how it plays out.
           </p>
         </div>
         <div class="fr-flow">
@@ -508,7 +577,7 @@
             <div class="fr-step__num">1</div>
             <div>
               <h3 class="fr-step__title">A grand opening</h3>
-              <p class="fr-step__text">Brass and banners and a room on its feet — we open the night the way it deserves.</p>
+              <p class="fr-step__text">Brass blasting, banners dropping, the room on its feet. We open the night the way it deserves.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
@@ -529,14 +598,14 @@
             <div class="fr-step__num">4</div>
             <div>
               <h3 class="fr-step__title">The giving</h3>
-              <p class="fr-step__text">Giveaway drawings throughout the room and a shared push toward the mission-fund vision.</p>
+              <p class="fr-step__text">Giveaway drawings all night long and a shared, electric push toward the mission-fund vision.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
             <div class="fr-step__num">5</div>
             <div>
               <h3 class="fr-step__title">The celebration</h3>
-              <p class="fr-step__text">Confetti, music, and a send-off to remember as we mark what we've built together.</p>
+              <p class="fr-step__text">Confetti in the air, music up loud, and a send-off to remember as we mark what we built together.</p>
             </div>
           </div>
         </div>
@@ -544,66 +613,67 @@
     </section>
 
     <!-- ======================= THE FUND ======================= -->
-    <section class="fr-section" id="impact">
+    <section class="fr-section fr-section--dark" id="fund">
       <div class="fr-shell">
         <div class="fr-section__head">
-          <p class="fr-eyebrow is-muted" data-reveal>Why we gather</p>
-          <h2 class="fr-section__title" data-reveal>A fund built to give — forever.</h2>
-          <p class="fr-section__lede" data-reveal>
-            Tonight isn't about meeting one year's budget. We're building a permanent mission fund —
-            invested, protected, and never spent down — so its returns can fuel the gospel year after
-            year, here in Texas and around the world. Our vision: grow it to $5 million.
-          </p>
+          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>The vision</p>
+          <h2 class="fr-section__title" data-reveal>One fund. Built to give <em>forever</em>.</h2>
         </div>
-        <div class="fr-pillars">
-          <article class="fr-pillar" data-reveal>
-            <span class="fr-pillar__num">01</span>
-            <h3 class="fr-pillar__title">A seed we never spend</h3>
-            <p class="fr-pillar__text">Every gift becomes part of a permanent fund. We invest the principal and leave it untouched — so your generosity keeps working long after tonight.</p>
-          </article>
-          <article class="fr-pillar" data-reveal>
-            <span class="fr-pillar__num">02</span>
-            <h3 class="fr-pillar__title">Missions, funded for good</h3>
-            <p class="fr-pillar__text">The returns go to work — supporting gospel-driven missions and the next generation of leaders, across Texas and around the world.</p>
-          </article>
-          <article class="fr-pillar" data-reveal>
-            <span class="fr-pillar__num">03</span>
-            <h3 class="fr-pillar__title">A $5 million vision</h3>
-            <p class="fr-pillar__text">Our goal is a fund big enough to sustain the mission for generations. Every seat filled and every gift given is another step toward it.</p>
-          </article>
+        <div class="fr-fund__grid" style="margin-top: clamp(2.5rem, 5vw, 3.5rem);">
+          <div data-reveal>
+            <p class="fr-fund__big">$5M
+              <small>Our goal: a permanent mission fund big enough to fuel the gospel for generations.</small>
+            </p>
+          </div>
+          <ul class="fr-fund__points">
+            <li class="fr-fund__point" data-reveal>
+              <h3>A seed we never spend</h3>
+              <p>Every gift joins a permanent fund. We invest the principal and leave it untouched — so your generosity keeps working long after the lights come up.</p>
+            </li>
+            <li class="fr-fund__point" data-reveal>
+              <h3>Missions, funded for good</h3>
+              <p>The returns go to work — fueling gospel-driven missions and the next generation of leaders, across Texas and around the world.</p>
+            </li>
+            <li class="fr-fund__point" data-reveal>
+              <h3>Every gift is a step</h3>
+              <p>Every seat filled and every dollar given moves us closer to a fund that outlasts all of us. July 7 is the next big step.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ======================= QUOTE BAND ======================= -->
+    <!-- ======================= FAITH WORKS BAND ======================= -->
     <section class="fr-band">
+      <div class="fr-bunting is-warm" data-bunting aria-hidden="true"></div>
       <div class="fr-shell">
-        <p class="fr-eyebrow" data-reveal>The heart of the night</p>
+        <p class="fr-eyebrow" data-reveal style="margin-top: 1.5rem;">The heart of the night</p>
         <img class="fr-band__script" src="../site-assets/faith-works.png" alt="Faith Works. — James 2:18" data-reveal />
-        <p class="fr-band__cite" data-reveal>Every gift is faith, at work in the world.</p>
+        <p class="fr-band__cite" data-reveal>James 2:18 · Every gift is faith, at work in the world</p>
       </div>
     </section>
 
     <!-- ======================= GIVE ======================= -->
     <section class="fr-section fr-give" id="give">
+      <div class="fr-confetti" data-confetti aria-hidden="true"></div>
       <div class="fr-shell fr-give__grid">
         <div>
-          <p class="fr-eyebrow" data-reveal>Attend · Give · Sponsor</p>
-          <h2 class="fr-give__title" data-reveal>Be part of the night.</h2>
+          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>Attend · Give · Sponsor</p>
+          <h2 class="fr-section__title" data-reveal>Put your faith to <em>work</em>.</h2>
           <p class="fr-give__text" data-reveal>
             Save your spot and join us on July 7 — admission is free, and we simply ask that you come
             ready to give. Every gift goes straight into the mission fund.
           </p>
           <p class="fr-give__text" data-reveal>
-            <strong>Own a business?</strong> Sponsor the evening and we'll recognize you in front of the
-            whole room. <strong>Can't make it on July 7?</strong> You can still be part of the night with
-            a gift from wherever you are.
+            <strong>Own a business?</strong> Sponsor the evening and we'll put your name in front of the
+            whole room. <strong>Can't make it on the 7th?</strong> Give from wherever you are and still be
+            part of the night.
           </p>
           <div class="fr-cta-row" data-reveal>
             <!-- Replace REPLACE-ME with your Givebutter campaign slug -->
-            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--light">
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--cream">
               Open the giving page
-              <svg class="fr-btn__arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="fr-btn__ico"><svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </a>
           </div>
         </div>
@@ -617,18 +687,23 @@
                <givebutter-widget id="YOUR_WIDGET_ID"></givebutter-widget>
 
              Add the <script> tag just before </body> below, and replace
-             the .fr-embed card markup with <givebutter-widget ...>.
+             the .fr-embed__core card markup with <givebutter-widget ...>.
              Until then, the styled card below links to your campaign.
              ============================================================ -->
         <aside class="fr-embed" data-reveal aria-label="Make a gift">
-          <p class="fr-embed__label">Give to the mission fund</p>
-          <div class="fr-embed__amounts">
-            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$50</a>
-            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$150</a>
-            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$500</a>
+          <div class="fr-embed__core">
+            <p class="fr-embed__label">Give to the mission fund</p>
+            <div class="fr-embed__amounts">
+              <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$50</a>
+              <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$150</a>
+              <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-embed__amount">$500</a>
+            </div>
+            <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--primary">
+              Give securely
+              <span class="fr-btn__ico"><svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+            <p class="fr-embed__note">Powered by Givebutter · 100% secure</p>
           </div>
-          <a href="https://givebutter.com/REPLACE-ME" target="_blank" rel="noopener" class="fr-btn fr-btn--primary">Give securely</a>
-          <p class="fr-embed__note">Powered by Givebutter · 100% secure</p>
         </aside>
       </div>
     </section>
@@ -637,7 +712,7 @@
     <section class="fr-section" id="faq">
       <div class="fr-shell">
         <div class="fr-section__head">
-          <p class="fr-eyebrow is-muted" data-reveal>Good to know</p>
+          <p class="fr-eyebrow" data-reveal>Good to know</p>
           <h2 class="fr-section__title" data-reveal>Questions, answered.</h2>
         </div>
         <div class="fr-faq" data-reveal>
@@ -685,8 +760,40 @@
   </footer>
 
   <script>
-    // Sticky nav background on scroll
     (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Build bunting pennants to fill each strip's width
+      document.querySelectorAll('[data-bunting]').forEach(function (strip) {
+        var per = 24; // px width of a pennant + gap, roughly
+        var count = Math.max(8, Math.ceil(strip.offsetWidth / per));
+        var frag = document.createDocumentFragment();
+        for (var i = 0; i < count; i++) { var p = document.createElement('span'); p.className = 'fr-pennant'; frag.appendChild(p); }
+        strip.appendChild(frag);
+      });
+
+      // Confetti pieces in the give section
+      if (!reduce) {
+        var colors = ['#f5a623', '#faf5ec', '#190f0a', '#eaa53c'];
+        document.querySelectorAll('[data-confetti]').forEach(function (layer) {
+          var frag = document.createDocumentFragment();
+          for (var i = 0; i < 22; i++) {
+            var c = document.createElement('i');
+            var left = (i * 4.5 + (i % 5) * 2.3) % 100;
+            var dur = 6 + (i % 6);
+            var delay = -(i % 8) * 1.3;
+            c.style.left = left + '%';
+            c.style.background = colors[i % colors.length];
+            c.style.animationDuration = dur + 's';
+            c.style.animationDelay = delay + 's';
+            c.style.transform = 'rotate(' + (i * 37 % 180) + 'deg)';
+            frag.appendChild(c);
+          }
+          layer.appendChild(frag);
+        });
+      }
+
+      // Sticky nav background on scroll
       var nav = document.getElementById('frNav');
       var onScroll = function () {
         if (window.scrollY > 24) nav.classList.add('is-scrolled');
@@ -701,7 +808,6 @@
         items.forEach(function (el) { el.classList.add('is-in'); });
         return;
       }
-      // Reveal anything already in view immediately (so the hero never waits on a scroll)
       items.forEach(function (el) {
         var r = el.getBoundingClientRect();
         if (r.top < window.innerHeight * 0.92 && r.bottom > 0) el.classList.add('is-in');

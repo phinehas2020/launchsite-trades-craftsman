@@ -6,7 +6,7 @@
   <title>Heritage Youth Missions – Annual Fundraiser 2026</title>
   <meta name="description"
     content="The grandest night yet — Heritage Youth Missions' annual fundraiser, Tuesday, July 7, 2026 at the Heritage Center in Waco, TX. Brass, banquet, live music, and one bold goal: a mission fund that never stops giving." />
-  <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026 — The grandest night yet" />
+  <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026 — Faith Works" />
   <meta property="og:description"
     content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. Brass, banquet, and a mission fund built to give for generations. Save your spot." />
   <meta property="og:type" content="website" />
@@ -71,29 +71,16 @@
 
     /* ---------- Eyebrow pill ---------- */
     .fr-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
+      display: block;
       font-family: var(--fr-body);
       font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.22em;
+      font-size: 0.74rem;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
       color: var(--brand-red);
-      padding: 0.45rem 0.95rem;
-      border: 1px solid var(--line-warm);
-      border-radius: 999px;
       margin: 0;
     }
-    .fr-eyebrow::before {
-      content: '';
-      width: 0.42rem; height: 0.42rem;
-      border-radius: 50%;
-      background: var(--brand-red);
-      box-shadow: 0 0 0 3px rgba(197, 34, 31, 0.16);
-    }
-    .fr-eyebrow--light { color: var(--gold); border-color: var(--line-dark); }
-    .fr-eyebrow--light::before { background: var(--gold); box-shadow: 0 0 10px 1px rgba(234, 165, 60, 0.6); }
+    .fr-eyebrow--light { color: var(--gold); }
 
     /* ---------- Buttons (button-in-button) ---------- */
     .fr-btn {
@@ -342,7 +329,7 @@
     .fr-step__text { color: var(--muted); margin: 0; font-size: 1.02rem; max-width: 38rem; }
 
     /* ---------- The Fund (dark, giant number) ---------- */
-    .fr-fund__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+    .fr-fund__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
     .fr-fund__big {
       font-family: var(--fr-body);
       font-weight: 800;
@@ -356,7 +343,7 @@
       color: transparent;
       -webkit-text-fill-color: transparent;
     }
-    .fr-fund__big small { display: block; font-family: var(--fr-display); font-weight: 400; -webkit-text-fill-color: var(--on-dark); color: var(--on-dark); font-size: clamp(1rem, 1.6vw, 1.3rem); letter-spacing: 0.02em; margin-top: 1.2rem; }
+    .fr-fund__big small { display: block; font-family: var(--fr-display); font-weight: 400; -webkit-text-fill-color: var(--on-dark); color: var(--on-dark); font-size: clamp(1rem, 1.6vw, 1.3rem); line-height: 1.4; letter-spacing: 0.02em; margin-top: 2rem; }
     .fr-fund__points { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
     .fr-fund__point { padding-left: 1.4rem; position: relative; }
     .fr-fund__point::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
@@ -497,11 +484,10 @@
       <div class="fr-shell">
         <div class="fr-hero__inner">
           <img class="fr-hero__torch" src="../site-assets/hym-torch.png" alt="Heritage Youth Missions torch" data-reveal />
-          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>Faith Works</p>
-          <h1 class="fr-hero__title" data-reveal>The grandest <em>night</em> yet.</h1>
+          <h1 class="fr-hero__title" data-reveal>Faith <em>Works</em>.</h1>
           <p class="fr-hero__lede" data-reveal>
-            Brass and banners, a banquet for a thousand, and one bold goal — to grow a mission fund that
-            never stops giving. Come ready to celebrate. Come ready to give.
+            We're building the kingdom — and it takes a permanent mission fund to keep going. Come
+            celebrate the progress, and help us go farther.
           </p>
           <div class="fr-cta-row" data-reveal>
             <a href="#give" class="fr-btn fr-btn--primary">
@@ -577,35 +563,28 @@
             <div class="fr-step__num">1</div>
             <div>
               <h3 class="fr-step__title">The opening</h3>
-              <p class="fr-step__text">Brass, banners, and a warm welcome as everyone finds their seats.</p>
+              <p class="fr-step__text">Doors open with brass, banners, and a welcome from the HYM team.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
             <div class="fr-step__num">2</div>
             <div>
               <h3 class="fr-step__title">Dinner &amp; live music</h3>
-              <p class="fr-step__text">Dinner at the table, with live folk and bluegrass sets between courses.</p>
+              <p class="fr-step__text">A sit-down dinner with live folk and bluegrass between courses.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
             <div class="fr-step__num">3</div>
             <div>
-              <h3 class="fr-step__title">The story</h3>
-              <p class="fr-step__text">We premiere this year's HYM film and share where we're headed next.</p>
+              <h3 class="fr-step__title">The state of the mission</h3>
+              <p class="fr-step__text">This year's HYM film, plus a real look at where the mission stands and where it's headed.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
             <div class="fr-step__num">4</div>
             <div>
-              <h3 class="fr-step__title">The giving</h3>
-              <p class="fr-step__text">Giveaway drawings throughout the night and the big push toward the fund goal.</p>
-            </div>
-          </div>
-          <div class="fr-step" data-reveal>
-            <div class="fr-step__num">5</div>
-            <div>
               <h3 class="fr-step__title">The celebration</h3>
-              <p class="fr-step__text">Confetti, music, and a proper send-off to close the night.</p>
+              <p class="fr-step__text">A full night of fun and celebration.</p>
             </div>
           </div>
         </div>
@@ -738,7 +717,7 @@
           </details>
           <details>
             <summary>Who can I contact with questions? <span class="sign">+</span></summary>
-            <p class="fr-faq__answer">Email us anytime at <a href="mailto:info@heritageyouthmissions.org">info@heritageyouthmissions.org</a> and a member of the HYM team will be glad to help.</p>
+            <p class="fr-faq__answer">Email us anytime at <a href="mailto:info@heritageyouthmissions.com">info@heritageyouthmissions.com</a> and a member of the HYM team will be glad to help.</p>
           </details>
         </div>
       </div>
@@ -753,7 +732,7 @@
         <span class="fr-footer__tag">A whole life for the whole world.</span>
       </a>
       <div class="fr-footer__meta">
-        Waco, Texas · <a href="mailto:info@heritageyouthmissions.org">info@heritageyouthmissions.org</a><br />
+        Waco, Texas · <a href="mailto:info@heritageyouthmissions.com">info@heritageyouthmissions.com</a><br />
         © 2026 Heritage Youth Missions
       </div>
     </div>

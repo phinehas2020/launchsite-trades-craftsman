@@ -195,7 +195,9 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(62% 48% at 50% 30%, #2a1810 0%, rgba(42, 24, 16, 0) 70%),
+        radial-gradient(64% 52% at 50% 48%, rgba(18, 11, 7, 0.6) 0%, rgba(18, 11, 7, 0) 72%),
+        linear-gradient(180deg, rgba(18, 11, 7, 0.74) 0%, rgba(18, 11, 7, 0.4) 26%, rgba(18, 11, 7, 0.5) 60%, rgba(18, 11, 7, 0.96) 100%),
+        url(../site-assets/fundraiser-hero.jpg) center 30% / cover no-repeat,
         var(--ink);
       color: var(--paper);
       padding-top: clamp(7rem, 12vh, 9.5rem);
@@ -229,13 +231,15 @@
       letter-spacing: -0.02em;
       margin: 1.4rem 0 0;
       color: var(--paper); /* beat the shared Webflow h1{color:#1e1e1c} on the dark hero */
+      text-shadow: 0 2px 44px rgba(0, 0, 0, 0.55);
     }
     .fr-hero__title em { font-style: italic; color: var(--gold); }
     .fr-hero__lede {
       max-width: 38rem;
       margin: 1.6rem auto 0;
       font-size: clamp(1.05rem, 1.6vw, 1.22rem);
-      color: var(--on-dark);
+      color: rgba(250, 245, 236, 0.9);
+      text-shadow: 0 1px 18px rgba(0, 0, 0, 0.55);
     }
     .fr-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; margin-top: 2.2rem; }
 
@@ -480,10 +484,8 @@
     <!-- ======================= HERO ======================= -->
     <section class="fr-hero">
       <div class="fr-bunting" data-bunting aria-hidden="true"></div>
-      <div class="fr-hero__glow" aria-hidden="true"></div>
       <div class="fr-shell">
         <div class="fr-hero__inner">
-          <img class="fr-hero__torch" src="../site-assets/hym-torch.png" alt="Heritage Youth Missions torch" data-reveal />
           <h1 class="fr-hero__title" data-reveal>Faith <em>Works</em>.</h1>
           <p class="fr-hero__lede" data-reveal>
             We're building the kingdom — and it takes a permanent mission fund to keep going. Come

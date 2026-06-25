@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <title>Heritage Youth Missions – Annual Fundraiser 2026</title>
   <meta name="description"
-    content="The grandest night yet — Heritage Youth Missions' annual fundraiser, Tuesday, July 7, 2026 at the Heritage Center in Waco, TX. Brass, banquet, live music, and one bold goal: a mission fund that never stops giving." />
+    content="The grandest night yet — Heritage Youth Missions' annual fundraiser, Tuesday, July 7, 2026 at the Heritage Center in Waco, TX. A night of dinner, live music, story, and one bold goal: a mission fund that never stops giving." />
   <meta property="og:title" content="Heritage Youth Missions Annual Fundraiser 2026 — Faith Works" />
   <meta property="og:description"
-    content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. Brass, banquet, and a mission fund built to give for generations. Save your spot." />
+    content="Tuesday, July 7, 2026 · Heritage Center, Waco TX. A night of dinner, music, and a mission fund built to give for generations. Save your spot." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../site-assets/mission-images/real_mission_6.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -194,46 +194,60 @@
     .fr-hero {
       position: relative;
       overflow: hidden;
-      background:
-        radial-gradient(64% 52% at 50% 48%, rgba(18, 11, 7, 0.6) 0%, rgba(18, 11, 7, 0) 72%),
-        linear-gradient(180deg, rgba(18, 11, 7, 0.74) 0%, rgba(18, 11, 7, 0.4) 26%, rgba(18, 11, 7, 0.5) 60%, rgba(18, 11, 7, 0.96) 100%),
-        url(../site-assets/fundraiser-hero.jpg) center 30% / cover no-repeat,
-        var(--ink);
+      isolation: isolate;
+      background: var(--ink);
       color: var(--paper);
       padding-top: clamp(7rem, 12vh, 9.5rem);
     }
-    .fr-hero__glow {
+    /* dim, cinematic photo layer with a slow ken-burns drift */
+    .fr-hero__bg {
       position: absolute;
-      top: clamp(5rem, 14vh, 9rem);
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(48rem, 92vw);
-      height: 32rem;
+      inset: -6% -3%;
       z-index: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 38%, rgba(245, 166, 35, 0.5) 0%, rgba(224, 83, 31, 0.28) 32%, rgba(224, 83, 31, 0) 66%);
-      filter: blur(8px);
+      background: url(../site-assets/fundraiser-hero.jpg) center 34% / cover no-repeat;
+      transform: scale(1.04);
+      animation: frKenburns 26s ease-in-out infinite alternate;
+      will-change: transform;
     }
-    .fr-hero__inner { position: relative; z-index: 1; text-align: center; max-width: 52rem; margin-inline: auto; padding-top: clamp(1.5rem, 4vw, 2.5rem); }
-    .fr-page .fr-hero__torch {
-      width: auto;
-      height: clamp(6.5rem, 13vw, 9.5rem);
-      margin: 0 auto 1.6rem;
-      filter: drop-shadow(0 18px 40px rgba(245, 166, 35, 0.45));
-      animation: frFloat 5.5s ease-in-out infinite;
+    .fr-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(56% 50% at 50% 42%, rgba(14, 9, 5, 0.4) 0%, rgba(14, 9, 5, 0.88) 100%),
+        linear-gradient(180deg, rgba(14, 9, 5, 0.72) 0%, rgba(14, 9, 5, 0.52) 38%, rgba(14, 9, 5, 0.99) 100%);
     }
-    @keyframes frFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-    .fr-hero__title {
-      font-family: var(--fr-display);
-      font-weight: 400;
-      font-size: clamp(3rem, 8.5vw, 7rem);
-      line-height: 0.98;
-      letter-spacing: -0.02em;
-      margin: 1.4rem 0 0;
-      color: var(--paper); /* beat the shared Webflow h1{color:#1e1e1c} on the dark hero */
-      text-shadow: 0 2px 44px rgba(0, 0, 0, 0.55);
+    @keyframes frKenburns {
+      from { transform: scale(1.04) translate3d(0, 0, 0); }
+      to { transform: scale(1.15) translate3d(0, -1.5%, 0); }
     }
-    .fr-hero__title em { font-style: italic; color: var(--gold); }
+    .fr-hero__embers { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+    .fr-hero > .fr-bunting { position: relative; z-index: 3; }
+    .fr-hero > .fr-shell { position: relative; z-index: 2; }
+    .fr-hero__inner { text-align: center; max-width: 56rem; margin-inline: auto; padding-top: clamp(1rem, 3vw, 2rem); will-change: transform, opacity; }
+
+    /* the celebration photo lives INSIDE the words */
+    .fr-hero__word {
+      margin: 0;
+      font-family: var(--fr-body);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: clamp(3.8rem, 15vw, 13.5rem);
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+      color: #f7f0e2;
+      text-shadow: 0 3px 26px rgba(0, 0, 0, 0.55), 0 0 64px rgba(245, 166, 35, 0.3);
+    }
+    .fr-hero__word .is-gold { color: #f1ab3b; }
+    .fr-hero__word span {
+      display: block;
+      opacity: 0;
+      transform: translateY(0.45em);
+      animation: frIgnite 1s var(--ease) forwards;
+    }
+    .fr-hero__word span:nth-child(1) { animation-delay: 0.18s; }
+    .fr-hero__word span:nth-child(2) { animation-delay: 0.36s; }
+    @keyframes frIgnite { to { opacity: 1; transform: none; } }
     .fr-hero__lede {
       max-width: 38rem;
       margin: 1.6rem auto 0;
@@ -354,6 +368,43 @@
     .fr-fund__point h3 { font-family: var(--fr-display); font-weight: 400; font-size: 1.4rem; margin: 0 0 0.3rem; color: var(--paper); }
     .fr-fund__point p { margin: 0; color: var(--on-dark); font-size: 0.98rem; }
 
+    /* growth-story stats */
+    .fr-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(2rem, 5vw, 3.5rem);
+      margin-top: clamp(3rem, 6vw, 4.5rem);
+    }
+    .fr-stat__num {
+      display: block;
+      font-family: var(--fr-body);
+      font-weight: 800;
+      font-size: clamp(2.6rem, 5.4vw, 4.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--gold) 6%, var(--ember) 72%, var(--brand-red) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    .fr-stat__label { display: block; margin-top: 1.1rem; color: var(--on-dark); font-size: 0.98rem; max-width: 22rem; }
+    .fr-fund__aside {
+      margin-top: clamp(2.8rem, 6vw, 4rem);
+      color: var(--on-dark);
+      font-size: 1.1rem;
+      max-width: 40rem;
+    }
+    .fr-fund__close {
+      margin-top: 1.3rem;
+      font-family: var(--fr-display);
+      font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+      line-height: 1.25;
+      color: var(--paper);
+      max-width: 36rem;
+    }
+    .fr-fund__close strong { color: var(--gold); font-weight: 400; }
+
     /* ---------- Faith Works band ---------- */
     .fr-band {
       position: relative;
@@ -434,11 +485,18 @@
     }
     [data-reveal].is-in { opacity: 1; transform: none; filter: none; }
 
+    /* Lenis smooth scroll */
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+
     @media (prefers-reduced-motion: reduce) {
       [data-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
       .fr-btn:hover, .fr-btn:active { transform: none; }
-      .fr-hero__torch, .fr-pennant, .fr-marquee__track, .fr-confetti i { animation: none; }
-      .fr-confetti { display: none; }
+      .fr-pennant, .fr-marquee__track, .fr-confetti i, .fr-hero__bg { animation: none; }
+      .fr-hero__word span { opacity: 1; transform: none; animation: none; }
+      .fr-confetti, .fr-hero__embers { display: none; }
     }
 
     /* ---------- Responsive ---------- */
@@ -483,10 +541,12 @@
   <main>
     <!-- ======================= HERO ======================= -->
     <section class="fr-hero">
+      <div class="fr-hero__bg" aria-hidden="true"></div>
+      <canvas class="fr-hero__embers" data-embers aria-hidden="true"></canvas>
       <div class="fr-bunting" data-bunting aria-hidden="true"></div>
       <div class="fr-shell">
-        <div class="fr-hero__inner">
-          <h1 class="fr-hero__title" data-reveal>Faith <em>Works</em>.</h1>
+        <div class="fr-hero__inner" data-hero-inner>
+          <h1 class="fr-hero__word"><span>Faith</span><span class="is-gold">Works</span></h1>
           <p class="fr-hero__lede" data-reveal>
             We're building the kingdom — and it takes a permanent mission fund to keep going. Come
             celebrate the progress, and help us go farther.
@@ -530,7 +590,7 @@
       <div class="fr-marquee__track">
         <div class="fr-marquee__group">
           <span>One Night</span><span class="fr-marquee__sep">✦</span>
-          <span>Brass &amp; Banquet</span><span class="fr-marquee__sep">✦</span>
+          <span>Dinner &amp; Drinks</span><span class="fr-marquee__sep">✦</span>
           <span>Live Music</span><span class="fr-marquee__sep">✦</span>
           <span>Giveaways</span><span class="fr-marquee__sep">✦</span>
           <span>Confetti</span><span class="fr-marquee__sep">✦</span>
@@ -539,7 +599,7 @@
         </div>
         <div class="fr-marquee__group">
           <span>One Night</span><span class="fr-marquee__sep">✦</span>
-          <span>Brass &amp; Banquet</span><span class="fr-marquee__sep">✦</span>
+          <span>Dinner &amp; Drinks</span><span class="fr-marquee__sep">✦</span>
           <span>Live Music</span><span class="fr-marquee__sep">✦</span>
           <span>Giveaways</span><span class="fr-marquee__sep">✦</span>
           <span>Confetti</span><span class="fr-marquee__sep">✦</span>
@@ -565,7 +625,7 @@
             <div class="fr-step__num">1</div>
             <div>
               <h3 class="fr-step__title">The opening</h3>
-              <p class="fr-step__text">Doors open with brass, banners, and a welcome from the HYM team.</p>
+              <p class="fr-step__text">Doors open with music, banners, and a welcome from the HYM team.</p>
             </div>
           </div>
           <div class="fr-step" data-reveal>
@@ -597,30 +657,30 @@
     <section class="fr-section fr-section--dark" id="fund">
       <div class="fr-shell">
         <div class="fr-section__head">
-          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>The vision</p>
-          <h2 class="fr-section__title" data-reveal>One fund. Built to give <em>forever</em>.</h2>
+          <p class="fr-eyebrow fr-eyebrow--light" data-reveal>Why we're doing this</p>
+          <h2 class="fr-section__title" data-reveal>Saying <em>no</em> isn't an option.</h2>
+          <p class="fr-section__lede" data-reveal>
+            For ten years, our Texas church has given over a million dollars to serve communities around
+            the world — funded one year at a time. Then an unexpected expense nearly drained the fund. So
+            instead of scraping a budget together every year, we built something permanent.
+          </p>
         </div>
-        <div class="fr-fund__grid" style="margin-top: clamp(2.5rem, 5vw, 3.5rem);">
-          <div data-reveal>
-            <p class="fr-fund__big">$5M
-              <small>Our goal: a permanent mission fund big enough to fuel the gospel for generations.</small>
-            </p>
+        <div class="fr-stats">
+          <div class="fr-stat" data-reveal>
+            <span class="fr-stat__num" data-count="220000" data-suffix="+">$220,000+</span>
+            <span class="fr-stat__label">Raised our very first night — the screen crossed $100K and just kept climbing.</span>
           </div>
-          <ul class="fr-fund__points">
-            <li class="fr-fund__point" data-reveal>
-              <h3>A seed we never spend</h3>
-              <p>Every gift joins a permanent fund. We invest the principal and leave it untouched — so your generosity keeps working long after the lights come up.</p>
-            </li>
-            <li class="fr-fund__point" data-reveal>
-              <h3>Missions, funded for good</h3>
-              <p>The returns go to work — fueling gospel-driven missions and the next generation of leaders, across Texas and around the world.</p>
-            </li>
-            <li class="fr-fund__point" data-reveal>
-              <h3>Every gift is a step</h3>
-              <p>Every seat filled and every dollar given moves us closer to a fund that outlasts all of us. July 7 is the next big step.</p>
-            </li>
-          </ul>
+          <div class="fr-stat" data-reveal>
+            <span class="fr-stat__num" data-count="550000" data-suffix="+">$550,000+</span>
+            <span class="fr-stat__label">We haven't spent a single penny of it. Local business owners invested it instead — and it's grown ever since.</span>
+          </div>
+          <div class="fr-stat" data-reveal>
+            <span class="fr-stat__num" data-count="5000000">$5,000,000</span>
+            <span class="fr-stat__label">The goal: a seed fund we only invest and never spend — a portion grows it, the rest funds missions for good.</span>
+          </div>
         </div>
+        <p class="fr-fund__aside" data-reveal>And it's not just the grown-ups giving — our young people alone have raised over $100,000, at $350 a year each.</p>
+        <p class="fr-fund__close" data-reveal>Year one: $0 → $550,000. <strong>What will next year look like?</strong></p>
       </div>
     </section>
 
@@ -640,7 +700,7 @@
       <div class="fr-shell fr-give__grid">
         <div>
           <p class="fr-eyebrow fr-eyebrow--light" data-reveal>Attend · Give · Sponsor</p>
-          <h2 class="fr-section__title" data-reveal>Put your faith to <em>work</em>.</h2>
+          <h2 class="fr-section__title" data-reveal>Be <em>part</em> of it.</h2>
           <p class="fr-give__text" data-reveal>
             Save your spot and join us on July 7 — admission is free, and we simply ask that you come
             ready to give. Every gift goes straight into the mission fund.
@@ -761,12 +821,10 @@
           for (var i = 0; i < 22; i++) {
             var c = document.createElement('i');
             var left = (i * 4.5 + (i % 5) * 2.3) % 100;
-            var dur = 6 + (i % 6);
-            var delay = -(i % 8) * 1.3;
             c.style.left = left + '%';
             c.style.background = colors[i % colors.length];
-            c.style.animationDuration = dur + 's';
-            c.style.animationDelay = delay + 's';
+            c.style.animationDuration = (6 + (i % 6)) + 's';
+            c.style.animationDelay = (-(i % 8) * 1.3) + 's';
             c.style.transform = 'rotate(' + (i * 37 % 180) + 'deg)';
             frag.appendChild(c);
           }
@@ -774,32 +832,114 @@
         });
       }
 
-      // Sticky nav background on scroll
+      // Rising embers in the hero (warm, atmospheric — ties to the torch)
+      (function () {
+        var canvas = document.querySelector('[data-embers]');
+        var hero = document.querySelector('.fr-hero');
+        if (!canvas || !hero || reduce) return;
+        var ctx = canvas.getContext('2d');
+        var W = 0, H = 0, parts = [];
+        function size() { W = canvas.width = hero.offsetWidth; H = canvas.height = hero.offsetHeight; }
+        function mk(fromBottom) {
+          return {
+            x: Math.random() * W,
+            y: fromBottom ? H + Math.random() * 40 : H + Math.random() * H * 0.5,
+            r: Math.random() * 1.8 + 0.8,
+            s: Math.random() * 0.45 + 0.2,
+            d: (Math.random() - 0.5) * 0.35,
+            a: Math.random() * 0.5 + 0.25,
+            hue: Math.random() < 0.5 ? '245,166,35' : '224,83,31'
+          };
+        }
+        size();
+        for (var i = 0; i < 40; i++) parts.push(mk(false));
+        function tick() {
+          ctx.clearRect(0, 0, W, H);
+          for (var i = 0; i < parts.length; i++) {
+            var p = parts[i];
+            p.y -= p.s; p.x += p.d; p.a -= 0.0011;
+            if (p.y < -12 || p.a <= 0) { parts[i] = mk(true); continue; }
+            ctx.beginPath();
+            ctx.shadowBlur = 10; ctx.shadowColor = 'rgba(' + p.hue + ',0.7)';
+            ctx.fillStyle = 'rgba(' + p.hue + ',' + p.a.toFixed(3) + ')';
+            ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+            ctx.fill();
+          }
+          requestAnimationFrame(tick);
+        }
+        tick();
+        window.addEventListener('resize', size, { passive: true });
+      })();
+
+      // Count-up for the growth-story numbers
+      function countUp(el) {
+        if (el.dataset.counted) return;
+        el.dataset.counted = '1';
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (reduce || !target) return;
+        var dur = 1500, start = null;
+        function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US') + suffix; }
+        function step(t) {
+          if (!start) start = t;
+          var p = Math.min(1, (t - start) / dur);
+          el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Sticky nav + hero parallax (content drifts up and fades as you scroll)
       var nav = document.getElementById('frNav');
-      var onScroll = function () {
-        if (window.scrollY > 24) nav.classList.add('is-scrolled');
-        else nav.classList.remove('is-scrolled');
-      };
+      var heroInner = document.querySelector('[data-hero-inner]');
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset || 0;
+        if (nav) { if (y > 24) nav.classList.add('is-scrolled'); else nav.classList.remove('is-scrolled'); }
+        if (heroInner && !reduce) {
+          heroInner.style.transform = 'translate3d(0,' + (y * 0.16) + 'px,0)';
+          heroInner.style.opacity = Math.max(0, 1 - y / 680);
+        }
+      }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      // Reveal-on-scroll
+      // Reveal-on-scroll (+ trigger count-up)
+      function activate(el) {
+        el.classList.add('is-in');
+        var n = el.matches('[data-count]') ? el : (el.querySelector ? el.querySelector('[data-count]') : null);
+        if (n) countUp(n);
+      }
       var items = document.querySelectorAll('[data-reveal]');
       if (!('IntersectionObserver' in window)) {
-        items.forEach(function (el) { el.classList.add('is-in'); });
+        items.forEach(activate);
         return;
       }
       items.forEach(function (el) {
         var r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight * 0.92 && r.bottom > 0) el.classList.add('is-in');
+        if (r.top < window.innerHeight * 0.92 && r.bottom > 0) activate(el);
       });
       var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-        });
+        entries.forEach(function (e) { if (e.isIntersecting) { activate(e.target); io.unobserve(e.target); } });
       }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
       items.forEach(function (el) { if (!el.classList.contains('is-in')) io.observe(el); });
     })();
+  </script>
+
+  <!-- Smooth scroll (premium glide). Optional — page works without it. -->
+  <script type="module">
+    import Lenis from '@studio-freight/lenis';
+    var lenis = new Lenis({ lerp: 0.09 });
+    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var id = a.getAttribute('href');
+        if (id && id.length > 1) {
+          var el = document.querySelector(id);
+          if (el) { e.preventDefault(); lenis.scrollTo(el, { offset: -10 }); }
+        }
+      });
+    });
   </script>
 
   <!-- Paste your Givebutter <script> tag here when you're ready to embed the live form. -->

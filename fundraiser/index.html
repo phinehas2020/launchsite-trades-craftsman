@@ -470,13 +470,22 @@
     .fr-faq__answer a { color: var(--brand-red); }
 
     /* ---------- Footer (dark) ---------- */
-    .fr-footer { background: var(--ink); color: var(--paper); padding-block: clamp(3rem, 6vw, 4.5rem); }
-    .fr-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
-    .fr-footer__brand { display: flex; align-items: center; gap: 1rem; }
-    .fr-footer__brand img { height: 2.2rem; width: auto; }
-    .fr-footer__tag { font-family: var(--fr-display); font-style: italic; color: var(--gold); font-size: 1.05rem; }
-    .fr-footer__meta { font-size: 0.85rem; color: var(--on-dark); text-align: right; }
-    .fr-footer__meta a:hover { color: var(--gold); }
+    .fr-footer {
+      background:
+        radial-gradient(70% 130% at 50% 0%, var(--paper-warm) 0%, rgba(251, 238, 216, 0) 68%),
+        var(--paper);
+      color: var(--ink);
+      border-top: 1px solid var(--line-warm);
+      padding-block: clamp(4.5rem, 10vw, 7.5rem);
+      text-align: center;
+    }
+    .fr-footer__inner { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
+    .fr-footer__brand { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; }
+    .fr-page .fr-footer__brand img { height: clamp(6rem, 14vw, 10rem); width: auto; }
+    .fr-footer__tag { font-family: var(--fr-display); font-style: italic; color: var(--brand-red); font-size: clamp(1.25rem, 2.2vw, 1.7rem); }
+    .fr-footer__meta { font-size: 0.9rem; color: var(--muted); text-align: center; line-height: 1.9; }
+    .fr-page .fr-footer__meta a { color: var(--brand-red); }
+    .fr-footer__meta a:hover { color: var(--ember); }
 
     /* ---------- Reveal animation ---------- */
     [data-reveal] {

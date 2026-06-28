@@ -315,36 +315,38 @@
     .fr-section__lede { font-size: 1.12rem; color: var(--muted); margin-top: 1.4rem; max-width: 40rem; }
     .fr-section--dark .fr-section__lede { color: var(--on-dark); }
 
-    /* ---------- The Evening (run of show) ---------- */
-    .fr-flow { max-width: 50rem; margin-top: clamp(3rem, 6vw, 4.5rem); }
+    /* ---------- The Evening (run of show, as cards) ---------- */
+    .fr-flow {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1rem, 1.8vw, 1.5rem);
+      margin-top: clamp(3rem, 6vw, 4.5rem);
+    }
     .fr-step {
       position: relative;
-      display: grid;
-      grid-template-columns: 4rem 1fr;
-      gap: 1.6rem;
-      padding-bottom: 2.4rem;
+      padding: clamp(1.9rem, 3vw, 2.6rem);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.5);
+      transition: transform 0.45s var(--ease), border-color 0.45s var(--ease), box-shadow 0.45s var(--ease);
     }
-    .fr-step:last-child { padding-bottom: 0; }
-    .fr-step::before {
-      content: '';
-      position: absolute;
-      left: 2rem; top: 4rem; bottom: -0.1rem;
-      width: 1px;
-      background: linear-gradient(var(--line-warm), rgba(197, 34, 31, 0.04));
+    .fr-step:hover {
+      transform: translateY(-5px);
+      border-color: var(--line-warm);
+      box-shadow: 0 28px 52px -32px rgba(197, 34, 31, 0.45);
     }
-    .fr-step:last-child::before { display: none; }
     .fr-step__num {
-      width: 4rem; height: 4rem;
+      width: 3rem; height: 3rem;
       border-radius: 50%;
       border: 1px solid var(--line-warm);
       background: var(--paper);
       display: grid; place-items: center;
-      font-family: var(--fr-body); font-weight: 800; font-size: 1.05rem;
+      font-family: var(--fr-body); font-weight: 800; font-size: 1rem;
       color: var(--brand-red);
-      position: relative; z-index: 1;
+      margin-bottom: 1.4rem;
     }
-    .fr-step__title { font-family: var(--fr-display); font-size: clamp(1.4rem, 2.4vw, 1.85rem); font-weight: 400; margin: 0.5rem 0 0.5rem; }
-    .fr-step__text { color: var(--muted); margin: 0; font-size: 1.02rem; max-width: 38rem; }
+    .fr-step__title { font-family: var(--fr-display); font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 400; margin: 0 0 0.55rem; }
+    .fr-step__text { color: var(--muted); margin: 0; font-size: 1.02rem; }
 
     /* ---------- The Fund (dark, giant number) ---------- */
     .fr-fund__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
@@ -523,6 +525,7 @@
       .fr-nav__inner { padding-left: 1.1rem; }
       .fr-nav__links { gap: 0.9rem; }
       .fr-nav__link:not(.is-back) { display: none; }
+      .fr-flow { grid-template-columns: 1fr; }
     }
   </style>
 </head>

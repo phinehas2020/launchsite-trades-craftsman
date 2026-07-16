@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundraiser Results | Heritage Youth Missions</title>
+  <meta name="description" content="See the latest published Heritage Youth Missions foreign-missions fundraiser result and learn how the mission fund supports future service.">
+  <link rel="icon" href="../site-assets/logo-new.png">
+  <style>
+    :root {
+      --ink: #10231b;
+      --forest: #164e3a;
+      --mint: #b9d5bd;
+      --sun: #f2c94c;
+      --cream: #f5f0e4;
+      --paper: #fbf9f2;
+      --white: #fff;
+      --line: rgba(16, 35, 27, .18);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .skip {
+      position: fixed;
+      top: .75rem;
+      left: .75rem;
+      z-index: 100;
+      padding: .8rem 1rem;
+      background: var(--white);
+      transform: translateY(-160%);
+    }
+    .skip:focus { transform: translateY(0); }
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 20;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.28);
+    }
+    .nav {
+      width: min(100% - 40px, 1420px);
+      min-height: 88px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem); }
+    .nav-links a {
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links a[aria-current="page"] { border-bottom: 1px solid currentColor; }
+    .menu-button {
+      display: none;
+      color: inherit;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.55);
+      padding: .65rem .8rem;
+      cursor: pointer;
+    }
+    .hero {
+      position: relative;
+      min-height: 90svh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--ink);
+    }
+    .hero-media, .hero-shade { position: absolute; inset: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-shade { background: linear-gradient(180deg, rgba(6,18,13,.18) 0%, rgba(6,18,13,.32) 43%, rgba(6,18,13,.94) 100%); }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(100% - 40px, 1420px);
+      margin: 0 auto;
+      padding: 150px 0 62px;
+    }
+    .eyebrow {
+      margin: 0 0 1.2rem;
+      font-size: .75rem;
+      font-weight: 780;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; display: inline-block; width: 38px; height: 1px; margin: 0 12px 4px 0; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 1080px;
+      margin-bottom: 1.4rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.8rem, 9.6vw, 9.6rem);
+      font-weight: 400;
+      letter-spacing: -.06em;
+      line-height: .85;
+    }
+    .hero-copy { max-width: 720px; margin: 0; font-size: clamp(1.05rem, 1.65vw, 1.4rem); line-height: 1.55; }
+    .result {
+      color: var(--cream);
+      background: var(--forest);
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+    .result-grid {
+      width: min(100% - 40px, 1420px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr .42fr .43fr;
+    }
+    .metric {
+      min-height: 250px;
+      padding: clamp(2rem, 4vw, 4.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid rgba(255,255,255,.23);
+    }
+    .metric:last-child { border-right: 0; }
+    .metric-label { font-size: .74rem; font-weight: 780; letter-spacing: .15em; text-transform: uppercase; }
+    .metric strong {
+      display: block;
+      margin-top: 2rem;
+      font-family: Georgia, serif;
+      font-size: clamp(3.4rem, 7vw, 8rem);
+      font-weight: 400;
+      letter-spacing: -.06em;
+      line-height: .86;
+    }
+    .metric:not(:first-child) strong { font-size: clamp(2.8rem, 5vw, 5.2rem); }
+    .metric small { color: rgba(245,240,228,.72); line-height: 1.5; }
+    .source-bar {
+      width: min(100% - 40px, 1420px);
+      margin: 0 auto;
+      padding: 1.2rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      color: rgba(245,240,228,.78);
+      font-size: .78rem;
+    }
+    .source-bar a { color: var(--white); text-underline-offset: 4px; }
+    .section { padding: clamp(80px, 10vw, 150px) 0; }
+    .wrap { width: min(100% - 40px, 1280px); margin: 0 auto; }
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+      gap: clamp(3rem, 9vw, 9rem);
+      align-items: start;
+    }
+    .section-label {
+      position: sticky;
+      top: 2rem;
+      font-size: .78rem;
+      font-weight: 780;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .purpose h2 {
+      max-width: 820px;
+      margin-bottom: 2rem;
+      font-family: Georgia, serif;
+      font-size: clamp(2.8rem, 6vw, 6.6rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .92;
+    }
+    .purpose-copy { max-width: 710px; color: #405048; font-size: clamp(1.05rem, 1.4vw, 1.22rem); line-height: 1.72; }
+    .purpose-copy p { margin-bottom: 1.4rem; }
+    .clarifier {
+      margin-top: 2.2rem;
+      padding: 1.4rem 0 0 1.4rem;
+      border-top: 1px solid var(--line);
+      border-left: 3px solid var(--forest);
+      color: var(--ink);
+      font-size: .92rem;
+    }
+    .path { color: var(--ink); background: var(--mint); }
+    .path h2 {
+      max-width: 900px;
+      margin: 0 0 clamp(3rem, 6vw, 6rem);
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 6.8vw, 7.2rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .9;
+    }
+    .steps { border-top: 1px solid rgba(16,35,27,.35); }
+    .step {
+      display: grid;
+      grid-template-columns: 80px minmax(220px, .7fr) minmax(0, 1fr);
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(16,35,27,.35);
+    }
+    .step-number { font-family: Georgia, serif; font-size: 1.6rem; }
+    .step h3 { margin: 0; font-size: clamp(1.35rem, 2.3vw, 2.15rem); font-weight: 600; }
+    .step p { max-width: 620px; margin: 0; color: #3f554a; line-height: 1.65; }
+    .photo-story {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      min-height: 760px;
+      color: var(--cream);
+      background: var(--ink);
+    }
+    .photo { min-height: 520px; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-copy {
+      padding: clamp(3rem, 7vw, 7rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .photo-copy h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(2.8rem, 5.5vw, 6rem);
+      font-weight: 400;
+      letter-spacing: -.05em;
+      line-height: .92;
+    }
+    .photo-copy p { max-width: 500px; color: rgba(245,240,228,.76); font-size: 1.06rem; line-height: 1.7; }
+    .cta { text-align: center; }
+    .cta h2 {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .92;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      padding: 0 1.4rem;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      background: var(--forest);
+      border: 1px solid var(--forest);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color .2s, background .2s;
+    }
+    .button:hover { color: var(--forest); background: transparent; }
+    footer { color: var(--cream); background: #0b1913; border-top: 1px solid rgba(255,255,255,.16); }
+    .footer-inner {
+      width: min(100% - 40px, 1420px);
+      margin: 0 auto;
+      padding: 36px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: .82rem;
+    }
+    .footer-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+    .footer-links a { text-underline-offset: 4px; }
+    [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .75s ease, transform .75s ease; }
+    [data-reveal].visible { opacity: 1; transform: none; }
+    @media (max-width: 900px) {
+      .result-grid { grid-template-columns: 1fr 1fr; }
+      .metric:first-child { grid-column: 1 / -1; border-bottom: 1px solid rgba(255,255,255,.23); }
+      .purpose-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .section-label { position: static; }
+      .photo-story { grid-template-columns: 1fr; min-height: auto; }
+      .photo-copy { gap: 3rem; }
+    }
+    @media (max-width: 780px) {
+      .nav { min-height: 74px; }
+      .brand img { width: 54px; height: 54px; }
+      .menu-button { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 20px;
+        right: 20px;
+        padding: 1.25rem;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.2rem;
+        color: var(--ink);
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .hero { min-height: 84svh; }
+      .hero-inner { padding-bottom: 44px; }
+      .result-grid { grid-template-columns: 1fr; }
+      .metric, .metric:first-child { grid-column: auto; min-height: 190px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.23); }
+      .metric strong, .metric:not(:first-child) strong { font-size: clamp(3rem, 18vw, 5.5rem); }
+      .source-bar { flex-direction: column; }
+      .step { grid-template-columns: 42px 1fr; }
+      .step p { grid-column: 2; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="Heritage Youth Missions home"><img src="../site-assets/logo-new.png" alt=""></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/what-we-do/">What we do</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/fundraiser/" aria-current="page">Fundraiser</a>
+        <a href="/team/">Team</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-media"><img src="../site-assets/fundraiser-hero.jpg" alt="Confetti falls over the Heritage Youth Missions foreign-missions fundraiser"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner" data-reveal>
+        <p class="eyebrow">Foreign missions fundraiser</p>
+        <h1>A generous night.<br>A lasting mission.</h1>
+        <p class="hero-copy">The fundraiser gathers the HYM community around one purpose: build a dependable mission fund that helps young people keep serving when needs arise.</p>
+      </div>
+    </section>
+
+    <section class="result" aria-labelledby="latest-result">
+      <div class="result-grid">
+        <article class="metric" data-reveal>
+          <span class="metric-label" id="latest-result">Latest published fundraiser total</span>
+          <strong data-count="179272">$179,272</strong>
+          <small>2025 Foreign Missions Fundraiser</small>
+        </article>
+        <article class="metric" data-reveal>
+          <span class="metric-label">Supporters</span>
+          <strong>506</strong>
+          <small>People who gave through the published campaign</small>
+        </article>
+        <article class="metric" data-reveal>
+          <span class="metric-label">Goal reached</span>
+          <strong>179%</strong>
+          <small>Against the campaign’s $100,000 goal</small>
+        </article>
+      </div>
+      <div class="source-bar">
+        <span>Verified July 16, 2026 · This is the latest foreign-missions fundraiser total published on HYM’s Givebutter profile.</span>
+        <a href="https://givebutter.com/It68zS" target="_blank" rel="noreferrer">View the official result ↗</a>
+      </div>
+    </section>
+
+    <section class="section purpose">
+      <div class="wrap purpose-grid">
+        <p class="section-label" data-reveal>01 · The point</p>
+        <div data-reveal>
+          <h2>Stop rebuilding the missions budget from zero.</h2>
+          <div class="purpose-copy">
+            <p>The long-term vision is a permanent mission fund: a dependable base that can help cover relief work, travel, supplies, service projects, and ministry partnerships year after year.</p>
+            <p>That matters because needs do not wait for a fundraising calendar. A stronger fund gives HYM the ability to prepare young people, respond when communities need help, and support mission work with greater stability.</p>
+            <p>The evening is also part of the formation itself. Students see adults, families, churches, and businesses put their resources behind service—and they learn to give, work, and take responsibility alongside them.</p>
+            <p class="clarifier"><strong>What the number means:</strong> $179,272 is the result of the latest published foreign-missions fundraiser campaign. It is not presented here as HYM’s lifetime giving total or as a live 2026 campaign counter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section path">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>How one night carries forward</p>
+        <h2 data-reveal>Gather. Grow. Go serve.</h2>
+        <div class="steps">
+          <article class="step" data-reveal>
+            <div class="step-number">01</div>
+            <h3>Gather the community</h3>
+            <p>Families, churches, businesses, and friends come together to hear the mission story and take ownership of the work ahead.</p>
+          </article>
+          <article class="step" data-reveal>
+            <div class="step-number">02</div>
+            <h3>Grow the mission fund</h3>
+            <p>Gifts create a stronger base for future service instead of forcing the organization to start over each time a trip or urgent need appears.</p>
+          </article>
+          <article class="step" data-reveal>
+            <div class="step-number">03</div>
+            <h3>Send prepared young people</h3>
+            <p>The fund helps turn training and willingness into real action: travel, materials, relief response, partner support, and hands-on work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-story">
+      <div class="photo"><img src="../site-assets/fundraiser-hero.jpg" alt="The 2025 HYM fundraiser room celebrating as giving passes the campaign goal"></div>
+      <div class="photo-copy">
+        <div>
+          <p class="eyebrow">The latest result</p>
+          <h2>The room crossed the goal—and kept going.</h2>
+        </div>
+        <p>The published 2025 campaign finished at $179,272, supported by 506 people. That is 179% of its $100,000 goal and a clear sign that the wider community wants this work to continue.</p>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">Keep the work moving</p>
+        <h2>Give through HYM’s official page.</h2>
+        <a class="button" href="https://givebutter.com/HYM" target="_blank" rel="noreferrer">Open HYM on Givebutter ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 Heritage Youth Missions · Waco, Texas</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/portfolio/#hunt-tx-relief">Hunt, TX Relief</a>
+        <a href="https://givebutter.com/HYM" target="_blank" rel="noreferrer">Official giving page</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.menu-button');
+    const links = document.querySelector('.nav-links');
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open', !open);
+    });
+
+    const items = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .12 });
+      items.forEach((item) => observer.observe(item));
+    } else {
+      items.forEach((item) => item.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>

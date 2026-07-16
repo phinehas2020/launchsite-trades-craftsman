@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         whatWeDo: resolve(__dirname, 'what-we-do/index.html'),
         portfolio: resolve(__dirname, 'portfolio/index.html'),
+        fundraiser: resolve(__dirname, 'fundraiser/index.html'),
         team: resolve(__dirname, 'team/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
       },
